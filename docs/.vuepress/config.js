@@ -1,13 +1,12 @@
 module.exports = {
-  "title": "个人笔记存储",
-  "description": "仅做笔记使用",
-  "dest": "public",
+  "title": "Kevin-Blog",
+  "description": "",
   "head": [
     [
       "link",
       {
         "rel": "icon",
-        "href": "/favicon.ico"
+        "href": "/favicon2.ico"
       }
     ],
     [
@@ -16,67 +15,49 @@ module.exports = {
         "name": "viewport",
         "content": "width=device-width,initial-scale=1,user-scalable=no"
       }
+    ],
+    [ 'link', 
+      {
+        "rel": 'stylesheet',
+        "href": '/css/style.css'
+      }
+    ],
+    [
+      'script', 
+      {
+        "charset": 'utf-8',
+        "src": '/js/main.js'
+      }
     ]
   ],
-  "theme": "reco",
+  "theme": "reco", //主题
   "themeConfig": {
-    "nav": [
-      {
-        "text": "Home",
+    "repo": 'kevin9281/kevin-blog',
+    "nav": [{
+        "text": "首页",
         "link": "/",
         "icon": "reco-home"
       },
       {
-        "text": "TimeLine",
+        "text": "面试题",
+        "icon": "reco-message",
+        "link": "/topic/",
+      },
+      {
+        "text": "记录时间",
         "link": "/timeLine/",
         "icon": "reco-date"
       },
-      {
-        "text": "Contact",
-        "icon": "reco-message",
-        "items": [
-          {
-            "text": "NPM",
-            "link": "https://www.npmjs.com/~reco_luan",
-            "icon": "reco-npm"
-          },
-          {
-            "text": "GitHub",
-            "link": "https://github.com/recoluan",
-            "icon": "reco-github"
-          },
-          {
-            "text": "简书",
-            "link": "https://www.jianshu.com/u/cd674a19515e",
-            "icon": "reco-jianshu"
-          },
-          {
-            "text": "CSDN",
-            "link": "https://blog.csdn.net/recoluan",
-            "icon": "reco-csdn"
-          },
-          {
-            "text": "博客圆",
-            "link": "https://www.cnblogs.com/luanhewei/",
-            "icon": "reco-bokeyuan"
-          },
-          {
-            "text": "WeChat",
-            "link": "https://mp.weixin.qq.com/s/mXFqeUTegdvPliXknAAG_A",
-            "icon": "reco-wechat"
-          }
-        ]
-      }
     ],
     "type": "blog",
     "blogConfig": {
       "category": {
         "location": 2,
-        "text": "Category"
+        "text": "前端基础"
       },
       "tag": {
-        "location": 3,
-        "text": "Tag"
+        "location": 4,
+        "text": "标签记录"
       }
     },
     "logo": "/head.png",

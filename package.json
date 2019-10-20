@@ -1,11 +1,15 @@
 {
   "name": "kevin-blog",
   "version": "1.0.0",
-  "repository": "http://recoluan.gitlab.io/vuepress-theme-reco-doc",
-  "author": "reco_luan",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kevin9281/kevin-blog.git"
+  },
+  "author": "",
   "scripts": {
     "dev": "vuepress dev docs",
-    "build": "vuepress build docs"
+    "build": "vuepress build docs",
+    "deploy": "bash deploy.sh"
   },
   "devDependencies": {
     "vuepress": "1.0.1",

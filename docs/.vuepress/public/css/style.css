@@ -1,0 +1,25 @@
+#app div div div div .home-blog.reco-show .hero {
+  background: url("../1939-1Z21914511648.jpg") center center / cover no-repeat !important;
+  height: 45rem !important;
+}
+
+#app div div div div .home-blog .home-blog-wrapper{
+
+}
+
+#app div div div div .home-blog .hero h1,
+#app div div div div .home-blog .hero p,
+#app div div div div .home-blog .footer,
+#app div div div header .home-link{
+  display: none;
+}
+
+#app div div div header,
+#app div .theme-container div .navbar .links,
+#app div div div header div nav .nav-item .nav-link{
+  color:#fff;
+  background: #000;
+}
+html{
+  font-size: 16px;
+}
