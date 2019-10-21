@@ -1,25 +1,37 @@
+/* 首幻灯片定位布局 */
 #app div div div div .home-blog.reco-show .hero {
-  background: url("../1939-1Z21914511648.jpg") center center / cover no-repeat !important;
-  height: 45rem !important;
+  background: #000 !important;
+  height: 47rem !important;
 }
 
-#app div div div div .home-blog .home-blog-wrapper{
+#app div div div div .home-blog .home-blog-wrapper {}
 
-}
-
+/* 隐藏多余元素 */
 #app div div div div .home-blog .hero h1,
 #app div div div div .home-blog .hero p,
 #app div div div div .home-blog .footer,
-#app div div div header .home-link{
+#app div div div header .home-link {
   display: none;
 }
 
+/* nav的背景颜色 字体颜色 */
 #app div div div header,
 #app div .theme-container div .navbar .links,
-#app div div div header div nav .nav-item .nav-link{
-  color:#fff;
+#app div div div header div nav .nav-item .nav-link {
+  color: #fff;
   background: #000;
 }
-html{
-  font-size: 16px;
+
+/* 组件容器定位 */
+#app div div div div div .home-center{
+  position: relative;
+  bottom: 106rem;
 }
+
+/* 内容高度 */
+#app div div div div .home-blog {
+  height: 111rem;
+}
+/* *{
+  outline: 1px solid red;
+} */
