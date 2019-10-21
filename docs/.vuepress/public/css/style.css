@@ -25,12 +25,12 @@
 /* 组件容器定位 */
 #app div div div div div .home-center{
   position: relative;
-  bottom: 106rem;
+  bottom: 118rem;
 }
 
 /* 内容高度 */
 #app div div div div .home-blog {
-  height: 111rem;
+  height: 122rem;
 }
 /* *{
   outline: 1px solid red;
