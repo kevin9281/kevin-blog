@@ -10,8 +10,6 @@ heroImageStyle: {
   borderRadius: '1rem',
 }
 isShowTitleInHome: false
-actionText: Guide
-actionLink: /views/other/guide
 features:
 - title: Yesterday
   details: 开发一款看着开心、写着顺手的 vuepress 博客主题
@@ -21,6 +19,6 @@ features:
   details: 希望更多的爱好者能够参与进来，帮助这个主题更好的成长
 ---
 
-
-
 <Picture></Picture>
+
+

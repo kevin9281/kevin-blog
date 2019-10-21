@@ -1,3 +1,6 @@
+const navConfig = require('../../config/navConfig.js');
+const sidebarConfig = require('../../config/sidebarConfig/index.js');
+
 module.exports = {
   "title": "Kevin-Blog",
   "description": "",
@@ -33,37 +36,13 @@ module.exports = {
   "theme": "reco", //主题
   "themeConfig": {
     "repo": 'kevin9281/kevin-blog',
-    "nav": [{
-        "text": "首页",
-        "link": "/",
-        "icon": "reco-home"
-      },
-      {
-        "text": "面试题",
-        "icon": "reco-message",
-        "link": "/topic/",
-      },
-      {
-        "text": "记录时间",
-        "link": "/timeLine/",
-        "icon": "reco-date"
-      },
-    ],
+    "nav": navConfig,
+    "sidebar": sidebarConfig,
+    "sidebarDepth":2,
     "type": "blog",
-    "blogConfig": {
-      "category": {
-        "location": 2,
-        "text": "前端基础"
-      },
-      "tag": {
-        "location": 4,
-        "text": "标签记录"
-      }
-    },
     "logo": "/head.png",
     "search": true,
     "searchMaxSuggestions": 10,
-    "sidebar": "auto",
     "lastUpdated": "Last Updated",
     "author": "kevin",
     "record": "xxxx",

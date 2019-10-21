@@ -1,23 +1,26 @@
 /* 首幻灯片定位布局 */
 #app div div div div .home-blog.reco-show .hero {
   background: #000 !important;
-  height: 47rem !important;
+  height: 52rem !important;
 }
 
-#app div div div div .home-blog .home-blog-wrapper {}
 
 /* 隐藏多余元素 */
+#app div div div div .home-blog .home-blog-wrapper,
 #app div div div div .home-blog .hero h1,
 #app div div div div .home-blog .hero p,
 #app div div div div .home-blog .footer,
-#app div div div header .home-link {
+#app div div div header .home-link,
+#app div div div .navbar .links .color-picker,
+#app div div div .navbar .links .fullscreen-wrapper {
   display: none;
 }
 
 /* nav的背景颜色 字体颜色 */
 #app div div div header,
 #app div .theme-container div .navbar .links,
-#app div div div header div nav .nav-item .nav-link {
+#app div div div header div nav .nav-item .nav-link,
+#app div div div header div nav div div .nav-dropdown {
   color: #fff;
   background: #000;
 }
@@ -25,13 +28,22 @@
 /* 组件容器定位 */
 #app div div div div div .home-center{
   position: relative;
-  bottom: 118rem;
+  bottom: 55rem;;
 }
 
 /* 内容高度 */
 #app div div div div .home-blog {
-  height: 122rem;
+  height: 37rem;
 }
 /* *{
   outline: 1px solid red;
 } */
+
+#app div .theme-container div div .page .page-title,
+.content__default:not(.custom){
+  margin: 0 !important;
+}
+
+#app div div div div div .home-center{
+  margin: 0 auto !important;
+}
