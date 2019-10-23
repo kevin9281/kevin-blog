@@ -40,10 +40,16 @@
 } */
 
 #app div .theme-container div div .page .page-title,
+#app div .theme-container div div .page .page-nav,
 .content__default:not(.custom){
   margin: 0 !important;
 }
 
 #app div div div div div .home-center{
   margin: 0 auto !important;
+}
+
+#app div div div .sidebar .sidebar-links li .sidebar-group .sidebar-links li a{
+  color: gray !important;
+
 }

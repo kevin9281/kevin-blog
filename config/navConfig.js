@@ -31,6 +31,7 @@ module.exports = [
         { text: '原生Ajax', link: '/ajax/jsajax/' },
         { text: 'jQuery的Ajax', link: '/ajax/jqajax/' },
         { text: 'Vue中的$http', link: '/ajax/vueajax/' },
+        { text: '官网后台数据', link: '/ajax/wzry/' },
       ]},
     ]
   },
