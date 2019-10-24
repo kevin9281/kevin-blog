@@ -476,7 +476,7 @@ router.beforeEach((to, from, next) => {
 export default router
 ```
 
->  在这里，我们使用 <code> middlewarePipeline <code>来运行栈中包含的后续中间件。
+>  在这里，我们使用 ```<code> ```middlewarePipeline``` <code>```来运行栈中包含的后续中间件。
 
 ```
 return middleware[0]({
