@@ -242,7 +242,7 @@ http://localhost:3000/users?q=k
 KEY 输入 Content-Type 
 VALUE  输入 application/json
 ```
-> 就可以在Body内写入信息 比如:  
+> 就可以在 Body / row 内写入信息 比如:  
 ```
 {
 	"name":"莫相澧",
@@ -293,7 +293,7 @@ http://localhost:3000/users/2
 ```
 > 然后本地数据就改好了  
 
-## 添加启动配置  
+## 添加启动配置(假數據)
 > 在package.json 中 "scripts":{ 添加
 ```
 "json:server:remote":"json-server http://jsonplaceholder.typicode.com/db"
@@ -305,7 +305,7 @@ http://localhost:3000/users/2
 npm run json:server:remote  
  ```
 
-> 就可以拿到  
+> 就可以拿到postman提供的假數據  
 ```
 Resources
   http://localhost:3000/posts
