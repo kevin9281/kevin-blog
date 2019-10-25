@@ -29,6 +29,7 @@ const jsajax = require('./ajax/jsajax/index.js');
 const jqajax =require('./ajax/jqajax/index.js');
 const vueajax = require('./ajax/vueajax/index.js');
 const wzry = require('./ajax/wzry/index.js');
+const mock = require('./ajax/mock/index.js');
 
 // 面试题
 const cssSubject = require('./more/cssSubject/index.js');
@@ -73,6 +74,7 @@ module.exports = {
   '/ajax/jqajax/': jqajax,
   '/ajax/vueajax/': vueajax,
   '/ajax/wzry/': wzry,
+  '/ajax/mock/': mock,
 
   // 面试题
   '/more/cssSubject/': cssSubject,

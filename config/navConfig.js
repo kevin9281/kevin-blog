@@ -32,6 +32,7 @@ module.exports = [
         { text: 'jQuery的Ajax', link: '/ajax/jqajax/' },
         { text: 'Vue中的$http', link: '/ajax/vueajax/' },
         { text: '官网后台数据', link: '/ajax/wzry/' },
+        { text: 'mock的使用', link: '/ajax/mock/' },
       ]},
     ]
   },
