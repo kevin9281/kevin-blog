@@ -2,12 +2,12 @@
 title: Vue vue-resource json-server
 ---
 
-## 介绍  
+## 1.介绍  
 > 这是用 json-server + postman 实现的RESTful风格的后台管理 增删改查  
 > 
 >  跳转可以分为带路由跳转
 
-## 介绍json-server  
+## 2.介绍json-server  
 > json-server可以直接把一个json文件托管成一个具备全RESTful风格的API,并支持跨域、jsonp、路由订制、数据快照保存等功能的 web 服务器。
 
 > app.js配合mockjs库可以很方便的进行生成模拟数据, 比如:  
@@ -65,7 +65,7 @@ DELETE /course/1
 GET    /course/1001
 ```
 
-## 配置环境  
+## 3.配置环境  
 ---  
 
 title: Vue vue-resource json-server postman 实现数据请求交互
@@ -170,7 +170,7 @@ title: Vue vue-resource json-server postman 实现数据请求交互
   http://localhost:3000  
 ```
 
-## 使用json-server-get请求  
+## 4.使用json-server-get请求  
 > 获取所有用户信息  
 ```
 http://localhost:3000/users
@@ -233,7 +233,7 @@ http://localhost:3000/users?age_get=30&age_lte=40
 http://localhost:3000/users?q=k
 ```
 
-## 使用postman-post请求  
+## 5.使用postman-post请求  
 > 当json-server 开启成功后  
 > 启动postman 然后把json-server启动域名输入input栏  
 > 点击左边 选择post 然后设置  
@@ -253,7 +253,7 @@ VALUE  输入 application/json
 
 > 然后点击 Send 信息就会自动生成到你本地的 db.json文件内 页面中就会多出一条数据
 
-## 使用postman-DELETE  
+## 6.使用postman-DELETE  
 > 把input旁边的请求方法 改为DELETE   
 > 然后把请求的域名改为  
 ```
@@ -263,7 +263,7 @@ http://localhost:3000/users/5
 > 然后点Send 会返回一个 { } 空的  
 > 然后本地的db.json中的数据就删除了  
 
-## 使用postman-PATCH  
+## 7.使用postman-PATCH  
 > PATCH 更新方法  
 > 先把请求方法改为 PATCH  
 > 然后把域名改为  
@@ -293,7 +293,7 @@ http://localhost:3000/users/2
 ```
 > 然后本地数据就改好了  
 
-## 添加启动配置(假數據)
+## 8.添加启动配置(假數據)
 > 在package.json 中 "scripts":{ 添加
 ```
 "json:server:remote":"json-server http://jsonplaceholder.typicode.com/db"
@@ -319,7 +319,7 @@ Resources
   http://localhost:3000
 ```  
 
-## 配置 vue-cli  
+## 9.配置 vue-cli  
 
 > 全局命令行安装vue 
 
@@ -368,7 +368,7 @@ const router = new VueRouter({
   }
 ```
 
-## 路由配置  
+## 10.路由配置  
 > router / index.js
 
 ```
@@ -418,7 +418,7 @@ const router = new VueRouter({
 export default router
 ```  
 
-## 使用 element  
+## 11.使用 element  
 
 > 安装  
 ```
@@ -453,7 +453,7 @@ Vue.use(Element, { size: 'small', zIndex: 3000 });
 
 > 然后对照组件设计表格
 
-## 发送get查询请求  
+## 12.发送get查询请求  
 
 > 然后打开json-server  
 
@@ -561,7 +561,7 @@ ps:可在代码开发完成后关闭，会同步关闭热加载
   }
 ```
 
-## 发送post添加数据请求  
+## 13.发送post添加数据请求  
 
 > 使用post 将添加的数据传递到本地接口里面去  
 
@@ -626,7 +626,7 @@ export default {
 </template>
 ```  
 
-## 点击详情传参跳转详情页与删除  
+## 14.点击详情传参跳转详情页与删除  
 
 > 列表页面  
 
@@ -764,7 +764,7 @@ export default {
 </style>
 ```  
 
-## 点击编辑跳转新编辑页面  
+## 15.点击编辑跳转新编辑页面  
 
 > 编辑的页面  
 

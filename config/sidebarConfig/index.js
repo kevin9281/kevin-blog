@@ -7,6 +7,7 @@ const git = require('./base/git/index.js');
 const css = require('./base/css/index.js');
 const html = require('./base/html/index.js');
 const javascript = require('./base/javascript/index.js');
+const typescript = require('./base/typescript/index.js');
 const node = require('./base/node/index.js');
 const webpack = require('./base/webpack/index.js');
 
@@ -52,6 +53,7 @@ module.exports = {
   '/base/git/': git,
   '/base/css/': css,
   '/base/javascript/': javascript,
+  '/base/typescript/': typescript,
   '/base/html/': html,
   '/base/node/': node,
   '/base/webpack/': webpack,

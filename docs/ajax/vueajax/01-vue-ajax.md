@@ -2,7 +2,7 @@
 title: Vue cors express 
 ---
 
-## 选型  
+## 1.选型  
 > element + node.js  后台博客管理系统
 
 > element 是个 vue.js 的组件 很多后台的组件
@@ -11,7 +11,7 @@ title: Vue cors express
 
 > 前端使用vue 开发 后端使用 node.js express+mogodb的形式对接数据  
 
-## 开始创建vue  
+## 2.开始创建vue  
 > 创建vue   
 ```vue create element-admin```  
 
@@ -31,7 +31,7 @@ title: Vue cors express
 
 > 此项目为了方便 直接在总文件夹下创建了后端server文件夹 然后所有依赖都写在了根目录下的package.json  
 
-## 使用element组件  
+## 3.使用element组件  
 > 输入  
 ```vue add element ```  
 
@@ -72,7 +72,7 @@ title: Vue cors express
 > 然后 里面的 ```<el-menu-item>``` 就可以添加路由指向 直接添加在index属性里面即可跳转  
 ```<el-menu-item index='/posts'>```  
 
-## 添加路由  
+## 4.添加路由  
 ```
 import Vue from 'vue'
 import VueRouter from 'vue-router'
@@ -123,7 +123,7 @@ export default router
 > 就会把 views内的文件都放进来到此处
 > 此处因为首页就是重定向到列表页 所以在列表页组件里面写东西 首页使用```<router-view></router-view>``` 标签 就会把内容展示出来  
 
-## 新建表单页面  
+## 5.新建表单页面  
 > element 官网里面 From表单  
 
 > W3C 标准中有如下规定：  
@@ -161,7 +161,7 @@ export default {
   },
 ```  
 
-## 列表查询页面  
+## 6.列表查询页面  
 > 列表查询页面 相当于把所有的展示出来  
 ```
 <template>
@@ -193,7 +193,7 @@ export default {
   },
 ```
 
-## 内容编辑页面  
+## 7.内容编辑页面  
 > 内容编辑页面 是由列表查询页面 经过点击button 编辑 跳转过来 跳转过来 需要带参数 此处是利用created 在页面创建后 立即发送请求 查询数据 返回给页面  
 
 ```
@@ -223,7 +223,7 @@ export default {
   },
 ```  
 
-## 后端接口  
+## 8.后端接口  
 > 首页创建 server / index.js   
 
 > 下载插件  
@@ -349,7 +349,7 @@ app.listen(3001, () => {
 })
 ```  
 
-## 前端调用接口(增)  
+## 9.前端调用接口(增)  
 > 需要用一个 ajax 的请求库  
 >习惯性的我们会用 axios  先安装  
 ``` npm i axios ```  
@@ -424,7 +424,7 @@ export default {
 </script>
 ```  
 
-## 前端调用接口(查)  
+## 10.前端调用接口(查)  
 > 同样使用 this.$http 访问到这个axios的实例  
 > 当前的articles 发送get请求请求方法不同 虽然路径一样 但是是不同的两个方法  
 > 这个路径 路径对应的是后端的请求路径 /api/articles  
@@ -450,7 +450,7 @@ export default {
 </script>
 ```  
 
-## 前端调用接口(删)  
+## 11.前端调用接口(删)  
 > 删除 当点击删除时候 触发方法 remove  
 > 传入一个形参 id 发送请求  
 > 当前的article 对象 的axios 实例 的删除  
@@ -515,7 +515,7 @@ export default {
 </script>
 ```  
 
-## 前端调用接口(改)  
+## 12.前端调用接口(改)  
 > 当点击编辑的时候 需要带着_id 一起跳转到编辑更改的页面  
 
 ```

@@ -2,7 +2,7 @@
 title: 选型 
 ---
 
-## 选型
+## 2.选型
 
 ```
 工具安装和环境搭建(nodejs,npm,mongodb)

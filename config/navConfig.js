@@ -6,6 +6,7 @@ module.exports = [
     { text: 'HTML', link: '/base/html/' },
     { text: 'CSS', link: '/base/css/' },
     { text: 'JavaScript', link: '/base/javascript/' },
+    { text: 'TypeScript', link: '/base/typescript/' },
     { text: 'Node', link: '/base/node/' },
     { text: 'Webpack', link: '/base/webpack/' },
     { text: 'GIT', link: '/base/git/' },
@@ -30,8 +31,8 @@ module.exports = [
       { text: '数据交互与请求', items: [
         { text: '原生Ajax', link: '/ajax/jsajax/' },
         { text: 'jQuery的Ajax', link: '/ajax/jqajax/' },
-        { text: 'Vue中的$http', link: '/ajax/vueajax/' },
-        { text: '官网后台数据', link: '/ajax/wzry/' },
+        { text: 'Vue的后台管理', link: '/ajax/vueajax/' },
+        { text: '跨域', link: '/ajax/wzry/' },
         { text: 'mock的使用', link: '/ajax/mock/' },
       ]},
     ]
