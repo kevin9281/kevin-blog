@@ -1,5 +1,5 @@
 ---
-title: wzry vue ajax node
+title: Vue+wzry后台管理
 ---
 
 ## 1.创建手册

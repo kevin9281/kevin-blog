@@ -1,6 +1,6 @@
 /* 首幻灯片定位布局 */
 #app div div div div .home-blog.reco-show .hero {
-  background: #000 !important;
+  background: skyblue !important;
   height: 52rem !important;
 }
 
@@ -21,8 +21,8 @@
 #app div .theme-container div .navbar .links,
 #app div div div header div nav .nav-item .nav-link,
 #app div div div header div nav div div .nav-dropdown {
-  color: #fff;
-  background: #000;
+  color: gray;
+  background: skyblue;
 }
 
 /* 组件容器定位 */
@@ -52,4 +52,10 @@
 #app div div div .sidebar .sidebar-links li .sidebar-group .sidebar-links li a{
   color: gray !important;
 
+}
+.window{
+  width: 20em !important;
+  height: 29em !important;
+  top: 5em;
+  left: 8em;
 }

@@ -1,5 +1,5 @@
 ---
-title: Vue vue-resource json-server
+title: Vue+json-server实现RESTful风格的后台管理
 ---
 
 ## 1.介绍  

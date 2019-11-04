@@ -1,5 +1,5 @@
 ---
-title: vue 中间件
+title: Vue 中间件
 ---
 
 ## 中间件管道

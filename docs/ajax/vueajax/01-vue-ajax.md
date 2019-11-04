@@ -1,5 +1,5 @@
 ---
-title: Vue cors express 
+title: Vue+node的后台博客系统
 ---
 
 ## 1.选型  

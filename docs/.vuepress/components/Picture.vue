@@ -1,143 +1,176 @@
 <template>
-	<div class="container">
-		<div class="candle">
-			<span class="glow"></span>
-			<span class="flames"></span>
-			<span class="thread"></span>
-		</div>
-	</div>	
+  <div class="container">
+    <input type="checkbox" class="toggle" />
+    <figure class="window">
+      <div class="curtain"></div>
+      <div class="clouds">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </figure>
+  </div>
 </template>
 
-<style>
-.container {
+<style scoped>
+body {
     margin: 0;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: skyblue;
 }
 
-.candle {
-    width: 15em;
-    height: 30em;
-    font-size: 10px;
-    background: linear-gradient(
-        orange,
-        darkorange,
-        sienna,
-        saddlebrown 50%,
-        rgba(0, 0, 0, 0.6)
-    );
-    box-shadow: 
-        inset 2em -3em 5em rgba(0, 0, 0, 0.4),
-        inset -2em 0 5em rgba(0, 0, 0, 0.4);
-    border-radius: 10em / 4em;
+:root {
+    --font-size: 5px;
+}
+
+.toggle {
+    position: absolute;
+    filter: opacity(0);
+    width: 25em;
+    height: 35em;
+    font-size: var(--font-size);
+    cursor: pointer;
+    z-index: 3;
+}
+
+.window {
     position: relative;
-    display: flex;
-    justify-content: center;
-    top: 10em;
-}
-
-.candle::before {
-    content: '';
-    position: absolute;
-    width: inherit;
-    height: 5em;
-    border: 0.2em solid darkorange;
-    border-radius: 50%;
     box-sizing: border-box;
-    background: radial-gradient(
-        #444,
-        orange,
-        saddlebrown,
-        sienna,
-        darkorange
-    );
-    filter: opacity(0.7);
+    width: 25em;
+    height: 35em;
+    font-size: var(--font-size);
+    background-color: #d9d9d9;
+    border-radius: 5em;
+    box-shadow: 
+        inset 0 0 8em rgba(0, 0, 0, 0.2),
+        0 0 0 0.4em #808080,
+        0 0 0 4em whitesmoke,
+        0 0 0 4.4em #808080,
+        0 2em 4em 4em rgba(0, 0, 0, 0.1);
+    overflow: hidden;
 }
 
-.thread {
-    position: absolute;
-    width: 0.6em;
-    height: 3.6em;
-    top: -1.8em;
-    background: linear-gradient(
-        #111,
-        black,
-        orange 90%
-    );
-    border-radius: 40% 40% 0 0;
-}
-
-.flames {
-    position: absolute;
-    width: 2.4em;
-}
-
-.flames::before {
-    content: '';
+.window .curtain {
     position: absolute;
     width: inherit;
-    height: 6em;
-    background-color: royalblue;
-    top: -4.8em;
-    border-radius: 50% 50% 35% 35%;
-    border: 0.2em solid dodgerblue;
-    box-sizing: border-box;
-    filter: opacity(0.7);
+    height: inherit;
+    background-color: whitesmoke;
+    top: -5%;
+    border-radius: 5em;
+    box-shadow:
+        0 0 0 0.4em #808080,
+        0 0 3em rgba(0, 0, 0, 0.4);
+    transition: 0.5s ease-in-out;
+    z-index: 2;
 }
 
-.flames::after {
+.toggle:checked ~ .window .curtain {
+    top: -90%;
+}
+
+.window .curtain::before {
     content: '';
     position: absolute;
-    width: inherit;
-    height: 12em;
-    top: -12em;
-    background: linear-gradient(white 80%, transparent);
-    border-radius: 50% 50% 20% 20%;
-    box-shadow: 0 -0.6em 0.4em darkorange;
-    animation: 
-        enlarge 5s linear infinite,
-        move 6s linear infinite;
+    width: 40%;
+    height: 0.8em;
+    background-color: #808080;
+    left: 30%;
+    bottom: 1.6em;
+    border-radius: 0.4em;
+}
+
+.window .curtain::after {
+    content: '';
+    position: absolute;
+    width: 1.6em;
+    height: 0.8em;
+    bottom: 1.6em;
+    background-image: radial-gradient(orange, orangered);
+    left: calc((100% - 1.6em) / 2);
+    border-radius: 0.4em;
+}
+
+.toggle:checked ~ .window .curtain::after {
+    background-image: radial-gradient(lightgreen, limegreen);
+}
+
+.window .clouds {
+    position: relative;
+    width: 20em;
+    height: 30em;
+    background-color: deepskyblue;
+    left: calc((100% - 20em) / 2);
+    top: calc((100% - 30em) / 2);
+    border-radius: 7em;
+    box-shadow: 0 0 0 0.4em #808080;
+    overflow: hidden;
+}
+
+.clouds span {
+    position: absolute;
+    width: 10em;
+    height: 4em;
+    background-color: white;
+    top: 20%;
+    border-radius: 4em;
+    animation: move 4s linear infinite;
 }
 
 @keyframes move {
-    0%, 100% {
-        transform: rotate(2deg);
+    from {
+        left: -150%;
     }
 
-    50% {
-        transform: rotate(-2deg);
-    }
-}
-
-@keyframes enlarge {
-    0%, 100% {
-        height: 12em;
-        top: -12em;
-    }
-
-    50% {
-        height: 14em;
-        top: -13em;
-    }
-}
-
-.glow {
-    position: absolute;
-    width: 10em;
-    height: 18em;
-    background-color: orangered;
-    border-radius: 50%;
-    top: -17em;
-    filter: blur(6em);
-    animation: blink 100ms infinite;
-}
-
-@keyframes blink {
     to {
-        filter: blur(6em) opacity(0.8);
+        left: 150%;
     }
+}
+
+.clouds span::before,
+.clouds span::after {
+    content: '';
+    position: absolute;
+    width: 4em;
+    height: 4em;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.clouds span::before {
+    top: -2em;
+    left: 2em;
+}
+
+.clouds span::after {
+    top: -1em;
+    right: 1em;
+}
+
+.clouds span:nth-child(2) {
+    top: 40%;
+    animation-delay: -1s;
+}
+
+.clouds span:nth-child(3) {
+    top: 60%;
+    animation-delay: -0.5s;
+}
+
+.clouds span:nth-child(4) {
+    top: 20%;
+    transform: scale(2);
+    animation-delay: -1.5s;
+}
+
+.clouds span:nth-child(5) {
+    top: 70%;
+    transform: scale(1.5);
+    animation-delay: -3s;
 }
 
 </style>
