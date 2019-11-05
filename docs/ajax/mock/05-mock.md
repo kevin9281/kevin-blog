@@ -4,9 +4,9 @@ title: 通过商品id查找商品信息
 
 ## 通过商品id查找商品信息
 
-> 写请求
+   写请求
 
-> mock / index.js
+   mock / index.js
 
 ```
 // 这是请求id为多少的商品信息
@@ -34,17 +34,17 @@ Mock.mock(/\/api\/getgoods/, 'get', function (option) {
 
 ```
 
->  发送请求 
+    发送请求 
 
 ```
-<template>
-  <div id="app">
-    <h1>学习MockJs</h1>
-    <button @click="getGoodsList">获取商品列表</button>
-    <button @click="addGodds">获取商品列表</button>
-    <button @click="getGoodsById (2)">根据商品id获取商品信息</button>
-  </div>
-</template>
+<template  
+  <div id="app"  
+    <h1  学习MockJs</h1  
+    <button @click="getGoodsList"  获取商品列表</button  
+    <button @click="addGodds"  获取商品列表</button  
+    <button @click="getGoodsById (2)"  根据商品id获取商品信息</button  
+  </div  
+</template  
 ```
 
 ```

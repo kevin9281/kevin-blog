@@ -201,7 +201,7 @@ virtualbox 在启动时直接失败:
 
    + virtualbox
    + virtualbox-host-dkms
-   + linux419-virtualbox-host-modules <Badge text="对应的版本 419" type="warn"/>
+   + linux419-virtualbox-host-modules <Badge text="对应的版本 419" type="warn"/  
 
 5. 重新执行
 
@@ -242,7 +242,7 @@ virtualbox 在启动时直接失败:
    在 Octopi 中重新安装：
 
    1. 安装 linux419-headers；
-   2. 移除 linux316-headers  <Badge text="误选为 316，需对应各自的错误" type="warn"/>。
+   2. 移除 linux316-headers  <Badge text="误选为 316，需对应各自的错误" type="warn"/  。
 
    接着重启电脑即可。
 
@@ -276,7 +276,7 @@ virtualbox 在启动时直接失败:
 
    可以看到输出结果相对于之前多了 `vmnet1`、`vmnet8` 两块网卡的配置，这是 VMware 由于默认开启了 Host-Only 模式和 NAT 模式（NAT 可能是我开启的，暂不纠正），如果启动了 Briged（桥接网卡）还会出现 `vmnet0`。
 
-   回到 VMware，点击 `Edit > Virtual Network Editor` 进一步配置，此时你就可以修改 Host-Only 模式、NAT 模式、Briged 模式的配置了。
+   回到 VMware，点击 `Edit    Virtual Network Editor` 进一步配置，此时你就可以修改 Host-Only 模式、NAT 模式、Briged 模式的配置了。
 
 
 

@@ -4,9 +4,9 @@ title: 自定制Random函数
 
 ## 自定制Random函数
 
-> 通过 Random 成员
+   通过 Random 成员
 
-> Mock.Random 中的方法与数据模板的 @占位符 一一对应，在需要时还可以为 Mock.Random 扩展方法，然后在数据模板中通过 @扩展方法 引用。例如：
+   Mock.Random 中的方法与数据模板的 @占位符 一一对应，在需要时还可以为 Mock.Random 扩展方法，然后在数据模板中通过 @扩展方法 引用。例如：
 
 ```
 Random.extend({
@@ -16,16 +16,16 @@ Random.extend({
     }
 })
 Random.constellation()
-// => "水瓶座"
+// =   "水瓶座"
 Mock.mock('@CONSTELLATION')
-// => "天蝎座"
+// =   "天蝎座"
 Mock.mock({
     constellation: '@CONSTELLATION'
 })
-// => { constellation: "射手座" }
+// =   { constellation: "射手座" }
 ```
 
-> mock / index.js 写请求
+   mock / index.js 写请求
 
 ```
 // 导入模拟假数据的包

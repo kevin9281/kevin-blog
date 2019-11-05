@@ -71,7 +71,7 @@ p{
   display: inline-block;  //行内块元素 就是不独占一行的块级元素 不占一行 能设置宽高 能用padding margin
   overflow: hidden;  // overflow 属性规定当内容溢出元素框时发生的事情。 内容会被修剪，并且其余内容是不可见的。
   text-overflow:ellipsis; //text-overflow 属性规定当文本溢出包含元素时发生的事情。显示省略符号来代表被修剪的文本。
-  white-space:nowrap; //white-space 属性设置如何处理元素内的空白。 文本不会换行，文本会在在同一行上继续，直到遇到 <br> 标签为止。
+  white-space:nowrap; //white-space 属性设置如何处理元素内的空白。 文本不会换行，文本会在在同一行上继续，直到遇到 <br   标签为止。
 }
 
 //width height

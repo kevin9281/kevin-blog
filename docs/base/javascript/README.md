@@ -2,6 +2,9 @@
 title: 首页
 ---
 
-## 介绍
+## 参考资料
 
-无论写什么，都最好给自己立一个规范，便于很久之后自己能够看得懂。
+**ES6 全套教程 ECMAScript6 (原著:阮一峰)**  :    *http://jsrun.pro/tutorial/cZKKp*
+
+**MDN web dpcs** : *https://developer.mozilla.org/zh-CN/docs/Web/JavaScript*
+

@@ -4,10 +4,10 @@ title: 使用mock-post
 
 ## 使用mock-post
 
-> 写接口
+   写接口
 
-> 在模拟post请求的时候 就会模拟打印下 option 
-> option 是相关的参数  
+   在模拟post请求的时候 就会模拟打印下 option 
+   option 是相关的参数  
 
 ```
 // 这里的option 是请求过来相关的参数
@@ -21,16 +21,16 @@ Mock.mock('/api/addgoods', 'post', function (option) {
 })
 ```
 
-> 发请求
+   发请求
 
 ```
-<template>
-  <div id="app">
-    <h1>学习MockJs</h1>
-    <button @click="getGoodsList">获取商品列表</button>
-    <button @click="addGodds">获取商品列表</button>
-  </div>
-</template>
+<template  
+  <div id="app"  
+    <h1  学习MockJs</h1  
+    <button @click="getGoodsList"  获取商品列表</button  
+    <button @click="addGodds"  获取商品列表</button  
+  </div  
+</template  
 ```
 
 ```

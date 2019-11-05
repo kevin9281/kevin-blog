@@ -4,9 +4,9 @@ title: 使用mock-get
 
 ## 使用mock-get
 
-> 在项目中使用mock 需要先跟后端 统一好接口 都应该返回那些数据 有那些字段 值是哪些类型的 都应该先约定好 形成文档
+   在项目中使用mock 需要先跟后端 统一好接口 都应该返回那些数据 有那些字段 值是哪些类型的 都应该先约定好 形成文档
 
->  https://github.com/nuysoft/Mock/wiki/Mock.mock() 中有介绍各种属性与值
+    https://github.com/nuysoft/Mock/wiki/Mock.mock() 中有介绍各种属性与值
 
 ```
 Miscellaneous:
@@ -26,7 +26,7 @@ mock 里面的函数 想要调用的话 就在前面加上@ 整体 '@increment(1
 图片建议使用 dataImage()
 ```
 
-> mock / index.js 写接口
+   mock / index.js 写接口
 
 ```
 // 导入模拟假数据的包
@@ -49,17 +49,17 @@ Mock.mock('/api/goodslist', 'get', {
 
 ```
 
-> 就可以在页面中发起请求 app.vue 拿到返回数据 写请求
+   就可以在页面中发起请求 app.vue 拿到返回数据 写请求
 
 ```
-<template>
-  <div id="app">
-    <h1>学习MockJs</h1>
-    <button @click="getGoodsList">获取商品列表</button>
-  </div>
-</template>
+<template  
+  <div id="app"  
+    <h1  学习MockJs</h1  
+    <button @click="getGoodsList"  获取商品列表</button  
+  </div  
+</template  
 
-<script>
+<script  
 export default {
   methods: {
     async getGoodsList() {
@@ -68,8 +68,8 @@ export default {
     }
   }
 }
-</script>
+</script  
 
-<style>
-</style>
+<style  
+</style  
 ```

@@ -4,44 +4,44 @@ title: vue 后台管理界面搭建
 
 ## 1.创建脚手架
 
-> 在当前目录 vue ui 默认配置
+   在当前目录 vue ui 默认配置
 
-> 然后在插件选择 安装插件 vue-cli-plugin-element
+   然后在插件选择 安装插件 vue-cli-plugin-element
 
->  默认引入 不用scss zh-CN 中文
+    默认引入 不用scss zh-CN 中文
 
->  main.js中就会自动引入
+    main.js中就会自动引入
 
 ## 2.创建导航栏 nav
 
-> 使用的element ui 的组件
+   使用的element ui 的组件
 
-> app.vue
+   app.vue
 
 ```
-<template>
-  <div id="app">
-    <myheader></myheader>
-    <section class="s-body">
-      <div class="s-body-sidebar">
-        <mysidebar></mysidebar>
-      </div>
-      <article class="s-right">
-        <!-- 右边是由路由跳转 所以面包屑导航应该在对顶部不变 -->
-        <el-breadcrumb separator-class="el-icon-arrow-right" class="crumbs">
-          <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
-          <el-breadcrumb-item>用户管理</el-breadcrumb-item>
-          <el-breadcrumb-item :to="{ path: '/userlist' }">用户列表</el-breadcrumb-item>
-        </el-breadcrumb>
-        <!-- 路由出口 -->
-        <!-- 路由匹配到的组件将渲染在这里 -->
-        <router-view></router-view>
-      </article>
-    </section>
-  </div>
-</template>
+<template  
+  <div id="app"  
+    <myheader  </myheader  
+    <section class="s-body"  
+      <div class="s-body-sidebar"  
+        <mysidebar  </mysidebar  
+      </div  
+      <article class="s-right"  
+        <!-- 右边是由路由跳转 所以面包屑导航应该在对顶部不变 --  
+        <el-breadcrumb separator-class="el-icon-arrow-right" class="crumbs"  
+          <el-breadcrumb-item :to="{ path: '/' }"  首页</el-breadcrumb-item  
+          <el-breadcrumb-item  用户管理</el-breadcrumb-item  
+          <el-breadcrumb-item :to="{ path: '/userlist' }"  用户列表</el-breadcrumb-item  
+        </el-breadcrumb  
+        <!-- 路由出口 --  
+        <!-- 路由匹配到的组件将渲染在这里 --  
+        <router-view  </router-view  
+      </article  
+    </section  
+  </div  
+</template  
 
-<script>
+<script  
 import { myheader, mysidebar } from "./components"
 
 export default {
@@ -54,9 +54,9 @@ export default {
   },
   methods: {}
 }
-</script>
+</script  
 
-<style>
+<style  
 * {
   margin: 0;
   padding: 0;
@@ -83,43 +83,43 @@ export default {
   padding: 10px;
   background: #fff;
 }
-</style>
+</style  
 
 ```
 
-> header.vue
+   header.vue
 
 ```
-<template>
-  <div class="nav">
-    <div class="logo">xx后台管理系统</div>
+<template  
+  <div class="nav"  
+    <div class="logo"  xx后台管理系统</div  
     <el-menu
       class="el-menu-demo"
       mode="horizontal"
       background-color="#545c64"
       text-color="#fff"
       active-text-color="#ffd04b"
-    >
-      <el-submenu index="1">
-        <template slot="title">管理员</template>
-        <el-menu-item index="1-1">登录</el-menu-item>
-        <el-menu-item index="1-2">注册</el-menu-item>
-      </el-submenu>
-      <el-menu-item index="2">退出</el-menu-item>
-    </el-menu>
-  </div>
-</template>
+      
+      <el-submenu index="1"  
+        <template slot="title"  管理员</template  
+        <el-menu-item index="1-1"  登录</el-menu-item  
+        <el-menu-item index="1-2"  注册</el-menu-item  
+      </el-submenu  
+      <el-menu-item index="2"  退出</el-menu-item  
+    </el-menu  
+  </div  
+</template  
 
-<script>
+<script  
 export default {
   data() {
     return {}
   },
   methods: {}
 }
-</script>
+</script  
 
-<style>
+<style  
 .nav {
   display: flex;
   align-items: center;
@@ -132,47 +132,47 @@ export default {
   font-size: 28px;
   letter-spacing: 3px; /* css 艺术字 */
 }
-</style>
+</style  
 ```
 
 ## 3.便捷导入组件
 
-> 引入组件的便捷方式 因为每一个组件都只有一个出口 写一个index.js作为出口 外面只需要引入index.js即可 
+   引入组件的便捷方式 因为每一个组件都只有一个出口 写一个index.js作为出口 外面只需要引入index.js即可 
 
-> index.js 作为一个中转站
+   index.js 作为一个中转站
 
 ```
 // 导出 创建这个方法 方法内部是导入文件
 // 页面中就可以直接使用
-export let myheader = () => import("./header.vue")
-export let mysidebar = () => import("./sidebar.vue")
+export let myheader = () =   import("./header.vue")
+export let mysidebar = () =   import("./sidebar.vue")
 
 ```
 
-> app.vue 主文件内部就可以使用导入
+   app.vue 主文件内部就可以使用导入
 
 ```
 import { myheader , mysidebar } from "./components"
 ```
 
 ```
-<template>
-  <div id="app">
-    <myheader></myheader>
-    <section class="s-body">
-      <mysidebar></mysidebar>
-      <article class="s-right"></article>
-    </section>
-  </div>
-</template>
+<template  
+  <div id="app"  
+    <myheader  </myheader  
+    <section class="s-body"  
+      <mysidebar  </mysidebar  
+      <article class="s-right"  </article  
+    </section  
+  </div  
+</template  
 ```
 
 ## 4.侧边栏导航
 
-> sidebar .vue
+   sidebar .vue
 
 ```
-<template>
+<template  
   <el-menu
     background-color="#545c64"
     text-color="#fff"
@@ -181,31 +181,31 @@ import { myheader , mysidebar } from "./components"
     class="el-menu-vertical-demo"
     :collapse="false"
     router
-  >
-    <el-menu-item index="4" route="/">
-      <i class="el-icon-setting"></i>
-      <span slot="title">工作平台</span>
-    </el-menu-item>
-    <el-submenu index="1">
-      <template slot="title">
-        <i class="el-icon-location"></i>
-        <span slot="title">用户管理</span>
-      </template>
-      <el-menu-item-group>
-        <el-menu-item index="1-1" route="/userlist">用户列表</el-menu-item>
-      </el-menu-item-group>
-      <el-menu-item-group>
-        <el-menu-item index="1-2" route="/adduser">添加用户</el-menu-item>
-      </el-menu-item-group>
-    </el-submenu>
-  </el-menu>
-</template>
+    
+    <el-menu-item index="4" route="/"  
+      <i class="el-icon-setting"  </i  
+      <span slot="title"  工作平台</span  
+    </el-menu-item  
+    <el-submenu index="1"  
+      <template slot="title"  
+        <i class="el-icon-location"  </i  
+        <span slot="title"  用户管理</span  
+      </template  
+      <el-menu-item-group  
+        <el-menu-item index="1-1" route="/userlist"  用户列表</el-menu-item  
+      </el-menu-item-group  
+      <el-menu-item-group  
+        <el-menu-item index="1-2" route="/adduser"  添加用户</el-menu-item  
+      </el-menu-item-group  
+    </el-submenu  
+  </el-menu  
+</template  
 
-<script>
+<script  
 export default {}
-</script>
+</script  
 
-<style>
+<style  
 /* s */
 
 .el-menu-vertical-demo:not(.el-menu--collapse) {
@@ -219,36 +219,36 @@ export default {}
 .el-menu-item-group__title{
   padding: 0;
 }
-</style>
+</style  
 ```
 
-> app.vue 
-> 给侧边栏设置高度 让主题内容后边撑满
+   app.vue 
+   给侧边栏设置高度 让主题内容后边撑满
 
 ```
-<template>
-  <div id="app">
-    <myheader></myheader>
-    <section class="s-body">
-      <div class="s-body-sidebar">
-        <mysidebar></mysidebar>
-      </div>
-      <article class="s-right">
-        <!-- 右边是由路由跳转 所以面包屑导航应该在对顶部不变 -->
-        <el-breadcrumb separator-class="el-icon-arrow-right" class="crumbs">
-          <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
-          <el-breadcrumb-item>用户管理</el-breadcrumb-item>
-          <el-breadcrumb-item :to="{ path: '/userlist' }">用户列表</el-breadcrumb-item>
-        </el-breadcrumb>
-        <!-- 路由出口 -->
-        <!-- 路由匹配到的组件将渲染在这里 -->
-        <router-view></router-view>
-      </article>
-    </section>
-  </div>
-</template>
+<template  
+  <div id="app"  
+    <myheader  </myheader  
+    <section class="s-body"  
+      <div class="s-body-sidebar"  
+        <mysidebar  </mysidebar  
+      </div  
+      <article class="s-right"  
+        <!-- 右边是由路由跳转 所以面包屑导航应该在对顶部不变 --  
+        <el-breadcrumb separator-class="el-icon-arrow-right" class="crumbs"  
+          <el-breadcrumb-item :to="{ path: '/' }"  首页</el-breadcrumb-item  
+          <el-breadcrumb-item  用户管理</el-breadcrumb-item  
+          <el-breadcrumb-item :to="{ path: '/userlist' }"  用户列表</el-breadcrumb-item  
+        </el-breadcrumb  
+        <!-- 路由出口 --  
+        <!-- 路由匹配到的组件将渲染在这里 --  
+        <router-view  </router-view  
+      </article  
+    </section  
+  </div  
+</template  
 
-<script>
+<script  
 import { myheader, mysidebar } from "./components"
 
 export default {
@@ -261,9 +261,9 @@ export default {
   },
   methods: {}
 }
-</script>
+</script  
 
-<style>
+<style  
 * {
   margin: 0;
   padding: 0;
@@ -290,39 +290,39 @@ export default {
   padding: 10px;
   background: #fff;
 }
-</style>
+</style  
 
 ```
 
 ## 5.用户列表
 
-> 面包屑导航 + 主体内容
+   面包屑导航 + 主体内容
 
->  view / user / userlist.vue
+    view / user / userlist.vue
 
 
 ```
-<template>
-  <div class="my-body">
-    <el-table router border :data="tableData" style="width: 100%">
-      <el-table-column prop="dateof" label="日期" width="180"></el-table-column>
-      <el-table-column prop="name" label="姓名" width="180"></el-table-column>
-      <el-table-column prop="address" label="地址"></el-table-column>
-      <el-table-column label="操作">
-        <template slot-scope="scope">
-          <!-- 作用域插槽 外面可以通过scope拿到内部的值 -->
-          <el-button size="mini" @click="jumped(scope.row.id)">编辑</el-button>
-          <el-button size="mini" type="danger" @click="deleteCustomer(scope.row.id)">删除</el-button>
-        </template>
-      </el-table-column>
-    </el-table>
-    <div class="pagination">
-      <el-pagination background layout="prev, pager, next" :total="1000"></el-pagination>
-    </div>
-  </div>
-</template>
+<template  
+  <div class="my-body"  
+    <el-table router border :data="tableData" style="width: 100%"  
+      <el-table-column prop="dateof" label="日期" width="180"  </el-table-column  
+      <el-table-column prop="name" label="姓名" width="180"  </el-table-column  
+      <el-table-column prop="address" label="地址"  </el-table-column  
+      <el-table-column label="操作"  
+        <template slot-scope="scope"  
+          <!-- 作用域插槽 外面可以通过scope拿到内部的值 --  
+          <el-button size="mini" @click="jumped(scope.row.id)"  编辑</el-button  
+          <el-button size="mini" type="danger" @click="deleteCustomer(scope.row.id)"  删除</el-button  
+        </template  
+      </el-table-column  
+    </el-table  
+    <div class="pagination"  
+      <el-pagination background layout="prev, pager, next" :total="1000"  </el-pagination  
+    </div  
+  </div  
+</template  
 
-<script>
+<script  
 export default {
   data() {
     return {
@@ -351,9 +351,9 @@ export default {
     this.getUsers()
   }
 }
-</script>
+</script  
 
-<style>
+<style  
 .crumbs {
   margin: 10px 0;
 }
@@ -361,36 +361,36 @@ export default {
   text-align: center;
   margin: 10px 0;
 }
-</style>
+</style  
 
 ```
 
-> app.vue
+   app.vue
 
 ```
-<template>
-  <div id="app">
-    <myheader></myheader>
-    <section class="s-body">
-      <div class="s-body-sidebar">
-        <mysidebar></mysidebar>
-      </div>
-      <article class="s-right">
-        <!-- 右边是由路由跳转 所以面包屑导航应该在对顶部不变 -->
-        <el-breadcrumb separator-class="el-icon-arrow-right" class="crumbs">
-          <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
-          <el-breadcrumb-item>用户管理</el-breadcrumb-item>
-          <el-breadcrumb-item :to="{ path: '/userlist' }">用户列表</el-breadcrumb-item>
-        </el-breadcrumb>
-        <!-- 路由出口 -->
-        <!-- 路由匹配到的组件将渲染在这里 -->
-        <router-view></router-view>
-      </article>
-    </section>
-  </div>
-</template>
+<template  
+  <div id="app"  
+    <myheader  </myheader  
+    <section class="s-body"  
+      <div class="s-body-sidebar"  
+        <mysidebar  </mysidebar  
+      </div  
+      <article class="s-right"  
+        <!-- 右边是由路由跳转 所以面包屑导航应该在对顶部不变 --  
+        <el-breadcrumb separator-class="el-icon-arrow-right" class="crumbs"  
+          <el-breadcrumb-item :to="{ path: '/' }"  首页</el-breadcrumb-item  
+          <el-breadcrumb-item  用户管理</el-breadcrumb-item  
+          <el-breadcrumb-item :to="{ path: '/userlist' }"  用户列表</el-breadcrumb-item  
+        </el-breadcrumb  
+        <!-- 路由出口 --  
+        <!-- 路由匹配到的组件将渲染在这里 --  
+        <router-view  </router-view  
+      </article  
+    </section  
+  </div  
+</template  
 
-<script>
+<script  
 import { myheader, mysidebar } from "./components"
 
 export default {
@@ -403,9 +403,9 @@ export default {
   },
   methods: {}
 }
-</script>
+</script  
 
-<style>
+<style  
 * {
   margin: 0;
   padding: 0;
@@ -432,7 +432,7 @@ export default {
   padding: 10px;
   background: #fff;
 }
-</style>
+</style  
 
 
 
@@ -440,7 +440,7 @@ export default {
 
 ## 6.vue-router
 
-> 管理系统都是个单页面应用
+   管理系统都是个单页面应用
 
 ```
 导航栏 侧边栏 面包屑导航 都是不变动的 只有中间主体内容变化  
@@ -453,7 +453,7 @@ export default {
 src目录下 创建 view / user / userlish.vue  用户文件夹中创建 userlist.vue 用户列表
 ```
 
-> main.js 中注册路由
+   main.js 中注册路由
 
 ```
 import Vue from 'vue'
@@ -467,12 +467,12 @@ Vue.config.productionTip = false
 
 new Vue({
   router,
-  render: h => h(App),
+  render: h =   h(App),
 }).$mount('#app')
 
 ```
 
-> routes / index.js配置路由
+   routes / index.js配置路由
 
 ```
 import Vue from 'vue'
@@ -485,19 +485,19 @@ const router = new VueRouter({
   mode: 'history',
   routes: [{
       path: "/",
-      component: () => import('@/view/home')
+      component: () =   import('@/view/home')
     },
     {
       path: "/userlist",
-      component: () => import('@/view/users/userlist')
+      component: () =   import('@/view/users/userlist')
     },
     {
       path: "/edituser/:id",
-      component: () => import('@/view/users/edituser')
+      component: () =   import('@/view/users/edituser')
     },
     {
       path: "/adduser",
-      component: () => import('@/view/users/adduser')
+      component: () =   import('@/view/users/adduser')
     }
   ]
 })
@@ -505,32 +505,32 @@ const router = new VueRouter({
 export default router
 ```
 
->  app.vue 中只需要标签即可将其渲染
+    app.vue 中只需要标签即可将其渲染
 
 ```
-  <!-- 路由出口 -->
-  <!-- 路由匹配到的组件将渲染在这里 -->
-<router-view></router-view>
+  <!-- 路由出口 --  
+  <!-- 路由匹配到的组件将渲染在这里 --  
+<router-view  </router-view  
 ```
 
 ## 7.使用echarts
 
-> 安装依赖 echarts  
+   安装依赖 echarts  
 
->  npm install echarts --save
+    npm install echarts --save
 
-> 就可以直接使用
+   就可以直接使用
 
-> home.vue
+   home.vue
 
 ```
-<template>
-  <div>
-    <div id="main" class="home-main"></div>
-  </div>
-</template>
+<template  
+  <div  
+    <div id="main" class="home-main"  </div  
+  </div  
+</template  
 
-<script>
+<script  
 import echarts from 'echarts'
 
 export default {
@@ -557,32 +557,32 @@ export default {
     })
   }
 }
-</script>
+</script  
 
-<style>
+<style  
 .home-main {
   width: 500px;
   height: 300px;
 }
-</style>
+</style  
 ```
 
 ## 8.使用蚂蚁AntV
 
-> 安装依赖 npm install @antv/g2 --save
+   安装依赖 npm install @antv/g2 --save
 
-> 成功安装完成之后，即可使用 import 或 require 进行引用。
+   成功安装完成之后，即可使用 import 或 require 进行引用。
 
 ```
-<template>
-  <div>
-    <p class="gg">G2 示例</p>
-    <div id="c1"></div>
-    <br>
-  </div>
-</template>
+<template  
+  <div  
+    <p class="gg"  G2 示例</p  
+    <div id="c1"  </div  
+    <br  
+  </div  
+</template  
 
-<script>
+<script  
 import G2 from "@antv/g2"
 
 export default {
@@ -617,34 +617,34 @@ export default {
     this.aaa()
   }
 }
-</script>
+</script  
 
-<style>
+<style  
 .gg {
   padding-left: 20px;
   font-size: 17px;
 }
-</style>
+</style  
 
 ```
 
 ## 9.使用highcharts
 
-> 安装依赖 npm install highcharts --save
+   安装依赖 npm install highcharts --save
 
->  使用 highcharts 还需要jquery
+    使用 highcharts 还需要jquery
 
-> home.vue
+   home.vue
 
 ```
-<template>
-  <div>
-    <p class="gg">Highcharts 示例中国地图</p>
-    <div id="highmaps" class="container"></div>
-  </div>
-</template>
+<template  
+  <div  
+    <p class="gg"  Highcharts 示例中国地图</p  
+    <div id="highmaps" class="container"  </div  
+  </div  
+</template  
 
-<script>
+<script  
 import Highcharts from "highcharts/highstock"
 import Highmaps from "highcharts/modules/map"
 import $ from "jquery"
@@ -722,7 +722,7 @@ export default {
           },
           subtitle: {
             text:
-              '<a href="https://www.hcharts.cn/mapdata">点击查看地图数据及详情，注意县级数据为收费数据，如果您有需要，请联系我们购买</a>'
+              '<a href="https://www.hcharts.cn/mapdata"  点击查看地图数据及详情，注意县级数据为收费数据，如果您有需要，请联系我们购买</a  '
           },
           mapNavigation: {
             enabled: true,
@@ -732,13 +732,13 @@ export default {
           },
           tooltip: {
             useHTML: true,
-            headerFormat: "<table><tr><td>{point.name}</td></tr>",
+            headerFormat: "<table  <tr  <td  {point.name}</td  </tr  ",
             pointFormat:
-              "<tr><td>全称</td><td>{point.properties.fullname}</td></tr>" +
-              "<tr><td>行政编号</td><td>{point.properties.areacode}</td></tr>" +
-              "<tr><td>父级</td><td>{point.properties.parent}</td></tr>" +
-              "<tr><td>经纬度</td><td>{point.properties.longitude},{point.properties.latitude}</td></tr>",
-            footerFormat: "</table>"
+              "<tr  <td  全称</td  <td  {point.properties.fullname}</td  </tr  " +
+              "<tr  <td  行政编号</td  <td  {point.properties.areacode}</td  </tr  " +
+              "<tr  <td  父级</td  <td  {point.properties.parent}</td  </tr  " +
+              "<tr  <td  经纬度</td  <td  {point.properties.longitude},{point.properties.latitude}</td  </tr  ",
+            footerFormat: "</table  "
           },
           colorAxis: {
             min: 0,
@@ -773,14 +773,14 @@ export default {
     this.highmaps()
   }
 }
-</script>
+</script  
 ```
 
 ## 10.使用json-server
 
-> 完整代码
+   完整代码
 
-> db.json
+   db.json
 
 ```
 {

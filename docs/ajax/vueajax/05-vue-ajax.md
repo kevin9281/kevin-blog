@@ -4,7 +4,7 @@ title: Vue+wzry后台管理
 
 ## 1.创建手册
 
-> 全局安装node vne和脚手架
+   全局安装node vne和脚手架
 
 ```
 0.1 node -v  （检查一下 版本） node 安装地址：http://nodejs.cn/download/
@@ -16,9 +16,9 @@ title: Vue+wzry后台管理
     注：cnpm跟npm用法完全一致，只是在执行命令时将npm改为cnpm（以下操作将以cnpm代替npm）。
 ```
 
->  1. 创建主文件夹
+    1. 创建主文件夹
 
->  2. 生成内容 
+    2. 生成内容 
 
 ```
   2.1 mkdir server 创建server文件夹    (服务端项目 给web 和 管理项目的接口)
@@ -26,7 +26,7 @@ title: Vue+wzry后台管理
   2.3 创建脚手架 vue create admin 创建后台管理项目 (选默认)
 ```
 
->  3. 进入服务端 初始化项目  (项目介绍文件)
+    3. 进入服务端 初始化项目  (项目介绍文件)
 
 ```
   3.1 cd server
@@ -37,19 +37,19 @@ title: Vue+wzry后台管理
   3.6 就可以用 npm run serve 启动服务器
 ```
 
->  4.安装插件
+    4.安装插件
 
 ```
   4.1 进入admin 安装 vue add element
-  4.1.1 ? How do you want to import Element? (Use arrow keys) > Fully import 引用方式
+  4.1.1 ? How do you want to import Element? (Use arrow keys)    Fully import 引用方式
         ? Do you wish to overwrite Element's SCSS variables? No
-        ? Choose the locale you want to load (Use arrow keys) > zh-CN
+        ? Choose the locale you want to load (Use arrow keys)    zh-CN
   4.1.2 安装路由 vue add router 
-        ? Use history mode for router? (Requires proper server setup for index fallback in production) > No
+        ? Use history mode for router? (Requires proper server setup for index fallback in production)    No
   4.2 安装 axios  请求数据提交接口 npm i axios
 ```
 
->  5.完成admin 内数据接口axios  npm install axios
+    5.完成admin 内数据接口axios  npm install axios
 
 ```
   5.1 创建http.js 然后编辑
@@ -66,7 +66,7 @@ title: Vue+wzry后台管理
   Vue.prototype.$http = http
 ```
 
->  6.完成服务器 创建服务器 
+    6.完成服务器 创建服务器 
 
 ```
   6.0 下载mogondb
@@ -76,9 +76,9 @@ title: Vue+wzry后台管理
   6.2 启动服务器 npm run serve
 ```
 
->  7.安装插件 npm i inflection   用于单词的格式转换 单复数的转换
+    7.安装插件 npm i inflection   用于单词的格式转换 单复数的转换
 
->  8.基于 Quill、适用于 Vue 的富文本编辑器，支持服务端渲染和单页应用。 可视化编辑
+    8.基于 Quill、适用于 Vue 的富文本编辑器，支持服务端渲染和单页应用。 可视化编辑
 
 ```
     8.1 Vue-Quill-Editor
@@ -86,13 +86,13 @@ title: Vue+wzry后台管理
 ```
 
 ```
-  <template>
-  <div id="app">
-    <vue-editor v-model="content"></vue-editor>
-    </div>
-  </template>
+  <template  
+  <div id="app"  
+    <vue-editor v-model="content"  </vue-editor  
+    </div  
+  </template  
 
-  <script>
+  <script  
   import { VueEditor } from "vue2-editor";
 
   export default {
@@ -102,20 +102,20 @@ title: Vue+wzry后台管理
 
     data() {
       return {
-        content: "<h1>Some initial content</h1>"
+        content: "<h1  Some initial content</h1  "
       };
     }
   };
-  </script>
+  </script  
 ```
 
 ```
   8.3 实现图片上传 在文档后面 Example - Custom Image Handler
-  <template>
-    <div id="app">
-      <vue-editor id="editor" useCustomImageHandler @image-added="handleImageAdded" v-model="htmlForEditor"> </vue-editor>
-    </div>
-  </template>
+  <template  
+    <div id="app"  
+      <vue-editor id="editor" useCustomImageHandler @image-added="handleImageAdded" v-model="htmlForEditor"   </vue-editor  
+    </div  
+  </template  
 ```
 
 ## 2.选型
@@ -125,7 +125,7 @@ title: Vue+wzry后台管理
 初始化项目
 ```
 
->  管理后台 : 基于Element UI的后台管理基础界面搭建
+    管理后台 : 基于Element UI的后台管理基础界面搭建
 
 ```
 创建分类
@@ -169,7 +169,7 @@ title: Vue+wzry后台管理
 上传文件的登录校验 (el-upload, headers)
 ```
 
->  移动端网站
+    移动端网站
 
 ```
 "工具样式"概念和 SASS (SCSS)
@@ -210,30 +210,30 @@ Node.js 安装、配置淘宝镜像
 
 ## 3.npm使用国内淘宝镜像的方法
 
->  一.通过命令配置
+    一.通过命令配置
 
->  1. 命令
+    1. 命令
 
 ```
 npm config set registry https://registry.npm.taobao.org
 ```
 
->  2. 验证命令
+    2. 验证命令
 
 ```
 npm config get registry
 如果返回https://registry.npm.taobao.org，说明镜像配置成功。
 ```
 
->  二、通过使用cnpm安装  
+    二、通过使用cnpm安装  
 
->  1. 安装cnpm
+    1. 安装cnpm
 
 ```
 npm install -g cnpm --registry=https://registry.npm.taobao.org
 ```
 
->  2. 使用cnpm
+    2. 使用cnpm
 
 ```
 cnpm install xxx
@@ -246,31 +246,31 @@ cnpm install xxx
 https://www.mongodb.com/download-center
 ```
 
->  选择msi 下载
+    选择msi 下载
 
->  下载完配置环境变量  因为mondgdb 不像是node 下载完就直接配置了环境
+    下载完配置环境变量  因为mondgdb 不像是node 下载完就直接配置了环境
 
->  右键点击计算机 然后点属性 => 高级系统设置 => 环境变量 => path => 把下载的mongodb 的bin 全目录新建到环境变量中 然后保存  (D:\MongoDB\bin)
+    右键点击计算机 然后点属性 =   高级系统设置 =   环境变量 =   path =   把下载的mongodb 的bin 全目录新建到环境变量中 然后保存  (D:\MongoDB\bin)
 
->  然后就可以在全局cmd 内测试 直接输入 mongod
+    然后就可以在全局cmd 内测试 直接输入 mongod
 
->  在c盘根目录下创建 data 内创建文件夹 db (默认的数据库的目录)
+    在c盘根目录下创建 data 内创建文件夹 db (默认的数据库的目录)
 
->  然后cmd 命令行全局 mongod 就可以开启了
+    然后cmd 命令行全局 mongod 就可以开启了
 
 
 ## 5.CRUD 通用接口
 
->  把服务器后端页面的接口 第四个参数换成动态路径
+    把服务器后端页面的接口 第四个参数换成动态路径
 
->  1.子路由挂载的路径 加前缀改动态
+    1.子路由挂载的路径 加前缀改动态
 
->  2.把前面的所有发送请求的路径 都把 categories 删掉
+    2.把前面的所有发送请求的路径 都把 categories 删掉
 
->  3.加入中间键 自定义中间键
+    3.加入中间键 自定义中间键
 
 ```
-  app.use('/admin/api/rest/:resource', async (req,res,next) => { /* 中间键 */
+  app.use('/admin/api/rest/:resource', async (req,res,next) =   { /* 中间键 */
     const modelName = require('inflection').classify(req.params.resource)
     /* 利用插件转换 接口路径的参数的格式 */
     /* return res.send ({ modelName }) */
@@ -279,25 +279,25 @@ https://www.mongodb.com/download-center
   },router) 
 ```
 
->    4.然后把所有的请求加前缀为 req.Model
+      4.然后把所有的请求加前缀为 req.Model
 ```
   const model = await req.Model.findById(req.params.id)  //示例
 ```
 
 ## 6.引起报错 sockjs
 
->  首先 sockjs-node 是一个JavaScript库，提供跨浏览器JavaScript的API，创建了一个低延迟、全双工的浏览器和web服务器之间通信通道。
+    首先 sockjs-node 是一个JavaScript库，提供跨浏览器JavaScript的API，创建了一个低延迟、全双工的浏览器和web服务器之间通信通道。
 
->  服务端：sockjs-node（https://github.com/sockjs/sockjs-node）
->  客户端：sockjs-clien（https://github.com/sockjs/sockjs-client）
+    服务端：sockjs-node（https://github.com/sockjs/sockjs-node）
+    客户端：sockjs-clien（https://github.com/sockjs/sockjs-client）
 
 
->  如果你的项目没有用到 sockjs，vuecli3 运行 npm run serve 之后 network 里面一直调研一个接口：http://localhost:8080/sockjs-node/info?t=1462183700002
+    如果你的项目没有用到 sockjs，vuecli3 运行 npm run serve 之后 network 里面一直调研一个接口：http://localhost:8080/sockjs-node/info?t=1462183700002
 
->  作为一个有节操的程序猿，实在不能忍受，特意自己研究了下源码，从根源上关闭这个调用
+    作为一个有节操的程序猿，实在不能忍受，特意自己研究了下源码，从根源上关闭这个调用
 
->  1. 找到/node_modules/sockjs-client/dist/sockjs.js 
->  2.找到代码的 1605行  
+    1. 找到/node_modules/sockjs-client/dist/sockjs.js 
+    2.找到代码的 1605行  
 
 ```
   try {
@@ -308,15 +308,15 @@ https://www.mongodb.com/download-center
   }
 ```
 
->  3.刷新，搞定。
+    3.刷新，搞定。
 
 ## 7.element ui 自带插件 上传功能
 
->  上传图片是我们选择图片之后 他会要发起一个异步请求 把图片传给某一个接口
+    上传图片是我们选择图片之后 他会要发起一个异步请求 把图片传给某一个接口
 
->  然后在后端接口保存这张图片 保存后并返回给客户端一个图片的整个url网址是什么
+    然后在后端接口保存这张图片 保存后并返回给客户端一个图片的整个url网址是什么
 
->  最终前端拿到响应之后 把地址展示出来
+    最终前端拿到响应之后 把地址展示出来
 
 ```
 参数:
@@ -325,20 +325,20 @@ https://www.mongodb.com/download-center
 :before-upload : 上传之前做什么
 ```
 
->  把服务端返回的一堆东西 把其中表示图片地址的 赋值给model.icon 就能展示图片了 同时model.icon也赋值了
+    把服务端返回的一堆东西 把其中表示图片地址的 赋值给model.icon 就能展示图片了 同时model.icon也赋值了
 
->  file 字段名 (binary) 二进制
+    file 字段名 (binary) 二进制
 
->  服务端上传接口:
+    服务端上传接口:
 
->  1.安装中间键插件 专门用来上传数据的  npm i multer
+    1.安装中间键插件 专门用来上传数据的  npm i multer
 
->  2.服务端 后台界面 admin/index.js
+    2.服务端 后台界面 admin/index.js
 
 ```
   const multer = require('multer')
   const upload = multer({dest: __dirname + '../../uploads'}) /* 绝对地址 */
-  app.post('/admin/api/upload', upload.single('file') , async(req,res) => {
+  app.post('/admin/api/upload', upload.single('file') , async(req,res) =   {
     const file = req.file
     file.url = `http:localhost:3000/uploads/${file.filename}`
     res.send(file)
@@ -346,13 +346,13 @@ https://www.mongodb.com/download-center
 }
 ```
 
->  3.把上传文件夹使用静态文件托管  服务端 index
+    3.把上传文件夹使用静态文件托管  服务端 index
 
 ```
 app.use('/uploads' , express.static(__dirname + '/uploads'))
 ```
 
->  4.就会多一个url 然后前端展示出来
+    4.就会多一个url 然后前端展示出来
 
 ```
   afterUpload(res){
@@ -360,29 +360,29 @@ app.use('/uploads' , express.static(__dirname + '/uploads'))
   },
 ```
 
->  会发现无法赋值问题 vue内显示赋值
+    会发现无法赋值问题 vue内显示赋值
 
->  5.前端界面
+    5.前端界面
 
 ```
-<el-input v-model="model.name"></el-input>
-  </el-form-item>
-  <el-form-item label="图标">
-    <el-input v-model="model.icon"></el-input>
+<el-input v-model="model.name"  </el-input  
+  </el-form-item  
+  <el-form-item label="图标"  
+    <el-input v-model="model.icon"  </el-input  
     <el-upload
       class="avatar-uploader"
       :action="$http.defaults.baseURL + '/upload'"
       :show-file-list="false"
       :on-success="afterUpload"
-    >
-      <img v-if="model.icon" :src="model.icon" class="avatar">
-      <i v-else class="el-icon-plus avatar-uploader-icon"></i>
-    </el-upload>
-  </el-form-item>
-  <el-form-item>
-    <el-button type="primary" native-type="submit">保存</el-button>
+      
+      <img v-if="model.icon" :src="model.icon" class="avatar"  
+      <i v-else class="el-icon-plus avatar-uploader-icon"  </i  
+    </el-upload  
+  </el-form-item  
+  <el-form-item  
+    <el-button type="primary" native-type="submit"  保存</el-button  
 
-<script>
+<script  
 export default {
   props:{
     id:{}
@@ -421,26 +421,26 @@ export default {
     this.id && this.fetch();  /* 如果有this.id 才执行 fetch()方法 */
   }
 }
-</script>
+</script  
 ```
 
 ```
-<el-table :data="items">
-      <el-table-column prop="_id" label="ID" width="240"></el-table-column>
-      <el-table-column prop="name" label="物品名称"></el-table-column>
-      <el-table-column prop="icon" label="图标">
-        <template slot-scope="scope">
-          <img :src="scope.row.icon" style="height:3rem;">
-        </template>
-      </el-table-column>
-      <el-table-column fixed="right" label="操作" width="180">
-        <template slot-scope="scope">
-<el-button></el-button>
+<el-table :data="items"  
+      <el-table-column prop="_id" label="ID" width="240"  </el-table-column  
+      <el-table-column prop="name" label="物品名称"  </el-table-column  
+      <el-table-column prop="icon" label="图标"  
+        <template slot-scope="scope"  
+          <img :src="scope.row.icon" style="height:3rem;"  
+        </template  
+      </el-table-column  
+      <el-table-column fixed="right" label="操作" width="180"  
+        <template slot-scope="scope"  
+<el-button  </el-button  
 ```
 
 ## 8.后台管理员权限
 
->  1. 密码不能用明文保存
+    1. 密码不能用明文保存
 
 ```
   1.1 在后端模型里面安装 npm i bcrypt 用于做密码的散列
@@ -450,35 +450,35 @@ export default {
 ```
     password: { 
       type: String , 
-      select: false,  =>用于显示或者隐藏密码明文 用户密码留空
+      select: false,  =  用于显示或者隐藏密码明文 用户密码留空
       set ( val ) {
       return require('bcrypt').hashSync( val, 10 )
     }}
 ```
->    select 如为false 则不显示 不管怎么保存也不会把原来的改变
+      select 如为false 则不显示 不管怎么保存也不会把原来的改变
 
 ## 9.登录
 
->  1.创建登录路由 引入登录界面
+    1.创建登录路由 引入登录界面
 
->  2.给登录界面 定义 model 然后绑定model username password
+    2.给登录界面 定义 model 然后绑定model username password
 
->  3.@submit.native.prevent 表单阻止默认提交 绑定到from 实现点击登录 提交model username password 数据
+    3.@submit.native.prevent 表单阻止默认提交 绑定到from 实现点击登录 提交model username password 数据
 
->  4.写后台接口
+    4.写后台接口
 
 ```
   请求到后台login接口 把用户名传到login接口 然后在后台校验 最终得到数据 
   返回给前端一个token密钥 然后前端通过密钥来证明自己是哪一个用户
 ```
 
->  5.跟后台约定好 如果服务端发生报错 统一返回一个json 里面有个message表示要让客户端显示什么文字
->   通用的处理方案 当服务端返回一个错误代码 里面有个message的话 就弹出来
+    5.跟后台约定好 如果服务端发生报错 统一返回一个json 里面有个message表示要让客户端显示什么文字
+     通用的处理方案 当服务端返回一个错误代码 里面有个message的话 就弹出来
 ```
 /* 给整个请求加一个拦截器 */
-http.interceptors.response.use( res => {
+http.interceptors.response.use( res =   {
   return res
-}, err =>{
+}, err =  {
   /* 如果message有内容才弹出内容 */
   if ( err.response.data.message ){
     Vue.prototype.$message({
@@ -490,16 +490,16 @@ http.interceptors.response.use( res => {
 })
 ```
 
->  6.用户存在的话 就要在后台校验密码是否正确
+    6.用户存在的话 就要在后台校验密码是否正确
 
->  7.服务端安装返回token 做web token验证 先安装插件 npm i jsonwebtoken
+    7.服务端安装返回token 做web token验证 先安装插件 npm i jsonwebtoken
 
 ```
 sessionStorage.token = res.data.token   -关闭浏览器将不做保存
 localStorage.token = res.data.token     -关闭浏览器后还会保存
 ```
 
->  8.服务端登录校验
+    8.服务端登录校验
 
 ```
 8.1 服务端做限制 如果没有token的话 就不允许访问
@@ -511,8 +511,8 @@ localStorage.token = res.data.token     -关闭浏览器后还会保存
 8.7 然后进行判断
 ```
 
->  9.服务端安装插件 http-assert   npm i http-assert 
->  用于测试的时候判断确保这个东西是否存在  顶替if判断 发错误码
+    9.服务端安装插件 http-assert   npm i http-assert 
+    用于测试的时候判断确保这个东西是否存在  顶替if判断 发错误码
 
 ```
 9.1 先引用  const assert = require('http-assert')
@@ -521,18 +521,18 @@ localStorage.token = res.data.token     -关闭浏览器后还会保存
 9.4 判断如果后台抛出错误401 前端就跳转登录页面
 ```
 
->  10.封装校验中间件 把判断的中间键写成一个函数形式
->  在服务端创建新文件夹 然后里面写中间件
->  用函数形式 module.exports = options => { return 中间件内容 }
->  通过options 调用
->  每一个创建的中间件文件里面都必须引入 使用到的插件
+    10.封装校验中间件 把判断的中间键写成一个函数形式
+    在服务端创建新文件夹 然后里面写中间件
+    用函数形式 module.exports = options =   { return 中间件内容 }
+    通过options 调用
+    每一个创建的中间件文件里面都必须引入 使用到的插件
 
 ```
 10.1 使用中间件 const authMiddleware = require("../../middleware/auth")
 10.2 调用中间件 app.use('/admin/api/rest/:resource', authMiddleware() , resourceMiddleware,router) 
 ```
 
->  11.前端客户端路由限制
+    11.前端客户端路由限制
 
 ```
 11.1 给允许公开访问的页面 路由添加 
@@ -542,7 +542,7 @@ localStorage.token = res.data.token     -关闭浏览器后还会保存
 
   })
 
-router.beforeEach((to, from ,next) => {    //去哪个页面 来自哪个页面 接下来怎么处理
+router.beforeEach((to, from ,next) =   {    //去哪个页面 来自哪个页面 接下来怎么处理
   if (!to.meta.isPublic && !localStorage.token) { //如果不是公开页面 同时也没有token
     return next('/login')   //那么跳转登录页
   }
@@ -553,12 +553,12 @@ export default router
 
 ## 10.vue 手机端官网
 
->  1. SASS(SCSS) css都是直接在main.js内引入
->  进入web页面安装插件 npm i -D sass sass-loader
+    1. SASS(SCSS) css都是直接在main.js内引入
+    进入web页面安装插件 npm i -D sass sass-loader
 
->  2. 开发网站第一步重置样式
+    2. 开发网站第一步重置样式
 
->  3. 网站色彩和字体定义 colors 定义变量 
+    3. 网站色彩和字体定义 colors 定义变量 
 
 ```
 text 定义字体 让编写的时候直接使用class来确定文本的位置
@@ -581,31 +581,31 @@ text 定义字体 让编写的时候直接使用class来确定文本的位置
 }
 ```
 
->  4. 更改设置 px to rem  改为 html的px
+    4. 更改设置 px to rem  改为 html的px
 
->  5.定义flex布局
+    5.定义flex布局
 
->  6.运用3重嵌套 嵌套出各种边距
+    6.运用3重嵌套 嵌套出各种边距
 
-> 7.先安装路由插件 vue add router 写单页面应用
+   7.先安装路由插件 vue add router 写单页面应用
 
 ```
   se history mode for router?  //使用的是普通的模式 地址栏会加上#
   (Requires proper server setup for index fallback in production) No
 ```
 
->  8.创建个新 Main.vue 页面 把主页面路由改为新页面 scaffold
-> Main编写头部
+    8.创建个新 Main.vue 页面 把主页面路由改为新页面 scaffold
+   Main编写头部
 
->  9.编写Home 内容 
+    9.编写Home 内容 
 
 ```
 9.1 首页幻灯片 swiper 前端页面 安装插件 npm install vue-awesome-swiper --save
 9.2 引入配置  github上 和 npm 官网都有 分是全局使用 还是局部使用
 ```
 
->  10.精灵图片(雪碧图) sprite 一张图片内有很多小图片 通过css背景定位方式决定显示哪个图标
->   借助 www.spritecow.com 图片传上去 自动定位
+    10.精灵图片(雪碧图) sprite 一张图片内有很多小图片 通过css背景定位方式决定显示哪个图标
+     借助 www.spritecow.com 图片传上去 自动定位
 
 ```
 .sprite {  
@@ -622,21 +622,21 @@ text 定义字体 让编写的时候直接使用class来确定文本的位置
 }
 ```
 
->  11.字体图标  用文字画出来的图标 可以用文字控制 也可以加颜色
+    11.字体图标  用文字画出来的图标 可以用文字控制 也可以加颜色
 
->  12.卡片布局 组件 card 图标 名称 都可以算是卡片布局 封装到全局
+    12.卡片布局 组件 card 图标 名称 都可以算是卡片布局 封装到全局
 
 ```
   12.1 封装组件 创建 components/Card.vue
   12.2 把通用的放进去 把数据改成动态传值
 ```
 
->  13.封装一个带分类 带列表的组件 list-card 列表卡片
+    13.封装一个带分类 带列表的组件 list-card 列表卡片
 
 ```
 13.0 components 内创建 listCard.vue
 13.1 main.js 内 引用list-card组件
-13.2 把原有的card 内容部分全写成 <slot></slot>
+13.2 把原有的card 内容部分全写成 <slot  </slot  
 13.3 编辑新listcard 编辑数据类型
   props:{
     icon: {type:String , required:true},
@@ -644,19 +644,19 @@ text 定义字体 让编写的时候直接使用class来确定文本的位置
     categories:{type:Array, required:true}
   },
 13.4 从home中请求数据
-13.5 给home <m-list-card></m-list-card>绑定数据 :categories="newsCats"
+13.5 给home <m-list-card  </m-list-card  绑定数据 :categories="newsCats"
 13.6.在listcard 内 循环数据 newsCats
-13.7 在listcard内 <slot name="items" :category="category"></slot> 给数据绑定回去
-13.8 在home中 <template #items="{category}"></template> 引入数据 然后循环
+13.7 在listcard内 <slot name="items" :category="category"  </slot   给数据绑定回去
+13.8 在home中 <template #items="{category}"  </template   引入数据 然后循环
 ```
 
 ## 11.首页新闻资讯后台数据对接
 
->  1. 做一个功能从原网站直接录入分类新闻
+    1. 做一个功能从原网站直接录入分类新闻
 ```
   1.1 通过js 选中原网站所有 $$('.news_list .title')
-  1.2 得到标题 内容 $$('.news_list .title').map(el => el.innerHTML)
-  1.3 去掉前面热门5条 $$('.news_list .title').map(el => el.innerHTML).slice(5)
+  1.2 得到标题 内容 $$('.news_list .title').map(el =   el.innerHTML)
+  1.3 去掉前面热门5条 $$('.news_list .title').map(el =   el.innerHTML).slice(5)
   1.4 放到js内直接使用 写个接口去录入这些数据 省得一个个录入
   1.5 在数据库 db.js 内直接先把所有模型全部引用一遍 npm i require-all 把某一个文件夹下所有文件使用一遍
        require('require-all')(__dirname + './../models')
@@ -664,7 +664,7 @@ text 定义字体 让编写的时候直接使用class来确定文本的位置
   1.7 做新闻接口展示出来
 ```
 
->  2. 安装插件 npm i axios 用于做接口请求 把原有的写页面的数据 改为一个空数组接受数据
+    2. 安装插件 npm i axios 用于做接口请求 把原有的写页面的数据 改为一个空数组接受数据
 
 ```
     data(){
@@ -675,23 +675,23 @@ text 定义字体 让编写的时候直接使用class来确定文本的位置
   }
   swiper 点击关联 
   <div class="nav-item" :class="{active: active === i}"
-  @click="$refs.list.swiper.slideTo(i)">
+  @click="$refs.list.swiper.slideTo(i)"  
 
   swiper 滑动关联 
-  <swiper ref="list" @slide-change="() => active = $refs.list.swiper.realIndex"> 
+  <swiper ref="list" @slide-change="() =   active = $refs.list.swiper.realIndex"   
 ```
 
->  3. 安装插件 npm i dayjs 格式化时间 改成任意格式
+    3. 安装插件 npm i dayjs 格式化时间 改成任意格式
 
 ## 12.首页英雄列表 抓取数据导入对接
 
-> 1.先在后台接口抓取数据
+   1.先在后台接口抓取数据
 
 ```
-$$('.hero-nav > li').map((li,i) => {
+$$('.hero-nav    li').map((li,i) =   {
     return {
     name:li.innerText,
-      heroes:$$('li', $$('.hero-list')[i]).map(el =>{
+      heroes:$$('li', $$('.hero-list')[i]).map(el =  {
         return {
         name:$$('h3',el)[0].innerHTML,
         avatar:$$('img',el)[0].src
@@ -701,17 +701,17 @@ $$('.hero-nav > li').map((li,i) => {
 })
 ```
 
->  2. 导入服务器
+    2. 导入服务器
 
->  3. 设置点击获取自动高度 <swiper ref="list" :options="{autoHeight:true}"
+    3. 设置点击获取自动高度 <swiper ref="list" :options="{autoHeight:true}"
 
->  4  新闻详情页
+    4  新闻详情页
 
->  5. 英雄详情页
+    5. 英雄详情页
 
 ## 13.部署和发布
 
->  1.生产环境下的编译
+    1.生产环境下的编译
 
 ```
 1.1 生产环境下就不会有这些端口了 不需要在服务器上运行 npm run serve 这种命令了
@@ -737,7 +737,7 @@ $$('.hero-nav > li').map((li,i) => {
     同样创建 web/vue.config.js    web/.env.development 
 ```
 
->  2 . 购买域名和服务器
+    2 . 购买域名和服务器
 
 ```
     买好域名服务器后
@@ -746,7 +746,7 @@ $$('.hero-nav > li').map((li,i) => {
   logon root  然后输入 password 
 ```
 
->  3.域名解析
->   同样就可以访问公共ip 和域名
+    3.域名解析
+     同样就可以访问公共ip 和域名
 
->  4.Nginx 安装和配置
+    4.Nginx 安装和配置

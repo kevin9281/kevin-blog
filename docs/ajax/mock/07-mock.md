@@ -4,7 +4,7 @@ title: 对mock提供的数据模块拆分
 
 ## 对mock提供的数据模块拆分
 
-> 在mock文件夹下创建 goods.js 此文件表示所有商品接口模块 还可以新建 商品接口模块 用户接口模块等...
+   在mock文件夹下创建 goods.js 此文件表示所有商品接口模块 还可以新建 商品接口模块 用户接口模块等...
 
 ```
 // 导入模拟假数据的包
@@ -59,7 +59,7 @@ Mock.mock(/\/api\/getgoods/, 'get', function (option) {
 
 ```
 
-> 再从 mock / index.js 中 导入商品模块 就只需要将index.js 暴露出去 方便管理
+   再从 mock / index.js 中 导入商品模块 就只需要将index.js 暴露出去 方便管理
 
 ```
 // 导入扩展函数(Random 自定义假数据)
@@ -72,9 +72,9 @@ import './goods'
 // 导入购物车模块 cart.js
 ```
 
-> 还可以创建一个文件 专门保存自定义假数据
+   还可以创建一个文件 专门保存自定义假数据
 
-> mock / extends.js 
+   mock / extends.js 
 
 ```
 

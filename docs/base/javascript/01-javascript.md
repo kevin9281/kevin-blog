@@ -6,7 +6,7 @@ title: 数组
 
 在 [MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array) 的基础上附加一些想法及常用示例。
 
-> 为了减少描述，省略 `console` 语句。
+   为了减少描述，省略 `console` 语句。
 
 
 
@@ -41,9 +41,9 @@ Array(arrayLength)
 
 描述如上。
 
-> 个人在日常开发中常用场景：
->
-> 1. 创建数组。
+   个人在日常开发中常用场景：
+  
+   1. 创建数组。
 
 ### 3. 示例
 
@@ -88,11 +88,11 @@ Array.from(arrayLike[, mapFn[, thisArg]])
 
 在 ES2015 中，`Class` 语法允许我们为内置类型（比如 Array）和自定义类新建子类（比如叫 SubArray）。这些子类也会继承父类的静态方法，比如 `SubArray.from()`，调用该方法后会返回子类 `SubArray` 的一个实例，而不是 `Array` 的实例。
 
-> 个人在日常开发中常用场景：
->
-> 1. 将获取的 DOM 类数组转为数组；
-> 2. 将一串字符串转为数组；
-> 3. 将 Map 类数组转为数组。
+   个人在日常开发中常用场景：
+  
+   1. 将获取的 DOM 类数组转为数组；
+   2. 将一串字符串转为数组；
+   3. 将 Map 类数组转为数组。
 
 ### 3. 示例
 
@@ -129,17 +129,17 @@ Array.from(arrayLike[, mapFn[, thisArg]])
 + Using arrow functions and Array from
 
   ```js
-  Array.from([1, 2, 3], x => x + x); // [2, 4, 6]
+  Array.from([1, 2, 3], x =   x + x); // [2, 4, 6]
   Array.from({length: 5, 0: 'a'}); //  ["a", undefined, undefined, undefined, undefined]
-  Array.from({length: 5}, (v, i) => i); // [0, 1, 2, 3, 4]
+  Array.from({length: 5}, (v, i) =   i); // [0, 1, 2, 3, 4]
   ```
 
 + Sequence generator (range)
 
-  > 这是一个非常有意思的写法，很值得学习。
+     这是一个非常有意思的写法，很值得学习。
 
   ```js
-  const range = (start, stop, step) => Array.from({ length: (stop - start) / step + 1}, (_, i) => start + (i * step));
+  const range = (start, stop, step) =   Array.from({ length: (stop - start) / step + 1}, (_, i) =   start + (i * step));
   
   range(0, 4, 1);
   // [0, 1, 2, 3, 4] 
@@ -147,7 +147,7 @@ Array.from(arrayLike[, mapFn[, thisArg]])
   range(1, 10, 2); 
   // [1, 3, 5, 7, 9]
   
-  range('A'.charCodeAt(0), 'Z'.charCodeAt(0), 1).map(x => String.fromCharCode(x));
+  range('A'.charCodeAt(0), 'Z'.charCodeAt(0), 1).map(x =   String.fromCharCode(x));
   // ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
   ```
 
@@ -157,7 +157,7 @@ Array.from(arrayLike[, mapFn[, thisArg]])
 
 用于创建一个具有可变数量参数的新数组实例，而不需要考虑参数的数量或类型。与 Array 方法的区别是当处理单个参数且该参数为正整数类型时（负整数 Array 会报错），Array 方法会创建对应长度的空数组（空数组是指对应长度空位“empty”的数组），该行为会影响 map 方法无法生效。
 
-> 其实我一直很好奇为什么被命名为 of。
+   其实我一直很好奇为什么被命名为 of。
 
 ### 1. 语法
 
@@ -177,9 +177,9 @@ Array.of(element0[, element1[, ...[, elementN]]])
 
 此函数是 ECMAScript 2015 标准的一部分。
 
-> 个人在日常开发中常用场景：
->
-> + 尚未使用过。
+   个人在日常开发中常用场景：
+  
+   + 尚未使用过。
 
 ### 3. 示例
 
