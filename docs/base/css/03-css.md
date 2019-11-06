@@ -40,9 +40,6 @@ title: css 小课1-20
 
   
 
-
-
-
    但是为  好地显示  ,我们还需要 些额外元素, 如  的元数据 meta 标签, 档的编码格 式,标题。浏览 是 能直接 解 HTML 的,需要把 HTML 转换成 DOM,HTML 和 DOM 是  样 的,虽然它们看起来 太 的差别,你可把 DOM  解成内存中的树状结构,
 
    
@@ -191,7 +188,7 @@ as author, description, and links to CSS or JavaScript files that should be appl
 
    比较好的整理到了 GitHub 上。有需要的朋友可以前往查看：*https://github.com/lefex/DSA/issues/45*。 
 
-![Image](https://raw.githubusercontent.com/kevin9281/-/master/640.webp)
+
 
 ***场景1:点击按钮后没效果***
 
@@ -199,13 +196,13 @@ as author, description, and links to CSS or JavaScript files that should be appl
 
    
 
-![Image](https://raw.githubusercontent.com/kevin9281/-/master/641.webp)
+
 
    ***场景2：标题间距不对***
 
   按钮距离左右的边距不正确，需要调整成 30px。按照下面箭头方向点击，你会看到按钮的详细信息，比如CSS颜色，HTML代码，盒模型。
 
-![Image](https://raw.githubusercontent.com/kevin9281/-/master/642.webp)
+
 
 
 
@@ -213,7 +210,6 @@ as author, description, and links to CSS or JavaScript files that should be appl
 
   有时候想查看某个变量的值，直接在控制台打印对应的变量名即可，比如在上面的 demo 中，我定义了一个 titles 全局变量，通过控制台输入变量名，然后按回车即可。同时也可以打印其它全局变量的值，比如 document 对象，window 对象，函数名：
 
-![Image](https://raw.githubusercontent.com/kevin9281/-/master/643.webp)
 
 
 
@@ -221,7 +217,7 @@ as author, description, and links to CSS or JavaScript files that should be appl
 
   通过 source 标签可以看到，当前页面使用了 3 个文件，分别为 day4.html, day4.js 和 day4.css。通过这个可以方便找到页面所对应的文件名，还可以查看源码。  
 
-![Image](https://raw.githubusercontent.com/kevin9281/-/master/644.webp)
+
 
 
 
@@ -304,7 +300,6 @@ body {
 
    div 和 span 是没有「语义」的标签，适合于任何没有语义的场景。下面是关于标签的语法。
 
-![Image](https://raw.githubusercontent.com/kevin9281/-/master/645.webp)
 
 
 
@@ -312,7 +307,6 @@ body {
 
   
 
-![Image](https://raw.githubusercontent.com/kevin9281/-/master/647.webp)
 
 
 
@@ -402,7 +396,6 @@ h3 {
 
   
 
-![Image](https://raw.githubusercontent.com/kevin9281/-/master/646.webp)
 
 
 
@@ -412,7 +405,6 @@ h3 {
 
 下图是 CSS 的加载过程：
 
-![Image](https://raw.githubusercontent.com/kevin9281/-/master/11.webp)
 
 
 
@@ -515,15 +507,12 @@ CSS的作用是「给HTML元素添加样式和布局」，也就是说通过 HTM
 
 
 
-![Image](https://raw.githubusercontent.com/kevin9281/-/master/12.webp)
 
 我们先预览下效果，点击底部按钮「知识小集」菜单会滚动到中间：
 
-![Image](https://raw.githubusercontent.com/kevin9281/-/master/13.webp)
 
 点击按钮后：
 
-![Image](https://raw.githubusercontent.com/kevin9281/-/master/14.webp)
 
 想要实现这种效果，需要做三件事：
 
@@ -694,7 +683,6 @@ div :last-child {
 
 CSS 相关的语法可以通过下面这张图来读懂：
 
-![Image](https://raw.githubusercontent.com/kevin9281/-/master/15.webp)
 
 >  注意：写 CSS 代码的时候，即使某个属性写错，浏览器也不会报错，只会忽略无法识别的 CSS 样式。
 
@@ -713,7 +701,6 @@ p { color: red; }
 <p>一起学前端!</p>
 ```
 
-![Image](https://raw.githubusercontent.com/kevin9281/-/master/16.webp)
 
 ***class 选择器***：以 “.” 开头，后跟一个名字。在一个HTML中，类选择器可以作用于多个 HTML 标签。
 
@@ -734,7 +721,6 @@ p {
 <p>一起学前端!</p>
 ```
 
-![Image](https://raw.githubusercontent.com/kevin9281/-/master/17.webp)
 
 ***ID 选择器***：以 “#” 开头，后跟一个选择器的名字，名字必须在当前文档唯一;
 
@@ -753,7 +739,6 @@ p {
 </body>
 ```
 
-![Image](https://raw.githubusercontent.com/kevin9281/-/master/18.webp)
 
 ***通用选择器（Universal selector）***：单独一个“ * ”，作用于所有的标签。下面的例子，清除 HTML 中所有标签的默认边距。
 
@@ -798,7 +783,6 @@ p {
 </body>
 ```
 
-![Image](https://raw.githubusercontent.com/kevin9281/-/master/19.webp)
 
 ***伪选择器（pseudo-selectors）***：它包含伪类（pseudo-classes）和伪元素（pseudo-elements）。这类选择器不是真正意义上的选择器，它作为选择器的一部分，起到选择器匹配元素的限定条件。比如，匹配 dom 树中某个元素的第一个孩子，匹配鼠标点击后的状态等。
 
@@ -851,13 +835,11 @@ a:focus {
 
 
 
-![Image](https://raw.githubusercontent.com/kevin9281/-/master/20.webp)
 
 ***组合选择器（Combinators）***: 这种选择器可以作用于多个 HTML 元素，有多种组合方式，下面这些方式，CSS 都会作用于 B 元素。通过下面的例子来讲解这些选择器，例子类似于一个树形，表示不同的层级：
 
 
 
-![Image](https://raw.githubusercontent.com/kevin9281/-/master/21.webp)
 
 代码如下：
 
@@ -888,7 +870,6 @@ div p {
 
 
 
-![Image](https://raw.githubusercontent.com/kevin9281/-/master/22.webp)
 
 ***A > B {}*** : A 元素的直接子节点会起作用，也就是只适用于 A 节点的第一层所有的子节点。例子中 div > p { } , 只会找到 div 的第一层子节点 p。
 
@@ -901,7 +882,6 @@ div > p {
 
 
 
-![Image](https://raw.githubusercontent.com/kevin9281/-/master/23.webp)
 
 ***A + B {}*** : 匹配 A 的下一个兄弟节点，AB具有相同的父节点，并且 B 紧跟在 A 的后面；例子中 div + p { } 只会匹配 div 的下一个兄弟节点 p；
 
@@ -914,7 +894,6 @@ div + p {
 
 
 
-![Image](https://raw.githubusercontent.com/kevin9281/-/master/24.webp)
 
 ***A ~ B {}*** : B是 A 之后的任意一个兄弟节点。例子中 div ~ p { } 会匹配 div 的所有兄弟节点 p；
 
@@ -927,7 +906,6 @@ div ~ p {
 
 
 
-![Image](https://raw.githubusercontent.com/kevin9281/-/master/25.webp)
 
 ***组选择器 A, B***：A 和 B 元素具有同一规则的 CSS 样式，不同元素使用逗号隔开。
 
@@ -958,11 +936,9 @@ div : first-child {
 
 
 
-![Image](https://raw.githubusercontent.com/kevin9281/-/master/26.webp)
 
 然后截了一张 w3c 的图：
 
-![Image](https://raw.githubusercontent.com/kevin9281/-/master/27.webp)
 
 w3c 这段描述的时候，看的不是很明白，「很官方」。那我就斗胆说下自己的看法。
 
@@ -1001,13 +977,11 @@ Selects any <p> that is the first element among its siblings 。
 
 
 
-![Image](https://raw.githubusercontent.com/kevin9281/-/master/28.webp)
 
 从图中可以明确，p:first-child 选择的是孩子节点中第一个元素是 p 的元素。所以被选中的元素为下图中「突出」显示的元素。
 
 
 
-![Image](https://raw.githubusercontent.com/kevin9281/-/master/29.webp)
 
 为这个问题，我特意给大家准备了一个例子：
 
@@ -1055,7 +1029,6 @@ Selects any <p> that is the first element among its siblings 。
 
 这段 HTML 对应的树状结构如下：
 
-![Image](https://raw.githubusercontent.com/kevin9281/-/master/30.webp)
 
 ***1***  匹配元素的第一个孩子是 p 的所有元素：
 
@@ -1070,9 +1043,7 @@ p:first-child {
 
 
 
-![Image](https://raw.githubusercontent.com/kevin9281/-/master/31.webp)
 
-![Image](https://raw.githubusercontent.com/kevin9281/-/master/32.webp)
 
 ***2***  匹配元素的第二个孩子是 div 的所有元素：
 
@@ -1086,9 +1057,7 @@ div:nth-child(2) {
 
 
 
-![Image](https://raw.githubusercontent.com/kevin9281/-/master/33.webp)
 
-![Image](https://raw.githubusercontent.com/kevin9281/-/master/34.webp)
 
 ***3***  匹配选择器为 .box2 的第一个孩子：
 
@@ -1102,7 +1071,6 @@ div:nth-child(2) {
 
 
 
-![Image](https://raw.githubusercontent.com/kevin9281/-/master/35.webp)
 
 ***4***  匹配选择器为 #box3 的第一个孩子：
 
@@ -1116,7 +1084,6 @@ div:nth-child(2) {
 
 
 
-![Image](https://raw.githubusercontent.com/kevin9281/-/master/36.webp)
 
 ***总结***
 
@@ -1130,7 +1097,6 @@ div:nth-child(2) {
 
 今天的内容是 CSS 中的 border 属性，它的意思是「边框」。在超越技术官网上有这么一种设计，自我介绍、联系方式和公众号下面有一条横线，它会根据字数的不同，长度在变化。这里恰好用到了 border 这个属性：
 
-![Image](https://raw.githubusercontent.com/kevin9281/-/master/37.webp)
 
 border 是一个简写属性，它由一个或多个属性组成：border-width, border-style, border-color。往往会使用简写的方式，比如：
 
@@ -1149,7 +1115,6 @@ border-color：表示边框的颜色，可以分别设置上下左右边框为�
 
 我们一起实现类似上面的效果：
 
-![Image](https://raw.githubusercontent.com/kevin9281/-/master/38.webp)
 
 上面效果的代码如下：
 
@@ -1242,7 +1207,6 @@ border-color：表示边框的颜色，可以分别设置上下左右边框为�
 }
 ```
 
-![Image](https://raw.githubusercontent.com/kevin9281/-/master/39.webp)
 
 
 
@@ -1267,7 +1231,6 @@ border-color：表示边框的颜色，可以分别设置上下左右边框为�
 
 HTML的设计的初衷是为了展示图文，它的排版能力非常强大。写文章的时候突发奇想，想到我还没有正式和同学们做过自我介绍，借这次机会做个自我介绍。通过这篇自我介绍，希望你能够对 HTML 有一个清晰的认识。文章最终效果如下：
 
-![Image](https://raw.githubusercontent.com/kevin9281/-/master/41.webp)
 
 ```
 <!DOCTYPE html>
@@ -1357,7 +1320,6 @@ CSS中主要有两种盒子：
 
 
 
-![Image](https://raw.githubusercontent.com/kevin9281/-/master/42.webp)
 
 
 
@@ -1365,7 +1327,6 @@ CSS中主要有两种盒子：
 
 
 
-![Image](https://raw.githubusercontent.com/kevin9281/-/master/43.webp)
 
 
 
@@ -1373,7 +1334,6 @@ CSS中主要有两种盒子：
 
 
 
-![Image](https://raw.githubusercontent.com/kevin9281/-/master/44.webp)
 
 
 
@@ -1381,7 +1341,6 @@ CSS中主要有两种盒子：
 
 
 
-![Image](https://raw.githubusercontent.com/kevin9281/-/master/45.webp)
 
 
 
@@ -1391,7 +1350,6 @@ CSS中主要有两种盒子：
 
 
 
-![Image](https://raw.githubusercontent.com/kevin9281/-/master/46.webp)
 
 
 
@@ -1433,7 +1391,6 @@ CSS中主要有两种盒子：
 
 
 
-![Image](https://raw.githubusercontent.com/kevin9281/-/master/47.webp)
 
 
 
@@ -1469,7 +1426,6 @@ content（内容）：表示内容的大小；
 
 
 
-![Image](https://raw.githubusercontent.com/kevin9281/-/master/48.webp)
 
 
 
@@ -1498,7 +1454,6 @@ box-sizing: border-box;
 
 
 
-![Image](https://raw.githubusercontent.com/kevin9281/-/master/49.webp)
 
 
 
@@ -1512,11 +1467,9 @@ box-sizing: border-box;
 
 在PC上展示效果如下：
 
-![Image](https://raw.githubusercontent.com/kevin9281/-/master/53.webp)
 
 在手机上展示效果如下：
 
-![Image](https://raw.githubusercontent.com/kevin9281/-/master/52.webp)
 
 
 
@@ -1751,7 +1704,6 @@ box-sizing: border-box;
 
 *1*display：inline
 
-![Image](https://raw.githubusercontent.com/kevin9281/-/master/54.webp)
 
 使用 inline 告诉浏览器这是一个行内元素，布局的时候要按照行内元素的方式布局，比如 span 标签默认的就是这种布局方式。在有足够空间的时候，它不会换行。不能使用 width 和 height 属性。从图中可知 width 和 height 并没有起作用，margin 只会在水平方向起作用。
 
@@ -1797,7 +1749,6 @@ box-sizing: border-box;
 
 使用 block 告诉浏览器这是一个块级元素，布局的时候要按照块级元素的方式布局，比如 p 、div 标签默认就是这种布局方式。把上面的选择器 strong 添加 display：block，使 span 标签变为块级标签，效果如下：
 
-![Image](https://raw.githubusercontent.com/kevin9281/-/master/55.webp)
 
 ```
 
@@ -1821,7 +1772,6 @@ box-sizing: border-box;
 
 
 
-![Image](https://raw.githubusercontent.com/kevin9281/-/master/56.webp)
 
 ```
 
@@ -1845,7 +1795,6 @@ box-sizing: border-box;
 
 
 
-![Image](https://raw.githubusercontent.com/kevin9281/-/master/57.webp)
 
 
 
@@ -1899,7 +1848,6 @@ img标签比较特殊，它默认属于行内（inline）元素。比如下面�
 
 
 
-![Image](https://raw.githubusercontent.com/kevin9281/-/master/58.webp)
 
 
 
@@ -1978,7 +1926,6 @@ alt：对图片的描述，供屏幕阅读器或者图片未加载出来时显�
 
 
 
-![Image](https://raw.githubusercontent.com/kevin9281/-/master/59.webp)
 
 
 
@@ -2076,13 +2023,11 @@ a:visited {
 
 比如在 [第9天：自我介绍](http://mp.weixin.qq.com/s?__biz=MzI5MTY0ODAwNQ==&mid=2247484080&idx=1&sn=0df71fc48c05bffd229fcd07e1a57cbf&chksm=ec0c25dadb7baccc357f607a31de80f2de0a5763cb1528b6b0958a441babfbff718e4518fcc5&scene=21#wechat_redirect) 这节课程中，首字“我”不同于其它字，它的字体大小是 30px。实现这种效果可以通过添加一个 span 标签，也可以使用伪元素选择器 ::first-letter 实现。
 
-![Image](https://raw.githubusercontent.com/kevin9281/-/master/62.webp)
 
 对于「图+文字」这种效果可以利用 ::before 这个伪元素选择器。下面的 CSS 样式中的 content 属性必须有，否则将不会展示。
 
 
 
-![Image](https://raw.githubusercontent.com/kevin9281/-/master/63.webp)
 
 ```
 .left {
@@ -2113,7 +2058,6 @@ a:visited {
 
 如果把上面的 ::before 换成 ::after，显示效果如下：
 
-![Image](https://raw.githubusercontent.com/kevin9281/-/master/64.webp)
 
 从上面可以看到，通过 ::before 和 ::after 可以给已知元素的前面或者后面拼接新的内容，好像添加了新的元素，我觉得这应该就是伪元素中“伪”的真正含义吧，它并不是一个真正的元素，但可以充当元素的角色。
 
@@ -2141,7 +2085,6 @@ a:visited {
 
 预览效果如下：
 
-![Image](https://raw.githubusercontent.com/kevin9281/-/master/65.webp)
 
 除了这两个伪元素外，还有其它的伪元素，比如：
 
@@ -2188,11 +2131,9 @@ a:visited {
 
 ellipsis（省略号）: 以 ... 省略号显示；
 
-![Image](https://raw.githubusercontent.com/kevin9281/-/master/66.webp)
 
 clip : 截断显示；
 
-![Image](https://raw.githubusercontent.com/kevin9281/-/master/67.webp)
 
 **只显示两行**
 
@@ -2215,11 +2156,9 @@ clip : 截断显示；
 
 
 
-![Image](https://raw.githubusercontent.com/kevin9281/-/master/68.webp)
 
 如果想显示 3 行内容，把 -webkit-line-clamp 改为 -webkit-line-clamp：3；
 
-![Image](https://raw.githubusercontent.com/kevin9281/-/master/69.webp)
 
 
 
@@ -2286,11 +2225,8 @@ CSS权重的知识点算是一个难点，需要掌握所有的选择器，起�
 
 
 
-![Image](https://raw.githubusercontent.com/kevin9281/-/master/72.webp)
 
-![Image](https://raw.githubusercontent.com/kevin9281/-/master/73.webp)
 
-![Image](https://raw.githubusercontent.com/kevin9281/-/master/74.webp)
 
 
 
@@ -2341,7 +2277,6 @@ animation-fill-mode：动画执行后的填充模式，它的值有 forwards、b
 
 看一个具体的实例，可以给选择器设置一个动画：
 
-![Image](https://raw.githubusercontent.com/kevin9281/-/master/75.webp)
 
 
 
@@ -2566,7 +2501,6 @@ body {
 
 选择器 content 的 font-size 是 20px，在选择器 title 的 width 属性的值为 9em，由于 title 所在的 div 标签父元素是 content 所在的标签，所以 width = 9*font-size=9*20=180px；同理 height = 4*20=80px；如果 title 所在的 div 标签 设置了 font-size，那么 em 计算的值将会依据自身的 font-size 计算。
 
-![Image](https://raw.githubusercontent.com/kevin9281/-/master/76.webp)
 
 
 
@@ -2610,7 +2544,6 @@ body {
 
 
 
-![Image](https://raw.githubusercontent.com/kevin9281/-/master/77.webp)
 
 **vw（viewport width）**，可视区域宽度，比如设置 50vw，相当于可视区域宽度的一半；
 
@@ -2643,7 +2576,6 @@ body {
 
 
 
-![Image](https://raw.githubusercontent.com/kevin9281/-/master/78.webp)
 
 
 
@@ -2663,7 +2595,6 @@ body {
 
 
 
-![Image](https://raw.githubusercontent.com/kevin9281/-/master/79.webp)
 
 
 
@@ -2760,7 +2691,6 @@ p {
 
 一图胜千言：
 
-![Image](https://raw.githubusercontent.com/kevin9281/-/master/82.webp)
 
 
 
@@ -2780,7 +2710,6 @@ x：元素、伪元素选择器，权重最低，可以看做 0-0-0-1；
 
 第一张宝图来自 *https://specifishity.com/* 
 
-![Image](https://raw.githubusercontent.com/kevin9281/-/master/83.webp)
 
 CSS specifical，可以翻译成 CSS 权重，图中通过鱼和鲨鱼来表示选择器的权重。
 
@@ -2804,15 +2733,12 @@ style：权重值更高，权重值为 1-0-0-0；
 
 有了上面知识的基础，理解下面这张图就不难理解了。图中的权重值逐渐递增。不同的的小人代码不同选择器的权重值：
 
-![Image](https://raw.githubusercontent.com/kevin9281/-/master/84.webp)
 
 下面是不同选择器之间结合的权重值:
 
-![Image](https://raw.githubusercontent.com/kevin9281/-/master/85.webp)
 
 第三张宝图来自: *https://cssspecificity.com/*
 
-![Image](https://raw.githubusercontent.com/kevin9281/-/master/86.webp)
 
 我看看一看实际的例子来说明 CSS 的权重问题。
 
@@ -2848,7 +2774,6 @@ p:nth-child(2) {
 
 
 
-![Image](https://raw.githubusercontent.com/kevin9281/-/master/87.webp)
 
 2.多种选择器相结合，权重值该如何计算；
 
@@ -2894,13 +2819,11 @@ div p {
 
 
 
-![Image](https://raw.githubusercontent.com/kevin9281/-/master/88.webp)
 
 **总结**
 
 CSS权重其实理解起来并不是很难，整个权重的设计思路很符合正常的思想，选择器选择的范围越小，权重值一般就会很大。VSCode 中提供了一种方法可以看到具体的权重值，鼠标停到选择器上面，就会显示下图所示的权重值。
 
-![Image](https://raw.githubusercontent.com/kevin9281/-/master/89.webp)
 
 
 
@@ -3152,7 +3075,7 @@ each(range(9), {
 
 最终效果如下：
 
-![Image](https://raw.githubusercontent.com/kevin9281/-/master/92.webp)
+
 
 
 

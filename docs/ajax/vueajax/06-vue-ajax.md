@@ -98,7 +98,7 @@ http://meyerweb.com/eric/tools/css/reset/
     overflow: hidden;
   }
 </style  
-```  
+```
 
    Home.vue
 
@@ -721,8 +721,8 @@ case 401:
   localStorage.removeItem("tsToken");
   router.push("/login");
   break;
-  ```
-  
+```
+
    在路由里面设置路由守卫
 
 ```
@@ -743,12 +743,12 @@ router.beforeEach((to: any, from: any, next: any) =   {
 ##  6.token
 
     token
- 
+
 
    1.先需要在登录post请求里面拿到token  
- 
+
    2.然后将token 存储到 localStorage 里面  
-  
+
    3.请求拦截器   
    负责将客户端标识token值存储并放置在头部提交给服务端  
 
@@ -758,18 +758,18 @@ router.beforeEach((to: any, from: any, next: any) =   {
 ```
 在axios请求拦截里面判断localStorage里面是否有token 如果有的话 就把token放到headers.Authorization  header里面的授权  
 ```
- 
+
 ``` 
 在axios响应拦截里面判断localStorage里面是否存在token 如果token过期了 那么就跳转401页面
 ```
- 
+
     5.定义路由守卫 
- 
+
  ```
  通过router.beforeEach  
  然后判断 localStorage是否有toen 如果有就继续跳转 如果没有 全都到登录页面
  ```
- 
+
 
  ##  7.实现找回密码页面
 
@@ -899,10 +899,10 @@ prop 表单域 model 字段，在使用 validate、resetFields 方法的情况�
       }
     });
   }
- ```
- 
+```
+
     如果valid为真表示验证通过 发起post请求 找回密码
- 
+
  ```
    /* 当前的ref 有个ruleForm validate 里面可以得到valid 给个类型 */
   /* 然后判断 如果valid校验成功的话 那是已经通过了 此处就有两个校验了*/
@@ -929,7 +929,7 @@ prop 表单域 model 字段，在使用 validate、resetFields 方法的情况�
       }
     });
   }
-```
+ ```
 
 ##  8.token存储到vuex
 
@@ -2137,6 +2137,7 @@ npm i echarts @types/echarts --save
 
    
 
+
 ```
 <template  
   <div ref="mychart" class="chart" :style="{width:chartWidth,height:chartHeight}"  </div  
@@ -2759,10 +2760,10 @@ v-if v-else 判断 如果scope.row.edit 为false 就是正常状态 当为ture �
         });
       });
   }
-  ```
-  
+```
+
      用 scope.row.edit 状态 控制可编辑与完成
-  
+
   ```
     <el-table-column label="角色" width="180"  
     <template slot-scope="scope"  
@@ -2793,7 +2794,7 @@ v-if v-else 判断 如果scope.row.edit 为false 就是正常状态 当为ture �
     </template  
   </el-table-column  
   
-```
+  ```
 
 
    完整 AddAccount.vue
@@ -3070,3 +3071,213 @@ export default class TableData extends Vue {
   @Getter("user") getUser: any;
 
 ```
+
+## 总结
+
+
+
+```
+vue-ts-projects
+|
+|
+└─── .gitignore (告诉Git哪些文件不需要添加到版本管理中)
+|
+|
+└─── LICENSE (产品许可文件)
+|
+|
+└─── vuets-api (后端)
+|
+|
+└─── vuets-app (前端)
+	|
+	|
+	└─── node_modules (所有的模块)
+	|
+	|
+	└─── public (静态文件目录)	
+	|				|
+	|				|
+	|				└─── css 
+	|				|		|				
+	|				|		|
+	|				|		└─── reset.css (初始样式)
+	|				|
+	|				|
+	|				└─── favicon.ico (图标)
+	|				|
+	|				|
+	|				└─── index.html (主静态页面)
+	|
+	|
+	└─── src (主文件目录)
+	|		 |
+	|		 |
+	|		 └─── assets (该项目的资源文件,会被webpack打包进你的代码)
+	|		 |    |
+	|		 |    |
+	|		 |    └─── (所有页面模块中引入的图片)
+	|		 |
+	|		 └─── components (组件)
+	|		 |		|
+	|		 |		|
+	|		 |		└─── Charts.vue (ECharts 组件配置文件)
+	|		 |
+	|		 |
+	|		 └─── router (路由管理)
+	|	   |	 |	
+	|	   |	 |	
+	|		 |	 └─── index.ts (路由配置文件)
+	|		 |
+	|		 |
+	|		 └─── store (Vuex状态管理)
+	|		 |   |
+	|		 |   |
+	|		 |   └─── actions.ts 
+	|		 |   |
+	|		 |   |
+	|		 |   └─── getters.ts
+	|		 |   |
+	|		 |   |
+	|		 |   └─── index.ts
+	|		 |   |
+	|		 |   |
+	|		 |   └─── mutations.ts
+	|		 |   |
+	|		 |   |
+	|		 |   └─── state.ts
+	|		 |
+	|		 |
+	|		 └─── utils (工具文件)
+	|		 |   |
+	|		 |   |
+	|		 |   └─── http.ts (引入配置 axios 设置请求拦截 响应拦截)
+	|		 |
+	|		 |
+	|		 └─── views (所有页面模块)
+	|		 |   |
+	|		 |   |
+	|		 |   └─── DataManage (管理模块)
+	|		 |   |   |
+	|		 |   |   |
+	|		 |   |   └─── ChartsData.vue (图标管理模块 折线图/柱状图/饼图)
+	|		 |   |   |
+	|		 |   |   |
+	|		 |   |   └─── EditDialog.vue (表格管理模块中的编辑功能模块)
+	|		 |   |   |
+	|		 |   |   |
+	|		 |   |   └─── FormData.vue (表单管理模块)
+	|		 |   |   |
+	|		 |   |   |
+	|		 |   |   └─── TableData.vue (表格管理模块)
+	|		 |   |
+	|		 |   |
+	|		 |   └─── Layout (页面布局的模块)
+	|		 |   |   |
+	|		 |   |   |
+	|		 |   |   └─── Content.vue (包含面包屑 有两个插槽 侧边栏/右侧内容DataManage)
+	|		 |   |   |
+	|		 |   |   |
+	|		 |   |   └─── Index.vue (页面主体 引入布局头部模块 内容模块)
+	|		 |   |   |
+	|		 |   |   |
+	|		 |   |   └─── LayoutHeader.vue (布局头部模块)
+	|		 |   |   |
+	|		 |   |   |
+	|		 |   |   └─── Sidebar.vue (侧边栏模块)
+	|		 |   |
+	|		 |   |
+	|		 |   └─── Login (登录注册页面)
+	|		 |   |   |
+	|		 |   |   |
+	|		 |   |   └─── Login.vue (登录页面 引入登录头部模块)
+	|		 |   |   |
+	|		 |   |   |
+	|		 |   |   └─── LoginHeader.vue (登录注册页面的头部)
+	|		 |   |   |
+	|		 |   |   |
+	|		 |   |   └─── Password.vue (注册页面 引入注册头部模块)
+	|		 |   |
+	|		 |   |
+	|		 |   └─── UserManage (用户管理模块(包含个人中心页面))
+	|		 |   |   |
+	|		 |   |   |
+	|		 |   |   └─── AccountData.vue (用户列表管理模块)
+	|		 |   |   |
+	|		 |   |   |
+	|		 |   |   └─── AddAccount.vue (新增账户 弹出层)
+	|		 |   |   |
+	|		 |   |   |
+	|		 |   |   └─── UserInfo.vue (个人中心页面)
+	|		 |   |
+	|		 |   |
+	|		 |   └─── 404.vue (访问错误的页面)
+	|		 |   |
+	|		 |   |
+	|		 |   └─── Home.vue (登录后的首页 显示在内容主体中间的)
+	|		 |
+	|		 |
+	|		 └─── App.vue (所有页面中共同需要的动画或者样式)
+	|		 |
+	|		 |
+	|		 └─── main.ts (入口文件)
+	|		 |
+	|		 |
+	|		 └─── shimtsx.d.ts (ts识别vue)
+	|		 |
+	|		 |
+	|		 └─── shims-vue.d.ts (vue识别ts)
+	|
+	|
+	└─── .gitignor (告诉Git哪些文件不需要添加到版本管理中)
+	|
+	|
+	└─── babel.config.js (配置babel 源代码进行转码)
+	|
+	|
+	└─── package-lock.json (锁定安装时的包的版本号，并且需要上传到git)
+	|
+	|
+	└─── package.json (项目的配置信息)
+	|
+	|
+	└─── README.md
+	|
+	|
+	└─── tsconfig.json (指定了用来编译这个项目的根文件和编译选项)
+	|
+	|
+	└─── vue.config.js (添加代理)
+```
+
+
+
+```
+主要页面分为 登录注册页面 之后就是一个单页面 只有内容改变 头部/侧边栏/面包屑都不改变  
+```
+
+> jwt 验证
+
+```
+登录验证:
+在登录请求里面拿到后台传来的token 
+然后把token存储到localStorage里面 并且存储到vuex中
+在axios请求拦截中判断localStorage是否有token 
+如果有的话 就把token放到头部 headers.Authorization里面 授权 返回给服务器 
+在axios响应拦截里面判断localStorage里面是否存在token 
+如果token过期了 那么就跳转401页面 
+然后在 router/index.ts 路由守卫中定义登录进来后 判断localStorage是否有token 
+如果有继续跳转 如果没有 全部都跳转到登录
+```
+
+```
+路由权限验证:
+先设置路由 让外部能获取到 将自己创建的路由 挂载到routes下
+在路由里面设置 roles:["admin", "editor"] 表示只有这两个用户 才有权限访问
+然后在 store 状态文件夹 state.ts中改为 不能放出所有路由 给路由一个空数组
+然后在 store 状态文件夹 actions.ts中把所有路由进行处理 判断用户是什么职位
+在router / index.ts 中beforeEach 路由守卫判断 让游客用户 不能编辑表格管理 编辑删除
+就可以在页面中 使用Getter 获取当前用户 
+然后用v-if判断如果当前用户 不是某某 就不能使用某功能
+```
+

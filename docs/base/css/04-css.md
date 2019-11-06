@@ -6,8 +6,6 @@ title: css 各类布局
 
 **课程：死磕CSS布局**
 
-![Image](https://raw.githubusercontent.com/kevin9281/-/master/93.webp)
-
 ##  基础布局
 
 ## FlexBox 布局

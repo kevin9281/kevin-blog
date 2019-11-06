@@ -54,8 +54,8 @@
 
 }
 .window{
-  width: 20em !important;
-  height: 29em !important;
-  top: 5em;
-  left: 8em;
+  width: 11em !important;
+  height: 19em !important;
+  top: 9em;
+  margin: 0 auto;
 }
