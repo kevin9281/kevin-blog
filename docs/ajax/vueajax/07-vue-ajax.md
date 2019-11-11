@@ -2182,6 +2182,66 @@ npm install sass-loader --save-dev
 
 
 
+## 14. 面包屑导航
+
+```
+路由配置文件:
+  {
+          path: '/Trafficaccidentddetail',
+          name: 'Trafficaccidentddetail',
+          meta: {
+            title: '交通事故详情',
+            breadcrumb:[
+              {
+                name:'事件管理',
+                path:'/Trafficaccident'
+              },
+              {
+                name:'交通事故',
+                path:'/Trafficaccident'
+              },
+              {
+                name:'详情',
+                path:'/Trafficaccidentddetail'
+              }
+            ]
+          },
+          component: resolve => require(['../components/page/Trafficaccidentddetail.vue'], resolve) //交通事故详情
+        },
+        
+说明：在这里我们 router 的 meta属性 添加了 自定义的breadcrumb对象，这样做后，在每个需要展示面包屑的组件页面中都可以通过访问
+```
+
+```
+在面包屑组件中可以不用watch,可以直接使用计算属性，循环计算属性
+      
+      
+      computed:{
+        breadcrumb(){
+          return  this.$route.meta.breadcrumb;
+        }
+      },
+      
+      
+      
+      <!-- 面包屑 -->
+      <div class="bread">
+        <el-breadcrumb separator-class="el-icon-arrow-right">
+          <el-breadcrumb-item 
+            :to="{ path: '/' }">
+            首页
+          </el-breadcrumb-item>
+          <el-breadcrumb-item 
+            :to="{ path: item.path }" 
+            v-for="(item,index) in breadcrumb"
+            :key="index"
+            >
+            {{item.name}}
+            </el-breadcrumb-item>
+        </el-breadcrumb>
+      </div>
+```
+
 
 
 
