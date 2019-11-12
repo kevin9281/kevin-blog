@@ -2,7 +2,9 @@
 title: 首页
 ---
 
-## 介绍
+## 参考资料
 
-主要用于解决在使用 Manjaro 时遇到的问题，以及是怎么解决的。
+vue 官网 https://cn.vuejs.org/
+
+vue-amap 高德 https://elemefe.github.io/vue-amap/#/zh-cn/introduction/install
 
