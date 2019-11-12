@@ -15,6 +15,7 @@ const children = [
   '12-vue',
   '13-vue',
   '14-vue',
+  '15-vue',
 ];
 
 module.exports = [

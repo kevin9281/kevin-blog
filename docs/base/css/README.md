@@ -3,6 +3,12 @@ title: 首页
 ---
 
 ## 参考资料
+bootstrap图标库 
+
+```
+<link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+```
+
 css 初始样式 http://meyerweb.com/eric/tools/css/reset/  
 
 前端小课 https://github.com/lefex/FE  
