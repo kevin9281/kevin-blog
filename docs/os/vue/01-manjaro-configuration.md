@@ -1,22 +1,22 @@
 ---
-title: 页面跳转
+title: vue 页面跳转
 ---
 
 ## 路由跳转   
 
-    跳转到 path:'/login' 的页面 
+跳转到 path:'/login' 的页面 
 
 ```
 <router-link to="/login"  <router-link/  
-```  
+```
 
-    路由跳转时传参  
+路由跳转时传参  
 
 ```
 传参的页面<template  中 ：<router-link :to="'/home/newsinfo/' + item.id"   <router-link/  
-```  
+```
 
-    参数接收  
+参数接收  
 
 ```
 data() {
@@ -29,7 +29,7 @@ data() {
    router.js内路由的配置  
 ```
   { path: '/home/newsinfo/:id', component: Newsinfo ，name: 'Newsinfo' }
-```  
+```
 
 ## 编程式页面跳转  
 
@@ -63,13 +63,13 @@ this.$router.push({
   name:'',
   query: { id:idParams }
 })
-```  
+```
 
     接收参数  
 
 ```
 this.$route.query.id
-```  
+```
 
    注意：传参是 router   ，  接收参数是  route
 

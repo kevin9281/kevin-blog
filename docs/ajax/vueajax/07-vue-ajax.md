@@ -2244,6 +2244,25 @@ npm install sass-loader --save-dev
 
 
 
+## 15. 完善首页
+
+```
+1. 分为8个组件构成
+  1.1 四个用户信息
+  1.2 echarts 曲线图
+  1.3 echarts 六边形图
+  1.4 echarts 扇形图
+  1.5 echarts 树状图
+  1.6 一个表单
+  1.7 一个日常记录 list
+  1.8 个人页面
+  
+1.1 先安装 CountTo 指定的持续时间内计入目标数 npm install vue-count-to
+ 使用 import CountTo from 'vue-count-to'
+    再安装 svg-icon 标签
+ 使用 npm install vue-svg-icon --save-dev
+```
+
 
 
 

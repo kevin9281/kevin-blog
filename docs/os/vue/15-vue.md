@@ -283,3 +283,269 @@ methods:{
 </van-cell>
 ```
 
+
+
+
+
+##  4.父子组件间传值三种方式
+
+```
+父子组件传值
+1. props / $emit
+2. $parent / children
+3. $ref
+```
+
+```
+1. 先创建项目 创建文件 实现 父子传值 demo
+  views / Parent.vue  Children.vue
+  
+2. 在app.vue 中引入 Parent.vue  
+
+<template>
+  <div id="app">
+    <m-parent/>
+  </div>
+</template>
+
+
+<script>
+import MParent from "./views/Parent";
+
+export default {
+  components: {
+    MParent,
+  },
+}
+</script>
+
+3. 在Parent.vue 中引入 Children.vue
+
+<template>
+  <div>
+    <h1>Parent</h1>
+    <m-children />
+  </div>
+</template>
+
+<script>
+import MChildren from "./Children";
+
+export default {
+  components: {
+    MChildren
+  }
+};
+</script>
+```
+
+**第一种 props / $emit**
+
+**通过props父组件传递到子组件**
+
+```
+1. 通过绑定属性实现父组件传递到子组件 <m-children :msg="'from Parent msg'"></m-children>
+:msg 相当于使用 v-bind:msg="'from Parent msg'" 赋值的是一个变量存储值 可以在子组件调用
+```
+
+```
+2. 使用props 接收父组件传来的值
+<script>
+export default {
+  props: {
+    msg: {  // 定义一个数据
+      type: String, // 定义类型
+      default: "" //默认值
+    }
+  }
+};
+</script>
+```
+
+**通过自定义事件 子组件传递到父组件**
+
+```
+1. 在子组件中写上 button 并绑定事件
+
+<button @click="passMsg">揍你!</button>
+
+  methods: {
+    passMsg() {
+      this.$emit('showMsg','i am from Children')
+    }
+  },
+```
+
+```
+2. 在父组件中接收
+
+<m-children @showMsg="showMsg"></m-children>  // 自定义事件
+
+export default {
+  data() {
+    return {
+      msg: ""  // 在父组件中接收 也必须要先在data中给初始值定义
+    }
+  },
+  components: {
+    MChildren
+  },
+  methods: {
+    showMsg(val) {  // 此方法showMsg 就是子组件中的第一个参数 val 就是子组件中的第二个参数
+      this.msg = val
+    }
+  },
+};
+
+然后当在父组件中 点击button 的时候 就会出现
+```
+
+**第二种 $parent / children**
+
+**子组件传递给父组件**
+
+```
+1. 先在子组件中定义
+
+  data() {
+    return {
+      childMsg: 'child msg'
+    }
+  },
+  
+2. 就可以直接在父组件中获取 同时也可以拿到子组件的方法
+
+ <h3>{{mms}}</h3>
+    
+  mounted () {
+    console.log(this.$children[0].childMsg);
+    this.mms = this.$children[0].childMsg
+  },
+```
+
+**第三种 $ref**
+
+```
+1. 在子组件定义
+
+  data() {
+    return {
+      childMsg: 'child msg'
+    }
+  },
+  
+2. 在父组件中 
+
+<m-children ref="children"></m-children>
+
+  mounted() {
+    console.log("ref", this.$refs.children);
+  }
+
+```
+
+## 5.非父子组件传值的方式
+
+**1.通过事件总线**
+
+```
+通过事件总线 进行非父子间传值
+// 原理上就是建立一个公共的js文件 , 专门用来传递消息
+// bus.js
+import Vue from 'vue'
+export default new Vue
+
+// 在需要传递消息的地方引入
+import bus from './bus.js'
+// 传递消息
+bus.$emit('msg',val)
+// 接收消息
+bus.$emit('msg',val => {
+	console.log(val)
+})
+```
+
+```
+1. 先在 src目录下 创建 util工具类文件夹 然后创建 bus.js 文件
+
+import Vue from 'vue'
+
+export default new Vue
+
+2. 然后在 需要传递的两个组件 都引入 bus.js 
+import bus from './util/bus.js'  
+
+3. 然后就可以在传值的组件中 使用一个事件绑定 
+
+<button @click="passMsg">传你</button>
+
+  methods: {
+    passMsg() {
+      bus.$emit('msg','i am from App')
+    }
+  },
+  
+4. 在接收组件中通过$on 监听这个事件
+
+  mounted() {
+    bus.$on("msg", ( val ) => {
+      this.childMsg = val
+    });
+  }
+  
+  <h5>{{childMsg}}</h5>
+```
+
+**2.  attrs / ​listeners **
+
+```
+$attrs / $listeners
+
+// 解决多级组件间传值的问题
+
+// 在传值的组件统一传值
+// 使用$attrs 传值的话 还需要在 接收值的组件 的 父组件上面绑定 v-bind="$attrs" 属性
+
+// $attrs 将父组件中不包含props的属性传入子组件, 通常配合 interitAttrs 选项一起使用
+// $listeners 监听子组件中的数据变化 传递给父组件
+
+// $listeners  包含了父作用域中的 (不含 .native 修饰器的) v-on 事件监听器。它可以通过 v-on=”$listeners” 传入内部组件——在创建更高层次的组件时非常有用。
+```
+
+```
+1. 现在传值组件中定义数据
+
+export default {
+  data() {
+    return {
+      a: 'msga',
+      b: 'msgb',
+      c: 'msgc',
+      d: 'msgd',
+    }
+  },
+ methods: {
+   ev1() {}
+  }
+}
+  
+然后利用自定义指令传递过去  传递方法的话 需要在前面加上个 @ 同时在传值组件中定义方法
+<m-parent :msg1="a" :msg2="b" :msg3="c" :msg4="d" @event2="ev2"></m-parent>
+
+2. 在接收组件的父组件中 
+	<m-children v-bind="$attrs" v-on="$listeners"></m-children>
+
+3. 在接收组件中定义
+  mounted() {
+    console.log('attrs',this.$attrs);
+  }
+  
+  attrs 
+  {msg1: "msga", msg2: "msgb", msg3: "msgc", msg4: "msgd"}
+  msg1: "msga"
+  msg2: "msgb"
+  msg3: "msgc"
+  msg4: "msgd"
+  __proto__: Object
+```
+
