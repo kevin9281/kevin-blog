@@ -2261,6 +2261,34 @@ npm install sass-loader --save-dev
  使用 import CountTo from 'vue-count-to'
     再安装 svg-icon 标签
  使用 npm install vue-svg-icon --save-dev
+ 
+ 创建组件 views / Home / admin / PanelGroup.vue 
+ 然后在 Home.vue 中使用组件
+ 
+1.2 安装 echarts main.js 中引入 注册
+
+npm install echarts -S
+
+// 引入echarts
+import echarts from 'echarts'
+
+Vue.prototype.$echarts = echarts
+
+  创建 admin / mixins / resize.js
+  创建组件 views / Home / admin / LineChart.vue
+  创建工具类 src / utils
+  
+ LineChart.vue 中引入 
+ 
+  import echarts from 'echarts'
+	require('echarts/theme/macarons') // echarts theme
+	import resize from './mixins/resize'
+	
+1.3 六边形图 RaddarChart.vue
+1.4 饼图 PieChart.vue 
+1.5 树状图 BarChart.vue
+1.6 展示表格
+使用 cnpm i js-cookie
 ```
 
 
