@@ -6,7 +6,7 @@ title: 5.数组类型
 
 数组是多个变量值的集合，数组是`Array` 对象的实例，所以可以像对象一样调用方法。
 
-### [#](http://houdunren.gitee.io/note/js/4 数组类型.html#创建数组)创建数组
+##  (http://houdunren.gitee.io/note/js/4 数组类型.html#创建数组)创建数组
 
 使用对象方式创建数组
 
@@ -65,7 +65,7 @@ console.log(hd.length);
 console.log(hd);
 ```
 
-### [#](http://houdunren.gitee.io/note/js/4 数组类型.html#array-of)Array.of
+##  (http://houdunren.gitee.io/note/js/4 数组类型.html#array-of)Array.of
 
 使用`Array.of` 与 `new Array` 不同是设置一个参数时不会创建空元素数组
 
@@ -77,7 +77,7 @@ hd = Array.of(1, 2, 3);
 console.log(hd); //[1, 2, 3]
 ```
 
-### [#](http://houdunren.gitee.io/note/js/4 数组类型.html#类型检测)类型检测
+##  (http://houdunren.gitee.io/note/js/4 数组类型.html#类型检测)类型检测
 
 检测变量是否为数组类型
 
@@ -86,11 +86,11 @@ console.log(Array.isArray([1, "后盾人", "hdcms"])); //true
 console.log(Array.isArray(9)); //false
 ```
 
-## [#](http://houdunren.gitee.io/note/js/4 数组类型.html#类型转换)类型转换
+##  (http://houdunren.gitee.io/note/js/4 数组类型.html#类型转换)类型转换
 
 可以将数组转换为字符串也可以将其他类型转换为数组。
 
-### [#](http://houdunren.gitee.io/note/js/4 数组类型.html#字符串)字符串
+##  (http://houdunren.gitee.io/note/js/4 数组类型.html#字符串)字符串
 
 大部分数据类型都可以使用`.toString()` 函数转换为字符串。
 
@@ -110,7 +110,7 @@ console.log(String([1, 2, 3]));
 console.log([1, 2, 3].join("-"));//1-2-3
 ```
 
-### [#](http://houdunren.gitee.io/note/js/4 数组类型.html#array-from)Array.from
+##  (http://houdunren.gitee.io/note/js/4 数组类型.html#array-from)Array.from
 
 使用`Array.from`可将类数组转换为数组，类数组指包含 `length` 属性或可迭代的对象。
 
@@ -149,7 +149,7 @@ DOM元素转换为数组后来使用数组函数，第二个参数类似于`map`
 </script>
 ```
 
-### [#](http://houdunren.gitee.io/note/js/4 数组类型.html#展开语法)展开语法
+##  (http://houdunren.gitee.io/note/js/4 数组类型.html#展开语法)展开语法
 
 使用展开语法将 `NodeList` 转换为数组操作
 
@@ -175,9 +175,9 @@ DOM元素转换为数组后来使用数组函数，第二个参数类似于`map`
 </script>
 ```
 
-## [#](http://houdunren.gitee.io/note/js/4 数组类型.html#展开语法-2)展开语法
+##  (http://houdunren.gitee.io/note/js/4 数组类型.html#展开语法-2)展开语法
 
-### [#](http://houdunren.gitee.io/note/js/4 数组类型.html#数组合并)数组合并
+##  (http://houdunren.gitee.io/note/js/4 数组类型.html#数组合并)数组合并
 
 使用展开语法来合并数组相比 `concat` 要更简单，使用`...` 可将数组展开为多个值。
 
@@ -187,7 +187,7 @@ let b = ['a', '后盾人', ...a];
 console.log(b); //["a", "后盾人", 1, 2, 3]
 ```
 
-### [#](http://houdunren.gitee.io/note/js/4 数组类型.html#函数参数)函数参数
+##  (http://houdunren.gitee.io/note/js/4 数组类型.html#函数参数)函数参数
 
 使用展示语法可以替代 `arguments` 来接收任意数量的参数
 
@@ -207,7 +207,7 @@ function hd(site, ...args) {
 hd("后盾人", 1, 2, 3);
 ```
 
-### [#](http://houdunren.gitee.io/note/js/4 数组类型.html#节点转换)节点转换
+##  (http://houdunren.gitee.io/note/js/4 数组类型.html#节点转换)节点转换
 
 可以将DOM节点转为数组，下面例子不可以使用 filter 因为是节点列表
 
@@ -259,13 +259,13 @@ hd("后盾人", 1, 2, 3);
 </script>
 ```
 
-## [#](http://houdunren.gitee.io/note/js/4 数组类型.html#解构赋值)解构赋值
+##  (http://houdunren.gitee.io/note/js/4 数组类型.html#解构赋值)解构赋值
 
 解构是一种更简洁的赋值特性，可以理解为分解一个数据的结构
 
 - 建设使用 `var/let/const` 声明
 
-### [#](http://houdunren.gitee.io/note/js/4 数组类型.html#基本使用)基本使用
+##  (http://houdunren.gitee.io/note/js/4 数组类型.html#基本使用)基本使用
 
 下面是基本使用语法
 
@@ -308,7 +308,7 @@ const [...a] = "houdunren.com";
 console.log(a); //Array(13)
 ```
 
-### [#](http://houdunren.gitee.io/note/js/4 数组类型.html#严格模式)严格模式
+##  (http://houdunren.gitee.io/note/js/4 数组类型.html#严格模式)严格模式
 
 非严格模式可以不使用声明指令，严格模式下必须使用声明。所以建议使用 let 等声明。
 
@@ -319,7 +319,7 @@ console.log(a); //Array(13)
 console.log(web);
 ```
 
-### [#](http://houdunren.gitee.io/note/js/4 数组类型.html#简洁定义)简洁定义
+##  (http://houdunren.gitee.io/note/js/4 数组类型.html#简洁定义)简洁定义
 
 只赋值部分变量
 
@@ -335,7 +335,7 @@ let [name, ...arr] = ['后盾人', 'hdcms', 'houdunren.com'];
 console.log(name, arr); //后盾人 (2) ["hdcms", "houdunren.com"]
 ```
 
-### [#](http://houdunren.gitee.io/note/js/4 数组类型.html#默认值)默认值
+##  (http://houdunren.gitee.io/note/js/4 数组类型.html#默认值)默认值
 
 为变量设置默认值
 
@@ -344,7 +344,7 @@ let [name, site = 'hdcms'] = ['后盾人'];
 console.log(site); //hdcms
 ```
 
-### [#](http://houdunren.gitee.io/note/js/4 数组类型.html#函数参数-2)函数参数
+##  (http://houdunren.gitee.io/note/js/4 数组类型.html#函数参数-2)函数参数
 
 数组参数的使用
 
@@ -355,9 +355,9 @@ function hd([a, b]) {
 hd(['后盾人', 'hdcms']);
 ```
 
-## [#](http://houdunren.gitee.io/note/js/4 数组类型.html#管理元素)管理元素
+##  (http://houdunren.gitee.io/note/js/4 数组类型.html#管理元素)管理元素
 
-### [#](http://houdunren.gitee.io/note/js/4 数组类型.html#基本使用-2)基本使用
+##  (http://houdunren.gitee.io/note/js/4 数组类型.html#基本使用-2)基本使用
 
 使用从0开始的索引来改变数组
 
@@ -375,7 +375,7 @@ arr[arr.length] = 'houdunren.com';
 console.log(arr); //[1, "后盾人", "hdcms", "houdunren.com"]
 ```
 
-### [#](http://houdunren.gitee.io/note/js/4 数组类型.html#扩展语法)扩展语法
+##  (http://houdunren.gitee.io/note/js/4 数组类型.html#扩展语法)扩展语法
 
 使用展示语法批量添加元素
 
@@ -386,7 +386,7 @@ hd.push(...arr);
 console.log(hd); //["houdunren", "后盾人", "hdcms"]
 ```
 
-### [#](http://houdunren.gitee.io/note/js/4 数组类型.html#push)push
+##  (http://houdunren.gitee.io/note/js/4 数组类型.html#push)push
 
 压入元素，直接改变元数组，返回值为数组元素数量
 
@@ -409,7 +409,7 @@ function rangeArray(begin, end) {
 console.log(rangeArray(1, 6));
 ```
 
-### [#](http://houdunren.gitee.io/note/js/4 数组类型.html#pop)pop
+##  (http://houdunren.gitee.io/note/js/4 数组类型.html#pop)pop
 
 从末尾弹出元素，直接改变元数组，返回值为弹出的元素
 
@@ -419,7 +419,7 @@ console.log(arr.pop()); //hdcms
 console.log(arr); //["后盾人"]
 ```
 
-### [#](http://houdunren.gitee.io/note/js/4 数组类型.html#shift)shift
+##  (http://houdunren.gitee.io/note/js/4 数组类型.html#shift)shift
 
 从数组前面取出一个元素
 
@@ -429,7 +429,7 @@ console.log(arr.shift()); //后盾人
 console.log(arr); //["hdcms"]
 ```
 
-### [#](http://houdunren.gitee.io/note/js/4 数组类型.html#unshift)unshift
+##  (http://houdunren.gitee.io/note/js/4 数组类型.html#unshift)unshift
 
 从数组前面添加元素
 
@@ -439,7 +439,7 @@ console.log(arr.unshift('向军大叔', 'houdunren')); //4
 console.log(arr); //["向军大叔", "houdunren", "后盾人", "hdcms"]
 ```
 
-### [#](http://houdunren.gitee.io/note/js/4 数组类型.html#fill)fill
+##  (http://houdunren.gitee.io/note/js/4 数组类型.html#fill)fill
 
 使用`fill` 填充数组元素
 
@@ -453,7 +453,7 @@ console.dir(Array(4).fill("后盾人")); //["后盾人", "后盾人", "后盾人
 console.log([1, 2, 3, 4].fill("后盾人", 1, 2)); //[1, "后盾人", 3, 4]
 ```
 
-### [#](http://houdunren.gitee.io/note/js/4 数组类型.html#slice)slice
+##  (http://houdunren.gitee.io/note/js/4 数组类型.html#slice)slice
 
 使用 `slice` 方法从数组中截取部分元素组合成新数组（并不会改变原数组），不传第二个参数时截取到数组的最后元素。
 
@@ -469,7 +469,7 @@ let arr = [0, 1, 2, 3, 4, 5, 6];
 console.log(arr.slice()); //[0, 1, 2, 3, 4, 5, 6]
 ```
 
-### [#](http://houdunren.gitee.io/note/js/4 数组类型.html#splice)splice
+##  (http://houdunren.gitee.io/note/js/4 数组类型.html#splice)splice
 
 使用 `splice` 方法可以添加、删除、替换数组中的元素，会对原数组进行改变，返回值为删除的元素。
 
@@ -530,7 +530,7 @@ const array = [1, 2, 3, 4];
 console.table(move(array, 0, 3));
 ```
 
-### [#](http://houdunren.gitee.io/note/js/4 数组类型.html#清空数组)清空数组
+##  (http://houdunren.gitee.io/note/js/4 数组类型.html#清空数组)清空数组
 
 将数组值修改为`[]`可以清空数组，如果有多个引用时数组在内存中存在被其他变量引用。
 
@@ -566,9 +566,9 @@ while (user.pop()) {}
 console.log(user);
 ```
 
-## [#](http://houdunren.gitee.io/note/js/4 数组类型.html#合并拆分)合并拆分
+##  (http://houdunren.gitee.io/note/js/4 数组类型.html#合并拆分)合并拆分
 
-### [#](http://houdunren.gitee.io/note/js/4 数组类型.html#join)join
+##  (http://houdunren.gitee.io/note/js/4 数组类型.html#join)join
 
 使用`join`连接成字符串
 
@@ -577,7 +577,7 @@ let arr = [1, "后盾人", "hdcms"];
 console.log(arr.join('-')); //1-后盾人-hdcms 使用join可以指定转换的连接方式
 ```
 
-### [#](http://houdunren.gitee.io/note/js/4 数组类型.html#split)split
+##  (http://houdunren.gitee.io/note/js/4 数组类型.html#split)split
 
 `split` 方法用于将字符串分割成数组，类似`join`方法的反函数。
 
@@ -586,7 +586,7 @@ let price = "99,78,68";
 console.log(price.split(",")); //["99", "78", "68"]
 ```
 
-### [#](http://houdunren.gitee.io/note/js/4 数组类型.html#concat)concat
+##  (http://houdunren.gitee.io/note/js/4 数组类型.html#concat)concat
 
 `concat`方法用于连接两个或多个数组，元素是值类型的是复制操作，如果是引用类型还是指向同一对象
 
@@ -603,7 +603,7 @@ console.log(array.concat(hd, cms)); //["hdcms", "houdunren", 1, 2, 3, 4]
 console.log([...array, ...hd, ...cms]);
 ```
 
-### [#](http://houdunren.gitee.io/note/js/4 数组类型.html#copywithin)copyWithin
+##  (http://houdunren.gitee.io/note/js/4 数组类型.html#copywithin)copyWithin
 
 使用 `copyWithin` 从数组中复制一部分到同数组中的另外位置。
 
@@ -626,11 +626,11 @@ const arr = [1, 2, 3, 4];
 console.log(arr.copyWithin(2, 0, 2)); //[1, 2, 1, 2]
 ```
 
-## [#](http://houdunren.gitee.io/note/js/4 数组类型.html#查找元素)查找元素
+##  (http://houdunren.gitee.io/note/js/4 数组类型.html#查找元素)查找元素
 
 数组包含多种查找的函数，需要把这些函数掌握清楚，然后根据不同场景选择合适的函数。
 
-### [#](http://houdunren.gitee.io/note/js/4 数组类型.html#indexof)indexOf
+##  (http://houdunren.gitee.io/note/js/4 数组类型.html#indexof)indexOf
 
 使用 `indexOf` 从前向后查找元素出现的位置，如果找不到返回 `-1`。
 
@@ -654,7 +654,7 @@ let arr = [7, 3, 2, 8, 2, 6];
 console.log(arr.indexOf(2, 3)); //4
 ```
 
-### [#](http://houdunren.gitee.io/note/js/4 数组类型.html#lastindexof)lastIndexOf
+##  (http://houdunren.gitee.io/note/js/4 数组类型.html#lastindexof)lastIndexOf
 
 使用 `lastIndexOf` 从后向前查找元素出现的位置，如果找不到返回 `-1`。
 
@@ -674,7 +674,7 @@ console.log(arr.lastIndexOf(2, 5));
 console.log(arr.lastIndexOf(2, -2));
 ```
 
-### [#](http://houdunren.gitee.io/note/js/4 数组类型.html#includes)includes
+##  (http://houdunren.gitee.io/note/js/4 数组类型.html#includes)includes
 
 使用 `includes` 查找字符串返回值是布尔类型更方便判断
 
@@ -695,7 +695,7 @@ function includes(array, item) {
 console.log(includes([1, 2, 3, 4], 3)); //true
 ```
 
-### [#](http://houdunren.gitee.io/note/js/4 数组类型.html#find)find
+##  (http://houdunren.gitee.io/note/js/4 数组类型.html#find)find
 
 find 方法找到后会把值返回出来
 
@@ -729,7 +729,7 @@ const find = user.find(user => (user.name = "后盾人"));
 console.log(find);
 ```
 
-### [#](http://houdunren.gitee.io/note/js/4 数组类型.html#findindex)findIndex
+##  (http://houdunren.gitee.io/note/js/4 数组类型.html#findindex)findIndex
 
 `findIndex` 与 `find` 的区别是返回索引值，参数也是 : 当前值，索引，操作数组。
 
@@ -743,7 +743,7 @@ console.log(arr.findIndex(function (v) {
 })); //3
 ```
 
-### [#](http://houdunren.gitee.io/note/js/4 数组类型.html#find原理)find原理
+##  (http://houdunren.gitee.io/note/js/4 数组类型.html#find原理)find原理
 
 下面使用自定义函数
 
@@ -777,9 +777,9 @@ let re = arr.findValue(function(item) {
 console.log(re);
 ```
 
-## [#](http://houdunren.gitee.io/note/js/4 数组类型.html#数组排序)数组排序
+##  (http://houdunren.gitee.io/note/js/4 数组类型.html#数组排序)数组排序
 
-### [#](http://houdunren.gitee.io/note/js/4 数组类型.html#reverse)reverse
+##  (http://houdunren.gitee.io/note/js/4 数组类型.html#reverse)reverse
 
 反转数组顺序
 
@@ -788,7 +788,7 @@ let arr = [1, 4, 2, 9];
 console.log(arr.reverse()); //[9, 2, 4, 1]
 ```
 
-### [#](http://houdunren.gitee.io/note/js/4 数组类型.html#sort)sort
+##  (http://houdunren.gitee.io/note/js/4 数组类型.html#sort)sort
 
 ```
 sort`每次使用两个值进行比较 `Array.sort((a,b)=>a-b
@@ -828,7 +828,7 @@ let sortLessons = lessons.sort((v1, v2) => v2.click - v1.click);
 console.log(sortLessons);
 ```
 
-### [#](http://houdunren.gitee.io/note/js/4 数组类型.html#排序原理)排序原理
+##  (http://houdunren.gitee.io/note/js/4 数组类型.html#排序原理)排序原理
 
 ```text
 let arr = [1, 5, 3, 9, 7];
@@ -850,9 +850,9 @@ arr = sort(arr, function(a, b) {
 console.table(arr);
 ```
 
-## [#](http://houdunren.gitee.io/note/js/4 数组类型.html#循环遍历)循环遍历
+##  (http://houdunren.gitee.io/note/js/4 数组类型.html#循环遍历)循环遍历
 
-### [#](http://houdunren.gitee.io/note/js/4 数组类型.html#for)for
+##  (http://houdunren.gitee.io/note/js/4 数组类型.html#for)for
 
 根据数组长度结合`for` 循环来遍历数组
 
@@ -869,7 +869,7 @@ for (let i = 0; i < lessons.length; i++) {
 console.log(lessons);
 ```
 
-### [#](http://houdunren.gitee.io/note/js/4 数组类型.html#foreach)forEach
+##  (http://houdunren.gitee.io/note/js/4 数组类型.html#foreach)forEach
 
 `forEach`使函数作用在每个数组元素上，但是没有返回值。
 
@@ -888,7 +888,7 @@ lessons.forEach((item, index, array) => {
 console.log(lessons);
 ```
 
-### [#](http://houdunren.gitee.io/note/js/4 数组类型.html#for-in)for/in
+##  (http://houdunren.gitee.io/note/js/4 数组类型.html#for-in)for/in
 
 遍历时的 key 值为数组的索引
 
@@ -904,7 +904,7 @@ for (const key in lessons) {
 }
 ```
 
-### [#](http://houdunren.gitee.io/note/js/4 数组类型.html#for-of)for/of
+##  (http://houdunren.gitee.io/note/js/4 数组类型.html#for-of)for/of
 
 与 `for/in` 不同的是 `for/of` 每次循环取其中的值而不是索引。
 
@@ -956,11 +956,11 @@ function arrayMax(array) {
 console.log(arrayMax([1, 3, 2, 9]));
 ```
 
-## [#](http://houdunren.gitee.io/note/js/4 数组类型.html#迭代器方法)迭代器方法
+##  (http://houdunren.gitee.io/note/js/4 数组类型.html#迭代器方法)迭代器方法
 
 数组中可以使用多种迭代器方法，迭代器后面章节会详解。
 
-### [#](http://houdunren.gitee.io/note/js/4 数组类型.html#keys)keys
+##  (http://houdunren.gitee.io/note/js/4 数组类型.html#keys)keys
 
 通过迭代对象获取索引
 
@@ -991,7 +991,7 @@ while (({ value, done } = values.keys()) && done === false) {
 }
 ```
 
-## [#](http://houdunren.gitee.io/note/js/4 数组类型.html#values)values
+##  (http://houdunren.gitee.io/note/js/4 数组类型.html#values)values
 
 通过迭代对象获取值
 
@@ -1014,7 +1014,7 @@ for (const value of arr.values()) {
 }
 ```
 
-### [#](http://houdunren.gitee.io/note/js/4 数组类型.html#entries)entries
+##  (http://houdunren.gitee.io/note/js/4 数组类型.html#entries)entries
 
 返回数组所有键值对，下面使用解构语法循环
 
@@ -1036,9 +1036,9 @@ let {done,value: [k, v]} = iterator.next();
 console.log(v);
 ```
 
-## [#](http://houdunren.gitee.io/note/js/4 数组类型.html#扩展方法)扩展方法
+##  (http://houdunren.gitee.io/note/js/4 数组类型.html#扩展方法)扩展方法
 
-### [#](http://houdunren.gitee.io/note/js/4 数组类型.html#every)every
+##  (http://houdunren.gitee.io/note/js/4 数组类型.html#every)every
 
 `every` 用于递归的检测元素，要所有元素操作都要返回真结果才为真。
 
@@ -1067,7 +1067,7 @@ let state = words.every(function (item, index, array) {
 if (state == false) console.log('标题必须包含所有关键词');
 ```
 
-### [#](http://houdunren.gitee.io/note/js/4 数组类型.html#some)some
+##  (http://houdunren.gitee.io/note/js/4 数组类型.html#some)some
 
 使用 `some` 函数可以递归的检测元素，如果有一个返回true，表达式结果就是真。第一个参数为元素，第二个参数为索引，第三个参数为原数组。
 
@@ -1084,7 +1084,7 @@ let state = words.some(function (item, index, array) {
 if (state) console.log('标题含有违规关键词');
 ```
 
-### [#](http://houdunren.gitee.io/note/js/4 数组类型.html#filter)filter
+##  (http://houdunren.gitee.io/note/js/4 数组类型.html#filter)filter
 
 使用 `filter` 可以过滤数据中元素，下面是获取所有在CSS栏目的课程。
 
@@ -1118,7 +1118,7 @@ const array = [1, 2, 3, 4];
 console.log(except(array, [2, 3])); //[1,4]
 ```
 
-### [#](http://houdunren.gitee.io/note/js/4 数组类型.html#map)map
+##  (http://houdunren.gitee.io/note/js/4 数组类型.html#map)map
 
 使用 `map` 映射可以在数组的所有元素上应用函数，用于映射出新的值。
 
@@ -1150,7 +1150,7 @@ lessons = lessons.map(function (item, index, array) {
 console.log(lessons);
 ```
 
-### [#](http://houdunren.gitee.io/note/js/4 数组类型.html#reduce)reduce
+##  (http://houdunren.gitee.io/note/js/4 数组类型.html#reduce)reduce
 
 使用 `reduce` 与 `reduceRight` 函数可以迭代数组的所有元素，`reduce` 从前开始 `reduceRight` 从后面开始。下面通过函数计算课程点击数的和。
 
@@ -1257,7 +1257,7 @@ let filterArr = arr.reduce((pre, cur, index, array) => {
 console.log(filterArr); // [1,2,6]
 ```
 
-## [#](http://houdunren.gitee.io/note/js/4 数组类型.html#动画案例)动画案例
+##  (http://houdunren.gitee.io/note/js/4 数组类型.html#动画案例)动画案例
 
 ![Untitled](http://houdunren.gitee.io/note/assets/img/Untitled-0803682.b8920733.gif)
 

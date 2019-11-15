@@ -9,7 +9,7 @@ title: 3.运算符与流程控制
 
 下面来讨论常用的编程运算符的使用。
 
-### [#](http://houdunren.gitee.io/note/js/2 运算符与流程控制.html#赋值运算符)赋值运算符
+## 运算符与流程控制
 
 使用 `=` 进行变量赋值
 
@@ -17,7 +17,7 @@ title: 3.运算符与流程控制
 let url = 'houdunren.com';
 ```
 
-### [#](http://houdunren.gitee.io/note/js/2 运算符与流程控制.html#算术运算符)算术运算符
+## 算术运算符
 
 包括以下几种算术运算符。
 
@@ -35,7 +35,7 @@ console.log(a * b); //15
 console.log(a % b); //2
 ```
 
-### [#](http://houdunren.gitee.io/note/js/2 运算符与流程控制.html#复合运算符)复合运算符
+## 复合运算符
 
 可以使用 `*=、/=、+=、-=、%=` 简写算术运算。即 `n*=2` 等同于 `n=n*2`。
 
@@ -57,9 +57,9 @@ console.log(n); //5
 
 `n+=3` 是 `n=n+3` 的简写形式
 
-### [#](http://houdunren.gitee.io/note/js/2 运算符与流程控制.html#一元运算符)一元运算符
+## 一元运算符
 
-#### [#](http://houdunren.gitee.io/note/js/2 运算符与流程控制.html#前置操作)前置操作
+## 前置操作
 
 前置操作会在表达式最先执行。
 
@@ -81,7 +81,7 @@ let f = 30 + ++n;
 console.log(f);
 ```
 
-#### [#](http://houdunren.gitee.io/note/js/2 运算符与流程控制.html#后置操作)后置操作
+## 后置操作
 
 后置操作会在表达式最后执行。
 
@@ -107,7 +107,7 @@ b = a++ + 2;
 console.log(b); //3
 ```
 
-### [#](http://houdunren.gitee.io/note/js/2 运算符与流程控制.html#比较运算符)比较运算符
+## 比较运算符
 
 | 运算符 | 说明               |
 | ------ | ------------------ |
@@ -148,9 +148,9 @@ console.log(a === true); //false
 </script>
 ```
 
-### [#](http://houdunren.gitee.io/note/js/2 运算符与流程控制.html#逻辑运算符)逻辑运算符
+## 逻辑运算符
 
-#### [#](http://houdunren.gitee.io/note/js/2 运算符与流程控制.html#逻辑与)逻辑与
+## 逻辑与
 
 使用 `&&` 符号表示逻辑与，指符号两端都为 true 时表达式结果为true。
 
@@ -161,7 +161,7 @@ if (a && b) {
 }
 ```
 
-#### [#](http://houdunren.gitee.io/note/js/2 运算符与流程控制.html#逻辑或)逻辑或
+## 逻辑或
 
 使用 `||` 符号表示逻辑或，指符号左右两端有一方为true，表达式即成立。
 
@@ -172,7 +172,7 @@ if (a || b) {
 }
 ```
 
-#### [#](http://houdunren.gitee.io/note/js/2 运算符与流程控制.html#逻辑非)逻辑非
+## 逻辑非
 
 使用 `!` 符号表示逻辑非，即原来是true转变为false，反之亦然。
 
@@ -183,7 +183,7 @@ if (a && !b) {
 }
 ```
 
-#### [#](http://houdunren.gitee.io/note/js/2 运算符与流程控制.html#优先级)优先级
+## 优先级
 
 下列中因为 `&&` 的优先级高所以结果是 `true`。
 
@@ -197,7 +197,7 @@ console.log(true || false && false);
 console.log((true || false) && false);
 ```
 
-#### [#](http://houdunren.gitee.io/note/js/2 运算符与流程控制.html#密码比对实例)密码比对实例
+## 密码比对实例
 
 ![Untitled](http://houdunren.gitee.io/note/assets/img/Untitled-2408590.ed2e964d.gif)
 
@@ -229,7 +229,7 @@ console.log((true || false) && false);
   });
 ```
 
-#### [#](http://houdunren.gitee.io/note/js/2 运算符与流程控制.html#短路运算)短路运算
+## 短路运算
 
 下例中 `a` 为真值，就已经知道结果了就不会再判断 `f` 的值了。
 
@@ -266,7 +266,7 @@ opt.url || getUrl(opt);
 console.log(opt.url);
 ```
 
-#### [#](http://houdunren.gitee.io/note/js/2 运算符与流程控制.html#实例操作)实例操作
+## 实例操作
 
 下面的例子在用户输入表单项并接收协议后才可提交
 
@@ -298,9 +298,9 @@ query("#form").addEventListener("submit", function(event) {
 </script>
 ```
 
-## [#](http://houdunren.gitee.io/note/js/2 运算符与流程控制.html#流程控制)流程控制
+## 流程控制
 
-### [#](http://houdunren.gitee.io/note/js/2 运算符与流程控制.html#if)if
+## if
 
 当条件为真时执行表达式代码块。
 
@@ -320,7 +320,7 @@ if (true)
 console.log('一直都显示的内容');
 ```
 
-### [#](http://houdunren.gitee.io/note/js/2 运算符与流程控制.html#if-else)if/else
+## if/else
 
 下面是使用多条件判断密码强度的示例
 
@@ -348,7 +348,7 @@ console.log('一直都显示的内容');
 </script>
 ```
 
-### [#](http://houdunren.gitee.io/note/js/2 运算符与流程控制.html#三元表达式)三元表达式
+## 三元表达式
 
 是针对 `if` 判断的简写形式。
 
@@ -373,7 +373,7 @@ function div(options = {}) {
 div();
 ```
 
-### [#](http://houdunren.gitee.io/note/js/2 运算符与流程控制.html#switch)switch
+## switch
 
 可以将 `switch` 理解为 `if` 的另一种结构清晰的写法。
 
@@ -450,7 +450,7 @@ switch (1) {
 }
 ```
 
-### [#](http://houdunren.gitee.io/note/js/2 运算符与流程控制.html#while)while
+## while
 
 循环执行语句，需要设置跳出循环的条件否则会陷入死循环状态。下面是循环输出表格的示例。
 
@@ -463,7 +463,7 @@ while (row-- != 0) {
 document.write(`</table>`);
 ```
 
-### [#](http://houdunren.gitee.io/note/js/2 运算符与流程控制.html#do-while)do/while
+## do/while
 
 后条件判断语句，无论条件是否为真都会先进行循环体。
 
@@ -489,7 +489,7 @@ function hd(row = 5) {
 hd();
 ```
 
-### [#](http://houdunren.gitee.io/note/js/2 运算符与流程控制.html#for)for
+## for
 
 可以在循环前初始化初始计算变量。下面是使用`for` 打印倒三角的示例
 
@@ -544,7 +544,7 @@ for (; i < 10; ) {
 }
 ```
 
-### [#](http://houdunren.gitee.io/note/js/2 运算符与流程控制.html#break-continue)break/continue
+## break/continue
 
 break用于退出当前循环，continue用于退出当前循环返回循环起始继续执行。
 
@@ -569,7 +569,7 @@ for (let i = 1; i <= 10; i++) {
 }
 ```
 
-### [#](http://houdunren.gitee.io/note/js/2 运算符与流程控制.html#label)label
+## label
 
 标签(label) 为程序定义位置，可以使用`continue/break`跳到该位置。
 
@@ -589,7 +589,7 @@ houdunren: for (let i = 1; i <= 10; i++) {
 }
 ```
 
-### [#](http://houdunren.gitee.io/note/js/2 运算符与流程控制.html#for-in)for/in
+## for/in
 
 用于遍历对象的所有属性，`for/in`主要用于遍历对象，不建议用来遍历数组。
 
@@ -638,7 +638,7 @@ for (name in window) {
 }
 ```
 
-### [#](http://houdunren.gitee.io/note/js/2 运算符与流程控制.html#for-of)for/of
+## for/of
 
 用来遍历 Arrays（数组）, Strings（字符串）, Maps（映射）, Sets（集合）等可迭代的数据结构。
 

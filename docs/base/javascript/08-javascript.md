@@ -8,7 +8,7 @@ title: 8.函数进阶
 
 函数是将复用的代码块封装起来的模块，在JS中函数还有其他语言所不具有的特性，接下来我们会详细掌握使用技巧。
 
-### [#](http://houdunren.gitee.io/note/js/7 函数进阶.html#生明定义)生明定义
+##  (http://houdunren.gitee.io/note/js/7 函数进阶.html#生明定义)生明定义
 
 在JS中函数也是对象函数是`Function`类的创建的实例，下面的例子可以方便理解函数是对象。
 
@@ -95,7 +95,7 @@ console.log(user.getName()); // 后盾人
 console.log(web);
 ```
 
-### [#](http://houdunren.gitee.io/note/js/7 函数进阶.html#形参实参)形参实参
+##  (http://houdunren.gitee.io/note/js/7 函数进阶.html#形参实参)形参实参
 
 形参是在函数声明时设置的参数，实参指在调用函数时传递的值。
 
@@ -109,7 +109,7 @@ function sum(n1, n2) {}
 sum(2, 3);
 ```
 
-### [#](http://houdunren.gitee.io/note/js/7 函数进阶.html#参数默认值)参数默认值
+##  (http://houdunren.gitee.io/note/js/7 函数进阶.html#参数默认值)参数默认值
 
 参数可以设置默认值，当不传实参时使用默认值替代。下例中当不传递 type 参数时使用默认值 asc。
 
@@ -120,7 +120,7 @@ function sortArray(arr, type = 'asc') {
 console.log(sortArray([1, 3, 2, 6], 'desc'));
 ```
 
-### [#](http://houdunren.gitee.io/note/js/7 函数进阶.html#函数参数)函数参数
+##  (http://houdunren.gitee.io/note/js/7 函数进阶.html#函数参数)函数参数
 
 函数可以做为参数传递，这也是大多数语言都支持的语法规则。
 
@@ -135,7 +135,7 @@ console.log(sortArray([1, 3, 2, 6], 'desc'));
 </script>
 ```
 
-### [#](http://houdunren.gitee.io/note/js/7 函数进阶.html#arguments)arguments
+##  (http://houdunren.gitee.io/note/js/7 函数进阶.html#arguments)arguments
 
 arguments 是函数获得到所有参数集合，下面是使用 `arguments` 求和的例子。
 
@@ -150,7 +150,7 @@ function sum() {
 console.log(sum(2, 3, 1, 4, 8));
 ```
 
-### [#](http://houdunren.gitee.io/note/js/7 函数进阶.html#合并参数)合并参数
+##  (http://houdunren.gitee.io/note/js/7 函数进阶.html#合并参数)合并参数
 
 使用 `...` 可以接受传入的多个参数合并为数组，下面是使用点语法进行求合计算。
 
@@ -162,7 +162,7 @@ function sum(...params) {
 console.log(sum(1, 3, 2, 4));
 ```
 
-### [#](http://houdunren.gitee.io/note/js/7 函数进阶.html#箭头函数)箭头函数
+##  (http://houdunren.gitee.io/note/js/7 函数进阶.html#箭头函数)箭头函数
 
 箭头函数是函数声明的简写形式，在使用递归调用、构造函数、事件处理器时不建议使用箭头函数。
 
@@ -193,7 +193,7 @@ console.log(hd);
 
 > 有关箭头函数的作用域知识会在后面章节讨论
 
-### [#](http://houdunren.gitee.io/note/js/7 函数进阶.html#函数提升)函数提升
+##  (http://houdunren.gitee.io/note/js/7 函数进阶.html#函数提升)函数提升
 
 函数也会提升到前面，优先级行于`var`变量提高
 
@@ -217,7 +217,7 @@ var hd = function () {
 }
 ```
 
-### [#](http://houdunren.gitee.io/note/js/7 函数进阶.html#递归调用)递归调用
+##  (http://houdunren.gitee.io/note/js/7 函数进阶.html#递归调用)递归调用
 
 递归指函数内部调用自身的方式。
 
@@ -296,7 +296,7 @@ star();
 </script>
 ```
 
-### [#](http://houdunren.gitee.io/note/js/7 函数进阶.html#回调函数)回调函数
+##  (http://houdunren.gitee.io/note/js/7 函数进阶.html#回调函数)回调函数
 
 在某个时刻被其他函数调用的函数称为回调函数，比如处理键盘、鼠标事件的函数。
 
@@ -314,7 +314,7 @@ let hd = ([1, 2, 3]).map(item => item + 10);
 console.log(hd)
 ```
 
-### [#](http://houdunren.gitee.io/note/js/7 函数进阶.html#展开语法)展开语法
+##  (http://houdunren.gitee.io/note/js/7 函数进阶.html#展开语法)展开语法
 
 展开语法已经在前面数据类型讨论过，使用展示语法可以替代 `arguments` 来接收任意数量的参数
 
@@ -334,7 +334,7 @@ function hd(site, ...args) {
 hd("后盾人", 1, 2, 3);
 ```
 
-### [#](http://houdunren.gitee.io/note/js/7 函数进阶.html#标签函数)标签函数
+##  (http://houdunren.gitee.io/note/js/7 函数进阶.html#标签函数)标签函数
 
 使用函数来解析标签字符串，第一个参数是字符串值的数组，其余的参数为标签变量。
 
@@ -347,11 +347,11 @@ let name = '后盾人',url = 'houdunren.com';
 hd `站点${name}-${url}`;
 ```
 
-## [#](http://houdunren.gitee.io/note/js/7 函数进阶.html#this)this
+##  (http://houdunren.gitee.io/note/js/7 函数进阶.html#this)this
 
 调用函数时 `this` 会隐式传递给函数指函数调用时的关联对象，也称之为函数的上下文。
 
-### [#](http://houdunren.gitee.io/note/js/7 函数进阶.html#普通调用)普通调用
+##  (http://houdunren.gitee.io/note/js/7 函数进阶.html#普通调用)普通调用
 
 独立函数在非严格模式下`this` 是全局`window`对象，严格模式时是`undefined`。
 
@@ -380,7 +380,7 @@ console.log(get());
 </script>
 ```
 
-### [#](http://houdunren.gitee.io/note/js/7 函数进阶.html#方法调用)方法调用
+##  (http://houdunren.gitee.io/note/js/7 函数进阶.html#方法调用)方法调用
 
 函数做为对象属性时 `this` 指向对象。
 
@@ -411,7 +411,7 @@ let hd = {
 console.log(hd.get());
 ```
 
-### [#](http://houdunren.gitee.io/note/js/7 函数进阶.html#构造函数)构造函数
+##  (http://houdunren.gitee.io/note/js/7 函数进阶.html#构造函数)构造函数
 
 函数当被 `new` 时即为构造函数，一般构造函数中包含属性与方法。函数中的上下文指向到实例对象。
 
@@ -428,7 +428,7 @@ let hd = new User();
 console.log(hd.say());
 ```
 
-### [#](http://houdunren.gitee.io/note/js/7 函数进阶.html#箭头函数-2)箭头函数
+##  (http://houdunren.gitee.io/note/js/7 函数进阶.html#箭头函数-2)箭头函数
 
 箭头函数中的`this` 会继承定义函数时的上下文，可以理解为和外层函数指向一个this。
 
@@ -503,9 +503,9 @@ console.log(obj.getName()()); //后盾人
 </script>
 ```
 
-## [#](http://houdunren.gitee.io/note/js/7 函数进阶.html#apply-call-bind)apply/call/bind
+##  (http://houdunren.gitee.io/note/js/7 函数进阶.html#apply-call-bind)apply/call/bind
 
-### [#](http://houdunren.gitee.io/note/js/7 函数进阶.html#原理分析)原理分析
+##  (http://houdunren.gitee.io/note/js/7 函数进阶.html#原理分析)原理分析
 
 构造函数中的`this`默认是一个空对象，然后构造函数处理后把这个空对象变得有值丰富了起来。
 
@@ -528,7 +528,7 @@ User.call(hdcms, "HDCMS");
 console.log(hdcms);
 ```
 
-### [#](http://houdunren.gitee.io/note/js/7 函数进阶.html#apply-call)apply/call
+##  (http://houdunren.gitee.io/note/js/7 函数进阶.html#apply-call)apply/call
 
 call与apply 用于显示的设置函数的上下文，两个方法作用一样都是将对象绑定到this，只是在传递参数上有所不同。
 
@@ -690,7 +690,7 @@ console.log(
 </script>
 ```
 
-### [#](http://houdunren.gitee.io/note/js/7 函数进阶.html#bind)bind
+##  (http://houdunren.gitee.io/note/js/7 函数进阶.html#bind)bind
 
 bind()是将函数绑定到某个对象，比如 a.bind(hd) 可以理解为将a函数绑定到hd对象上即 hd.a()。
 

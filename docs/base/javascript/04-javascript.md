@@ -10,7 +10,7 @@ title: 4.基本类型
 
 JS提供了非常丰富的数据类型，开发者要学会使用最适合的数据类型处理业务 。
 
-### [#](http://houdunren.gitee.io/note/js/3 基本类型.html#typeof)typeof
+## typeof
 
 `typeof` 用于返回以下原始类型
 
@@ -42,7 +42,7 @@ let d = { name: "houdunren.com" };
 console.log(typeof d); //object
 ```
 
-### [#](http://houdunren.gitee.io/note/js/3 基本类型.html#instanceof)instanceof
+## instanceof
 
 **`instanceof`** 运算符用于检测构造函数的 `prototype` 属性是否出现在某个实例对象的原型链上。
 
@@ -67,7 +67,7 @@ let hd = new User();
 console.log(hd instanceof User); //true
 ```
 
-### [#](http://houdunren.gitee.io/note/js/3 基本类型.html#值类型与对象)值类型与对象
+## 值类型与对象
 
 下面是使用字面量与对象方法创建字符串，返回的是不同类型。
 
@@ -86,11 +86,11 @@ console.log(hd.length); //9
 console.log(cms.length); //5
 ```
 
-## [#](http://houdunren.gitee.io/note/js/3 基本类型.html#string)String
+## String
 
 字符串类型是使用非常多的数据类型，也是相对简单的数据类型。
 
-### [#](http://houdunren.gitee.io/note/js/3 基本类型.html#声明定义)声明定义
+## 声明定义
 
 使用对象形式创建字符串
 
@@ -109,7 +109,7 @@ let content = '后盾人';
 console.log(content);
 ```
 
-### [#](http://houdunren.gitee.io/note/js/3 基本类型.html#转义符号)转义符号
+## 转义符号
 
 有些字符有双层含义，需要使用 `\` 转义符号进行含义转换。下例中引号为字符串边界符，如果输出引号时需要使用转义符号。
 
@@ -128,7 +128,7 @@ console.log(content);
 | \'   | 单引号   |
 | \"   | 双引号R  |
 
-### [#](http://houdunren.gitee.io/note/js/3 基本类型.html#连接运算符)连接运算符
+## 连接运算符
 
 使用 `+` 可以连接多个内容组合成字符串，经常用于组合输出内容使用。
 
@@ -146,7 +146,7 @@ web += '网址：houdunren.com';
 console.log(web); //后盾人网址：houdunren.com
 ```
 
-### [#](http://houdunren.gitee.io/note/js/3 基本类型.html#模板字面量)模板字面量
+## 模板字面量
 
 使用 ` ...` 符号包裹的字符串中可以写入引入变量与表达式
 
@@ -191,7 +191,7 @@ function template() {
 document.body.innerHTML = template();
 ```
 
-### [#](http://houdunren.gitee.io/note/js/3 基本类型.html#标签模板)标签模板
+## 标签模板
 
 标签模板是提取出普通字符串与变量，交由标签函数处理
 
@@ -243,7 +243,7 @@ function template() {
 document.body.innerHTML += template();
 ```
 
-### [#](http://houdunren.gitee.io/note/js/3 基本类型.html#获取长度)获取长度
+## 获取长度
 
 使用`length`属性可以获取字符串长度
 
@@ -251,7 +251,7 @@ document.body.innerHTML += template();
 console.log("houdunren.com".length)
 ```
 
-### [#](http://houdunren.gitee.io/note/js/3 基本类型.html#大小写转换)大小写转换
+## 大小写转换
 
 将字符转换成大写格式
 
@@ -265,7 +265,7 @@ console.log('houdunren.com'.toUpperCase()); //HOUDUNREN.COM
 console.log('houdunren.com'.toLowerCase()); //houdunren.com
 ```
 
-### [#](http://houdunren.gitee.io/note/js/3 基本类型.html#移除空白)移除空白
+## 移除空白
 
 使用`trim`删除字符串左右的空白字符
 
@@ -284,7 +284,7 @@ console.log(name.trimLeft());
 console.log(name.trimRight()); 
 ```
 
-### [#](http://houdunren.gitee.io/note/js/3 基本类型.html#获取单字符)获取单字符
+## 获取单字符
 
 根据从0开始的位置获取字符
 
@@ -298,7 +298,7 @@ console.log('houdunren'.charAt(3))
 console.log('houdunren'[3])
 ```
 
-### [#](http://houdunren.gitee.io/note/js/3 基本类型.html#截取字符串)截取字符串
+## 截取字符串
 
 使用 `slice、substr、substring` 函数都可以截取字符串。
 
@@ -322,7 +322,7 @@ console.log(hd.substring(3, -9)); //hou 负数转为0
 console.log(hd.substr(-3, 2)); //co 从后面第三个开始取两个
 ```
 
-### [#](http://houdunren.gitee.io/note/js/3 基本类型.html#查找字符串)查找字符串
+## 查找字符串
 
 从开始获取字符串位置，检测不到时返回 `-1`
 
@@ -370,7 +370,7 @@ const status = words.some(word => {
 console.log(status);
 ```
 
-### [#](http://houdunren.gitee.io/note/js/3 基本类型.html#替换字符串)替换字符串
+## 替换字符串
 
 `replace` 方法用于字符串的替换操作
 
@@ -391,7 +391,7 @@ const title = word.reduce((pre, word) => {
 document.body.innerHTML += title;
 ```
 
-### [#](http://houdunren.gitee.io/note/js/3 基本类型.html#重复生成)重复生成
+## 重复生成
 
 下例是根据参数重复生成星号
 
@@ -409,7 +409,7 @@ let phone = "98765432101";
 console.log(phone.slice(0, -3) + "*".repeat(3));
 ```
 
-### [#](http://houdunren.gitee.io/note/js/3 基本类型.html#类型转换)类型转换
+## 类型转换
 
 分隔字母
 
@@ -448,11 +448,11 @@ let arr = ['hdcms', '后盾人'];
 console.log(typeof arr.toString()); //string
 ```
 
-## [#](http://houdunren.gitee.io/note/js/3 基本类型.html#boolean)Boolean
+## Boolean
 
 布尔类型包括 `true` 与 `false` 两个值，开发中使用较多的数据类型。
 
-### [#](http://houdunren.gitee.io/note/js/3 基本类型.html#声明定义-2)声明定义
+## 声明定义
 
 使用对象形式创建布尔类型
 
@@ -467,7 +467,7 @@ console.log(new Boolean(false)); //false
 let hd =true;
 ```
 
-### [#](http://houdunren.gitee.io/note/js/3 基本类型.html#隐式转换)隐式转换
+## 隐式转换
 
 基本上所有类型都可以隐式转换为 Boolean类型。
 
@@ -517,7 +517,7 @@ if ([]) console.log("true");
 if ({}) console.log("true");
 ```
 
-### [#](http://houdunren.gitee.io/note/js/3 基本类型.html#显式转换)显式转换
+## 显式转换
 
 使用 `!!` 转换布尔类型
 
@@ -545,7 +545,7 @@ hd = new Date("2020-2-22 10:33");
 console.log(Boolean(hd)); //true
 ```
 
-### [#](http://houdunren.gitee.io/note/js/3 基本类型.html#实例操作)实例操作
+## 实例操作
 
 下面使用Boolean类型判断用户的输入，并给出不同的反馈。
 
@@ -558,9 +558,9 @@ while (true) {
 }
 ```
 
-## [#](http://houdunren.gitee.io/note/js/3 基本类型.html#number)Number
+## Number
 
-### [#](http://houdunren.gitee.io/note/js/3 基本类型.html#声明定义-3)声明定义
+## 声明定义
 
 使用对象方式声明
 
@@ -576,7 +576,7 @@ let num = 99;
 console.log(typeof num);
 ```
 
-### [#](http://houdunren.gitee.io/note/js/3 基本类型.html#基本函数)基本函数
+## 基本函数
 
 判断是否为整数
 
@@ -590,7 +590,7 @@ console.log(Number.isInteger(1.2));
 console.log((16.556).toFixed(2)); // 16.56
 ```
 
-### [#](http://houdunren.gitee.io/note/js/3 基本类型.html#nan)NaN
+## NaN
 
 表示无效的数值，下例计算将产生NaN结果。
 
@@ -616,7 +616,7 @@ var res = 2 / 'houdunren';
 console.log(Object.is(res, NaN));
 ```
 
-### [#](http://houdunren.gitee.io/note/js/3 基本类型.html#类型转换-2)类型转换
+## 类型转换
 
 **Number**
 
@@ -663,7 +663,7 @@ console.log(parseFloat('18.55'));	//18.55
 </script>
 ```
 
-### [#](http://houdunren.gitee.io/note/js/3 基本类型.html#舍入操作)舍入操作
+## 舍入操作
 
 使用 `toFixed` 可对数值舍入操作，参数指定保存的小数位
 
@@ -671,11 +671,11 @@ console.log(parseFloat('18.55'));	//18.55
 console.log(1.556.toFixed(2)); //1.56
 ```
 
-## [#](http://houdunren.gitee.io/note/js/3 基本类型.html#math)Math
+## Math
 
 `Math` 对象提供了众多方法用来进行数学计算，下面我们介绍常用的方法，更多方法使用请查看 [MDN官网](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math) 了解。
 
-### [#](http://houdunren.gitee.io/note/js/3 基本类型.html#取极限值)取极限值
+## 取极限值
 
 使用 `min` 与 `max` 可以取得最小与最大值。
 
@@ -691,7 +691,7 @@ console.log(Math.max(1, 2, 3));
 console.log(Math.max.apply(Math, [1, 2, 3]));
 ```
 
-### [#](http://houdunren.gitee.io/note/js/3 基本类型.html#舍入处理)舍入处理
+## 舍入处理
 
 取最接近的向上整数
 
@@ -711,7 +711,7 @@ console.log(Math.floor(1.555)); //1
 console.log(Math.round(1.5)); //2
 ```
 
-### [#](http://houdunren.gitee.io/note/js/3 基本类型.html#random)random
+## random
 
 `random` 方法用于返回 >=0 且 <1 的随机数（包括0但不包括1）。
 
@@ -759,11 +759,11 @@ let pos = Math.floor(Math.random() * (3-1)) + 1;
 console.log(stus[pos]);
 ```
 
-## [#](http://houdunren.gitee.io/note/js/3 基本类型.html#date)Date
+## Date
 
 网站中处理日期时间是很常用的功能，通过 `Date` 类型提供的丰富功能可以非常方便的操作。
 
-### [#](http://houdunren.gitee.io/note/js/3 基本类型.html#声明日期)声明日期
+## 声明日期
 
 获取当前日期时间
 
@@ -816,7 +816,7 @@ let date = new Date(...info);
 console.dir(date);
 ```
 
-### [#](http://houdunren.gitee.io/note/js/3 基本类型.html#类型转换-3)类型转换
+## 类型转换
 
 将日期转为数值类型就是转为时间戳单位是毫秒
 
@@ -841,7 +841,7 @@ console.log(timestamp);
 console.log(new Date(timestamp));
 ```
 
-### [#](http://houdunren.gitee.io/note/js/3 基本类型.html#对象方法)对象方法
+## 对象方法
 
 格式化输出日期
 
@@ -925,7 +925,7 @@ console.log(dateFormat(new Date(), "YYYY年MM月DD日"));
 | UTC()                | 根据世界时返回 1970 年 1 月 1 日 到指定日期的毫秒数。  |
 | valueOf()            | 返回 Date 对象的原始值。                               |
 
-### [#](http://houdunren.gitee.io/note/js/3 基本类型.html#moment-js)moment.js
+## moment.js
 
 Moment.js是一个轻量级的JavaScript时间库，它方便了日常开发中对时间的操作，提高了开发效率。
 

@@ -10,7 +10,7 @@ title: 9.作用域与闭包
 - 使用变量时会从当前作用域开始向上查找变量
 - 作用域就像攀亲亲一样，晚辈总是可以向上辈要些东西
 
-### [#](http://houdunren.gitee.io/note/js/8 作用域与闭包.html#使用规范)使用规范
+##  (http://houdunren.gitee.io/note/js/8 作用域与闭包.html#使用规范)使用规范
 
 作用域链只向上查找，找到全局WINDOW即终止，应该尽量不要在全局作用域中添加变量。
 
@@ -34,7 +34,7 @@ title: 9.作用域与闭包
 </script>
 ```
 
-### [#](http://houdunren.gitee.io/note/js/8 作用域与闭包.html#let-const)let/const
+##  (http://houdunren.gitee.io/note/js/8 作用域与闭包.html#let-const)let/const
 
 使用 `let/const` 可以将变量声明在块作用域中
 
@@ -69,7 +69,7 @@ for (let i = 0; i < 10; i++) {
 }
 ```
 
-## [#](http://houdunren.gitee.io/note/js/8 作用域与闭包.html#闭包函数)闭包函数
+##  (http://houdunren.gitee.io/note/js/8 作用域与闭包.html#闭包函数)闭包函数
 
 闭包指函数可以访问外部作用域变量的函数，即使在函数在当前作用域外也可以访问。如果没有闭包那么在处理事件绑定，异步请求时都会变得困难。
 
@@ -77,7 +77,7 @@ for (let i = 0; i < 10; i++) {
 - 闭包可以访问到外部作用域的所有变量
 - 可以想像闭包会将外部环境复制一份供其使用
 
-### [#](http://houdunren.gitee.io/note/js/8 作用域与闭包.html#使用技巧)使用技巧
+##  (http://houdunren.gitee.io/note/js/8 作用域与闭包.html#使用技巧)使用技巧
 
 下面代码在使用闭包时，外部函数作用域依然保留。
 
@@ -150,7 +150,7 @@ console.log(lisi.getName());
 </script>
 ```
 
-### [#](http://houdunren.gitee.io/note/js/8 作用域与闭包.html#赋值特性)赋值特性
+##  (http://houdunren.gitee.io/note/js/8 作用域与闭包.html#赋值特性)赋值特性
 
 在使用`for` 等循环时 `var` 赋值产生一个变量， `let` 会产生多个变量并产生块作用域，这样就可以方便使用闭包
 

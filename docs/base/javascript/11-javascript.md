@@ -15,13 +15,13 @@ title: 11.原型与类
 
 ![image-20191010023843179](http://houdunren.gitee.io/note/assets/img/image-20191010023843179.58edd59f.png)
 
-### [#](http://houdunren.gitee.io/note/js/10 原型与类.html#原型链)原型链
+##  (http://houdunren.gitee.io/note/js/10 原型与类.html#原型链)原型链
 
 通过引用类型的原型，继承另一个引用类型的属性与方法，这也是实现继承的步骤。
 
 ![image-20191010012103033](http://houdunren.gitee.io/note/assets/img/image-20191010012103033.3540a960.png)
 
-#### [#](http://houdunren.gitee.io/note/js/10 原型与类.html#setprototypeof-getprototypeof)setPrototypeOf & getPrototypeOf
+##  (http://houdunren.gitee.io/note/js/10 原型与类.html#setprototypeof-getprototypeof)setPrototypeOf & getPrototypeOf
 
 使用`Object.setPrototypeOf` 可设置对象的原型，下面的示例中继承关系为 obj>hd>cms。
 
@@ -44,7 +44,7 @@ console.log(obj.web);
 console.log(Object.getPrototypeOf(hd) == cms); //true
 ```
 
-#### [#](http://houdunren.gitee.io/note/js/10 原型与类.html#构造函数)构造函数
+##  (http://houdunren.gitee.io/note/js/10 原型与类.html#构造函数)构造函数
 
 下面为 `Stu` 更改了原型为`User` 的实例对象，`lisi`是通过构造函数`Stu`创建的实例对象
 
@@ -68,7 +68,7 @@ console.log(lisi.__proto__);
 console.log(lisi.getName());
 ```
 
-#### [#](http://houdunren.gitee.io/note/js/10 原型与类.html#instanceof)instanceof
+##  (http://houdunren.gitee.io/note/js/10 原型与类.html#instanceof)instanceof
 
 instanceof 用于检测右边的函数原型是否正在于左侧对象的的原型链上
 
@@ -89,7 +89,7 @@ console.dir(lisi instanceof Stu); //true
 console.dir(lisi instanceof User); //true
 ```
 
-### [#](http://houdunren.gitee.io/note/js/10 原型与类.html#构造函数-2)构造函数
+##  (http://houdunren.gitee.io/note/js/10 原型与类.html#构造函数-2)构造函数
 
 构造函数在被`new` 时上下文为对象实例，如果对象中存在方法将执行对象方法，不再原型上查找方法。
 
@@ -106,7 +106,7 @@ const obj = new hd();
 console.log(obj.show());
 ```
 
-### [#](http://houdunren.gitee.io/note/js/10 原型与类.html#对象原型)对象原型
+##  (http://houdunren.gitee.io/note/js/10 原型与类.html#对象原型)对象原型
 
 对象的原型引用构造函数的原型对象，是在创建对象时确定的，当构造函数原型对象改变时会影响后面的实例对象。
 
@@ -123,7 +123,7 @@ const obj2 = new hd();
 console.dir(obj2.name); //后盾人
 ```
 
-### [#](http://houdunren.gitee.io/note/js/10 原型与类.html#object-create)Object.create
+##  (http://houdunren.gitee.io/note/js/10 原型与类.html#object-create)Object.create
 
 创建一个新对象时使用现有对象做为原型
 
@@ -136,7 +136,7 @@ const hd = Object.create(new User("后盾人"));
 console.log(Object.getPrototypeOf(hd));
 ```
 
-### [#](http://houdunren.gitee.io/note/js/10 原型与类.html#super)super
+##  (http://houdunren.gitee.io/note/js/10 原型与类.html#super)super
 
 使用`super`调用父类方法较通过原型调用更方便
 
@@ -159,7 +159,7 @@ Object.setPrototypeOf(hd, Person);
 console.log(hd.show());
 ```
 
-### [#](http://houdunren.gitee.io/note/js/10 原型与类.html#函数复制)函数复制
+##  (http://houdunren.gitee.io/note/js/10 原型与类.html#函数复制)函数复制
 
 使用构造函数会产生函数复制造成内存占用，及函数不能共享的问题。
 
@@ -198,7 +198,7 @@ console.log(lisi.get());
 console.log(wangwu.get());
 ```
 
-### [#](http://houdunren.gitee.io/note/js/10 原型与类.html#prototype)prototype
+##  (http://houdunren.gitee.io/note/js/10 原型与类.html#prototype)prototype
 
 为Object原型对象添加方法，将影响所有函数
 
@@ -348,7 +348,7 @@ console.log(lisi.lessons); //["JS", "VUE", "CSS"]
 console.log(wangwu.lessons); //["JS", "VUE", "CSS"]
 ```
 
-### [#](http://houdunren.gitee.io/note/js/10 原型与类.html#proto)__proto__
+##  (http://houdunren.gitee.io/note/js/10 原型与类.html#proto)__proto__
 
 在实例化对象上存在__proto__ 记录了原型，所以可以通过对象访问到原型的属性或方法。
 
@@ -418,7 +418,7 @@ console.log("name" in lisi);
 console.log(lisi.hasOwnProperty("name"));
 ```
 
-### [#](http://houdunren.gitee.io/note/js/10 原型与类.html#constructor)constructor
+##  (http://houdunren.gitee.io/note/js/10 原型与类.html#constructor)constructor
 
 constructor存在于prototype原型中，用于指向构建函数的引用。
 
@@ -482,7 +482,7 @@ console.log(wangwu.show());
 console.log(lisi.show()); // lisi.show is not a function
 ```
 
-### [#](http://houdunren.gitee.io/note/js/10 原型与类.html#构造函数-3)构造函数
+##  (http://houdunren.gitee.io/note/js/10 原型与类.html#构造函数-3)构造函数
 
 使用构造函数用于定义初始属性，而使用原型定义对象共用方法。
 
@@ -519,13 +519,13 @@ console.log(array);
 console.log(array.string("-"));
 ```
 
-## [#](http://houdunren.gitee.io/note/js/10 原型与类.html#继承)继承
+##  (http://houdunren.gitee.io/note/js/10 原型与类.html#继承)继承
 
 继承是为了复用代码，JS中的继承就是应用原型链，一个对象的原型是另一个对象的实例。
 
-### [#](http://houdunren.gitee.io/note/js/10 原型与类.html#基本继承)基本继承
+##  (http://houdunren.gitee.io/note/js/10 原型与类.html#基本继承)基本继承
 
-#### [#](http://houdunren.gitee.io/note/js/10 原型与类.html#基本继承-2)基本继承
+##  (http://houdunren.gitee.io/note/js/10 原型与类.html#基本继承-2)基本继承
 
 继承的本质是将原型指向到另一个对象，下面在执行 `article.get` 方法时的查找顺序为：article对象 > article的原型request对象 > request的原型对象 。
 
@@ -563,7 +563,7 @@ console.log(
 );
 ```
 
-#### [#](http://houdunren.gitee.io/note/js/10 原型与类.html#原型方法)原型方法
+##  (http://houdunren.gitee.io/note/js/10 原型与类.html#原型方法)原型方法
 
 设置原型方法要放在改变原型后面，因为前后是两个不同的原型对象
 
@@ -591,9 +591,9 @@ article.url = `article/index/id/1`;
 article.show(); //article.show is not a function
 ```
 
-### [#](http://houdunren.gitee.io/note/js/10 原型与类.html#引用属性)引用属性
+##  (http://houdunren.gitee.io/note/js/10 原型与类.html#引用属性)引用属性
 
-#### [#](http://houdunren.gitee.io/note/js/10 原型与类.html#问题分析)问题分析
+##  (http://houdunren.gitee.io/note/js/10 原型与类.html#问题分析)问题分析
 
 在原型的构造函数中声明引用属性，会造成实例属性共用。
 
@@ -623,7 +623,7 @@ article2.url.article = "article/index/id/2";
 console.log(article1.url.article); //文章1的URL与文章2一样了
 ```
 
-#### [#](http://houdunren.gitee.io/note/js/10 原型与类.html#解决方法)解决方法
+##  (http://houdunren.gitee.io/note/js/10 原型与类.html#解决方法)解决方法
 
 解决上面的问题是使用 `call/apply` 为每个生成的对象设置属性
 
@@ -683,7 +683,7 @@ const article2 = new Article({ article: "article/index/id/2" });
 console.log(article1.url.article); //文章1的URL与文章2一样了
 ```
 
-### [#](http://houdunren.gitee.io/note/js/10 原型与类.html#原型工厂)原型工厂
+##  (http://houdunren.gitee.io/note/js/10 原型与类.html#原型工厂)原型工厂
 
 通过复制父类的原型对象来设置构造函数的原型实现方法继承，并在构造函数内部通过 `call/apply` 实现属性继承。
 
@@ -713,9 +713,9 @@ console.log(article1.get());
 console.log(article2.get());
 ```
 
-### [#](http://houdunren.gitee.io/note/js/10 原型与类.html#对象工厂)对象工厂
+##  (http://houdunren.gitee.io/note/js/10 原型与类.html#对象工厂)对象工厂
 
-#### [#](http://houdunren.gitee.io/note/js/10 原型与类.html#实现原理)实现原理
+##  (http://houdunren.gitee.io/note/js/10 原型与类.html#实现原理)实现原理
 
 在原型继承基础上，将对象的生成使用函数完成，并在函数内部为对象添加属性或方法。
 
@@ -750,7 +750,7 @@ const article2 = ArticleController(2);
 console.log(article2.get());
 ```
 
-#### [#](http://houdunren.gitee.io/note/js/10 原型与类.html#系统方法)系统方法
+##  (http://houdunren.gitee.io/note/js/10 原型与类.html#系统方法)系统方法
 
 JS也为我们提供了`Object.create` 完在上面一样的功能
 
@@ -768,7 +768,7 @@ function ArticleController(id) {
 ...
 ```
 
-### [#](http://houdunren.gitee.io/note/js/10 原型与类.html#实例操作)实例操作
+##  (http://houdunren.gitee.io/note/js/10 原型与类.html#实例操作)实例操作
 
 使用 `call/apply` 制作选项卡
 
@@ -910,13 +910,13 @@ function ArticleController(id) {
 </script>
 ```
 
-## [#](http://houdunren.gitee.io/note/js/10 原型与类.html#class)class
+##  (http://houdunren.gitee.io/note/js/10 原型与类.html#class)class
 
 为了和其他语言继承形态一致，JS提供了`class` 关键词用于模拟传统的`class` ，但底层实现机制依然是原型继承。
 
 `class` 只是语法糖，为了让实现类的形式更加简洁。
 
-### [#](http://houdunren.gitee.io/note/js/10 原型与类.html#语法介绍)语法介绍
+##  (http://houdunren.gitee.io/note/js/10 原型与类.html#语法介绍)语法介绍
 
 使用 `constructor` 构造函数传递参数
 
@@ -933,7 +933,7 @@ const xj = new User("向军大叔");
 console.log(xj.getName());
 ```
 
-#### [#](http://houdunren.gitee.io/note/js/10 原型与类.html#构造函数-4)构造函数
+##  (http://houdunren.gitee.io/note/js/10 原型与类.html#构造函数-4)构造函数
 
 构造函数不是必须的，如果不设置系统会设置如下类型
 
@@ -945,7 +945,7 @@ constructor(...args) {
 }
 ```
 
-### [#](http://houdunren.gitee.io/note/js/10 原型与类.html#super-2)super
+##  (http://houdunren.gitee.io/note/js/10 原型与类.html#super-2)super
 
 ```
 super` 指调父类引用，在构造函数中必须先调用`super()
@@ -1002,7 +1002,7 @@ const lisi = new User("李四");
 console.log(lisi.say());
 ```
 
-### [#](http://houdunren.gitee.io/note/js/10 原型与类.html#静态方法)静态方法
+##  (http://houdunren.gitee.io/note/js/10 原型与类.html#静态方法)静态方法
 
 指通过类访问不能使用对象访问的方式，下面是原生代码实现。
 
@@ -1041,7 +1041,7 @@ console.log(xj.getName());
 console.dir(User.show());
 ```
 
-### [#](http://houdunren.gitee.io/note/js/10 原型与类.html#方法覆盖)方法覆盖
+##  (http://houdunren.gitee.io/note/js/10 原型与类.html#方法覆盖)方法覆盖
 
 子类存在父类同名方法时使用子类方法
 
@@ -1068,7 +1068,7 @@ const lisi = new User("李四");
 lisi.say();
 ```
 
-### [#](http://houdunren.gitee.io/note/js/10 原型与类.html#计算属性)计算属性
+##  (http://houdunren.gitee.io/note/js/10 原型与类.html#计算属性)计算属性
 
 ```text
 const action = "learn";
@@ -1087,7 +1087,7 @@ const xj = new User("向军大叔");
 console.log(xj.learn());
 ```
 
-### [#](http://houdunren.gitee.io/note/js/10 原型与类.html#访问器)访问器
+##  (http://houdunren.gitee.io/note/js/10 原型与类.html#访问器)访问器
 
 ```text
 const action = "learn";
@@ -1104,7 +1104,7 @@ const xj = new User("向军", 19);
 console.log(xj.userInfo);
 ```
 
-### [#](http://houdunren.gitee.io/note/js/10 原型与类.html#实现继承)实现继承
+##  (http://houdunren.gitee.io/note/js/10 原型与类.html#实现继承)实现继承
 
 原生的继承主要是操作原型链，实现起来比较麻烦，使用 `class` 就要简单的多了。
 
@@ -1132,7 +1132,7 @@ const xj = new User("向军");
 console.dir(xj.run());
 ```
 
-### [#](http://houdunren.gitee.io/note/js/10 原型与类.html#实例操作-2)实例操作
+##  (http://houdunren.gitee.io/note/js/10 原型与类.html#实例操作-2)实例操作
 
 使用类重写tab面板
 
@@ -1266,7 +1266,7 @@ console.dir(xj.run());
 </script>
 ```
 
-### [#](http://houdunren.gitee.io/note/js/10 原型与类.html#扩展内置类)扩展内置类
+##  (http://houdunren.gitee.io/note/js/10 原型与类.html#扩展内置类)扩展内置类
 
 使用原型扩展内置类
 

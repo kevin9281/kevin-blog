@@ -11,7 +11,7 @@ title: 7.Set与Map
 - 值是唯一的
 - 遍历顺序是添加的顺序，方便保存回调函数
 
-### [#](http://houdunren.gitee.io/note/js/6 Set与Map.html#基本使用)基本使用
+##  (http://houdunren.gitee.io/note/js/6 Set与Map.html#基本使用)基本使用
 
 对象可以属性最终都会转为字符串
 
@@ -61,7 +61,7 @@ hd.add('hdcms')
 console.log(hd.values()); //SetIterator {"houdunren", "hdcms"}
 ```
 
-### [#](http://houdunren.gitee.io/note/js/6 Set与Map.html#获取数量)获取数量
+##  (http://houdunren.gitee.io/note/js/6 Set与Map.html#获取数量)获取数量
 
 获取元素数量
 
@@ -70,7 +70,7 @@ let hd = new Set(['后盾人', 'hdcms']);
 console.log(hd.size); //2
 ```
 
-### [#](http://houdunren.gitee.io/note/js/6 Set与Map.html#元素检测)元素检测
+##  (http://houdunren.gitee.io/note/js/6 Set与Map.html#元素检测)元素检测
 
 检测元素是否存在
 
@@ -80,7 +80,7 @@ hd.add('hdcms');
 console.log(hd.has('hdcms'));//true
 ```
 
-### [#](http://houdunren.gitee.io/note/js/6 Set与Map.html#删除元素)删除元素
+##  (http://houdunren.gitee.io/note/js/6 Set与Map.html#删除元素)删除元素
 
 使用 `delete` 方法删除单个元素，返回值为`boolean`类型
 
@@ -105,7 +105,7 @@ hd.clear();
 console.log(hd.values());
 ```
 
-### [#](http://houdunren.gitee.io/note/js/6 Set与Map.html#数组转换)数组转换
+##  (http://houdunren.gitee.io/note/js/6 Set与Map.html#数组转换)数组转换
 
 可以使用`点语法` 或 `Array.form` 静态方法将Set类型转为数组，这样就可以使用数组处理函数了
 
@@ -123,7 +123,7 @@ hd = new Set([...hd].filter(item => item < 5));
 console.log(hd);
 ```
 
-### [#](http://houdunren.gitee.io/note/js/6 Set与Map.html#去除重复)去除重复
+##  (http://houdunren.gitee.io/note/js/6 Set与Map.html#去除重复)去除重复
 
 去除字符串重复
 
@@ -138,7 +138,7 @@ const arr = [1, 2, 3, 5, 2, 3];
 console.log(...new Set(arr)); // 1,2,4,5
 ```
 
-### [#](http://houdunren.gitee.io/note/js/6 Set与Map.html#遍历数据)遍历数据
+##  (http://houdunren.gitee.io/note/js/6 Set与Map.html#遍历数据)遍历数据
 
 使用 `keys()/values()/entries()` 都可以返回迭代对象，因为`set`类型只有值所以 `keys与values` 方法结果一致。
 
@@ -171,7 +171,7 @@ for (const iterator of set) {
 }
 ```
 
-### [#](http://houdunren.gitee.io/note/js/6 Set与Map.html#搜索实例)搜索实例
+##  (http://houdunren.gitee.io/note/js/6 Set与Map.html#搜索实例)搜索实例
 
 下面通过历史搜索的示例体验`Set` 类型
 
@@ -239,7 +239,7 @@ for (const iterator of set) {
 </script>
 ```
 
-### [#](http://houdunren.gitee.io/note/js/6 Set与Map.html#交集)交集
+##  (http://houdunren.gitee.io/note/js/6 Set与Map.html#交集)交集
 
 获取两个集合中共同存在的元素
 
@@ -252,7 +252,7 @@ let newSet = new Set(
 console.log(newSet); //{"hdcms"}
 ```
 
-### [#](http://houdunren.gitee.io/note/js/6 Set与Map.html#差集)差集
+##  (http://houdunren.gitee.io/note/js/6 Set与Map.html#差集)差集
 
 在集合a中出现但不在集合b中出现元素集合
 
@@ -265,7 +265,7 @@ let newSet = new Set(
 console.log(newSet); //{"houdunren"}
 ```
 
-### [#](http://houdunren.gitee.io/note/js/6 Set与Map.html#并集)并集
+##  (http://houdunren.gitee.io/note/js/6 Set与Map.html#并集)并集
 
 将两个集合合并成一个新的集合，由于Set特性当然也不会产生重复元素。
 
@@ -276,7 +276,7 @@ let newSet = [...hd, ...cms];
 console.log(newSet);
 ```
 
-## [#](http://houdunren.gitee.io/note/js/6 Set与Map.html#weakset)WeakSet
+##  (http://houdunren.gitee.io/note/js/6 Set与Map.html#weakset)WeakSet
 
 WeakSet结构同样不会存储重复的值，它的成员必须只能是对象类型的值。
 
@@ -285,7 +285,7 @@ WeakSet结构同样不会存储重复的值，它的成员必须只能是对象�
 - 也是因为弱引用，WeakSet 结构没有keys( )，values( )，entries( )等方法和size属性
 - 因为是弱引用所以当外部引用删除时，希望自动删除数据时使用 `WeakMap`
 
-### [#](http://houdunren.gitee.io/note/js/6 Set与Map.html#声明定义)声明定义
+##  (http://houdunren.gitee.io/note/js/6 Set与Map.html#声明定义)声明定义
 
 以下操作由于数据不是对象类型将产生错误
 
@@ -307,7 +307,7 @@ new WeakSet([["hdcms"], ["houdunren"]]);
 document.querySelectorAll("button").forEach(item => Wset.add(item));
 ```
 
-### [#](http://houdunren.gitee.io/note/js/6 Set与Map.html#基本操作)基本操作
+##  (http://houdunren.gitee.io/note/js/6 Set与Map.html#基本操作)基本操作
 
 下面是WeakSet的常用指令
 
@@ -325,7 +325,7 @@ hd.delete(arr);
 console.log(hd.has(arr));
 ```
 
-### [#](http://houdunren.gitee.io/note/js/6 Set与Map.html#垃圾回收)垃圾回收
+##  (http://houdunren.gitee.io/note/js/6 Set与Map.html#垃圾回收)垃圾回收
 
 WeaSet保存的对象不会增加引用计数器，如果一个对象不被引用了会自动删除。
 
@@ -348,7 +348,7 @@ setTimeout(() => {
 }, 1000);
 ```
 
-### [#](http://houdunren.gitee.io/note/js/6 Set与Map.html#案例操作)案例操作
+##  (http://houdunren.gitee.io/note/js/6 Set与Map.html#案例操作)案例操作
 
 ![Untitled](http://houdunren.gitee.io/note/assets/img/Untitled-1382986.b76dd97f.gif)
 
@@ -442,14 +442,14 @@ setTimeout(() => {
 </script>
 ```
 
-## [#](http://houdunren.gitee.io/note/js/6 Set与Map.html#map)Map
+##  (http://houdunren.gitee.io/note/js/6 Set与Map.html#map)Map
 
 Map是一组键值对的结构，用于解决以往不能用对象做为键的问题
 
 - 具有极快的查找速度
 - 函数、对象、基本类型都可以作为键或值
 
-### [#](http://houdunren.gitee.io/note/js/6 Set与Map.html#声明定义-2)声明定义
+##  (http://houdunren.gitee.io/note/js/6 Set与Map.html#声明定义-2)声明定义
 
 可以接受一个数组作为参数，该数组的成员是一个表示键值对的数组。
 
@@ -497,7 +497,7 @@ console.log(hd.get(arr)); //houdunren.com
 console.log(hd.get(["后盾人"])); //undefined
 ```
 
-### [#](http://houdunren.gitee.io/note/js/6 Set与Map.html#获取数量-2)获取数量
+##  (http://houdunren.gitee.io/note/js/6 Set与Map.html#获取数量-2)获取数量
 
 获取数据数量
 
@@ -505,7 +505,7 @@ console.log(hd.get(["后盾人"])); //undefined
 console.log(map.size);
 ```
 
-### [#](http://houdunren.gitee.io/note/js/6 Set与Map.html#元素检测-2)元素检测
+##  (http://houdunren.gitee.io/note/js/6 Set与Map.html#元素检测-2)元素检测
 
 检测元素是否存在
 
@@ -513,7 +513,7 @@ console.log(map.size);
 console.log(map.has(obj1));
 ```
 
-### [#](http://houdunren.gitee.io/note/js/6 Set与Map.html#读取元素)读取元素
+##  (http://houdunren.gitee.io/note/js/6 Set与Map.html#读取元素)读取元素
 
 ```text
 let map = new Map();
@@ -526,7 +526,7 @@ map.set(obj, 'houdunren.com');
 console.log(map.get(obj));
 ```
 
-### [#](http://houdunren.gitee.io/note/js/6 Set与Map.html#删除元素-2)删除元素
+##  (http://houdunren.gitee.io/note/js/6 Set与Map.html#删除元素-2)删除元素
 
 使用 `delete()` 方法删除单个元素
 
@@ -568,7 +568,7 @@ console.log(map.clear());
 console.log(map.size);
 ```
 
-### [#](http://houdunren.gitee.io/note/js/6 Set与Map.html#遍历数据-2)遍历数据
+##  (http://houdunren.gitee.io/note/js/6 Set与Map.html#遍历数据-2)遍历数据
 
 使用 `keys()/values()/entries()` 都可以返回可遍历的迭代对象。
 
@@ -609,7 +609,7 @@ hd.forEach((value, key) => {
 });
 ```
 
-### [#](http://houdunren.gitee.io/note/js/6 Set与Map.html#数组转换-2)数组转换
+##  (http://houdunren.gitee.io/note/js/6 Set与Map.html#数组转换-2)数组转换
 
 可以使用`展开语法` 或 `Array.form` 静态方法将Set类型转为数组，这样就可以使用数组处理函数了
 
@@ -635,7 +635,7 @@ hd = new Map(newArr);
 console.log(...hd.keys());
 ```
 
-### [#](http://houdunren.gitee.io/note/js/6 Set与Map.html#节点集合)节点集合
+##  (http://houdunren.gitee.io/note/js/6 Set与Map.html#节点集合)节点集合
 
 map的key可以为任意类型，下面使用DOM节点做为键来记录数据。
 
@@ -662,7 +662,7 @@ map的key可以为任意类型，下面使用DOM节点做为键来记录数据�
 </script>
 ```
 
-### [#](http://houdunren.gitee.io/note/js/6 Set与Map.html#实例操作)实例操作
+##  (http://houdunren.gitee.io/note/js/6 Set与Map.html#实例操作)实例操作
 
 当不接受协议时无法提交表单，并根据自定义信息提示用户。
 
@@ -698,7 +698,7 @@ map的key可以为任意类型，下面使用DOM节点做为键来记录数据�
 </script>
 ```
 
-## [#](http://houdunren.gitee.io/note/js/6 Set与Map.html#weakmap)WeakMap
+##  (http://houdunren.gitee.io/note/js/6 Set与Map.html#weakmap)WeakMap
 
 **WeakMap** 对象是一组键/值对的集
 
@@ -710,7 +710,7 @@ map的key可以为任意类型，下面使用DOM节点做为键来记录数据�
 - 也是因为弱引用，WeaMap 结构没有keys( )，values( )，entries( )等方法和 size 属性
 - 当键的外部引用删除时，希望自动删除数据时使用 `WeakMap`
 
-### [#](http://houdunren.gitee.io/note/js/6 Set与Map.html#声明定义-3)声明定义
+##  (http://houdunren.gitee.io/note/js/6 Set与Map.html#声明定义-3)声明定义
 
 以下操作由于键不是对象类型将产生错误
 
@@ -734,7 +734,7 @@ new WeakSet("hdcms"); //TypeError: Invalid value used in weak set
 </script>
 ```
 
-### [#](http://houdunren.gitee.io/note/js/6 Set与Map.html#基本操作-2)基本操作
+##  (http://houdunren.gitee.io/note/js/6 Set与Map.html#基本操作-2)基本操作
 
 下面是WeakSet的常用指令
 
@@ -752,7 +752,7 @@ hd.delete(arr);
 console.log(hd.has(arr)); //false
 ```
 
-### [#](http://houdunren.gitee.io/note/js/6 Set与Map.html#垃圾回收-2)垃圾回收
+##  (http://houdunren.gitee.io/note/js/6 Set与Map.html#垃圾回收-2)垃圾回收
 
 WakeMap的键名对象不会增加引用计数器，如果一个对象不被引用了会自动删除。
 
@@ -771,7 +771,7 @@ setTimeout(() => {
 }, 1000);
 ```
 
-### [#](http://houdunren.gitee.io/note/js/6 Set与Map.html#选课案例)选课案例
+##  (http://houdunren.gitee.io/note/js/6 Set与Map.html#选课案例)选课案例
 
 ![Untitled](http://houdunren.gitee.io/note/assets/img/Untitled-3394771.86c02b15.gif)
 

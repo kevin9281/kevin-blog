@@ -8,11 +8,11 @@ Promise 将异步操作队列化，按照期望的顺序执行，返回符合预
 
 Promise 在各种开源库中已经实现，现在标准化后被浏览器默认支持。
 
-## [#](http://houdunren.gitee.io/note/js/14 Promise.html#问题探讨)问题探讨
+##  (http://houdunren.gitee.io/note/js/14 Promise.html#问题探讨)问题探讨
 
 下面我们来看一个发送多个异步请求，且每个请求依赖前一个请求的结果，这种业务代码的实现。
 
-### [#](http://houdunren.gitee.io/note/js/14 Promise.html#回调地狱)回调地狱
+##  (http://houdunren.gitee.io/note/js/14 Promise.html#回调地狱)回调地狱
 
 传统异步请求需要嵌套大量异步操作
 
@@ -31,7 +31,7 @@ Promise 在各种开源库中已经实现，现在标准化后被浏览器默认
 </script>
 ```
 
-### [#](http://houdunren.gitee.io/note/js/14 Promise.html#生成器处理)生成器处理
+##  (http://houdunren.gitee.io/note/js/14 Promise.html#生成器处理)生成器处理
 
 使用生成器解决上面的问题
 
@@ -69,7 +69,7 @@ task(function*() {
 });
 ```
 
-### [#](http://houdunren.gitee.io/note/js/14 Promise.html#promise-2)promise
+##  (http://houdunren.gitee.io/note/js/14 Promise.html#promise-2)promise
 
 下面使用支持`promise` 的库 `axios` 实现后的效果，是不是简洁清晰了很多。
 
@@ -89,11 +89,11 @@ task(function*() {
 </script>
 ```
 
-## [#](http://houdunren.gitee.io/note/js/14 Promise.html#使用起步)使用起步
+##  (http://houdunren.gitee.io/note/js/14 Promise.html#使用起步)使用起步
 
 Promise 可以理解为承诺，就像我们去KFC点餐服务员给我们一引取餐票，这就是承诺。如果餐做好了叫我们这就 就是成功，如果没有办法给我们做出食物这就是失败。
 
-### [#](http://houdunren.gitee.io/note/js/14 Promise.html#状态说明)状态说明
+##  (http://houdunren.gitee.io/note/js/14 Promise.html#状态说明)状态说明
 
 Promise包含三种状态
 
@@ -101,7 +101,7 @@ Promise包含三种状态
 - `resolve` 指操作成功将状态设置为`fulfilled`
 - `reject` 指操作失败将状态设置为`rejected`
 
-### [#](http://houdunren.gitee.io/note/js/14 Promise.html#基本使用)基本使用
+##  (http://houdunren.gitee.io/note/js/14 Promise.html#基本使用)基本使用
 
 下面是异步请求随机获取名小于六位字符的名子
 
@@ -146,7 +146,7 @@ promise
   });
 ```
 
-### [#](http://houdunren.gitee.io/note/js/14 Promise.html#then)then
+##  (http://houdunren.gitee.io/note/js/14 Promise.html#then)then
 
 - `resolved`状态执行的回调函数，即`return`具体值或调用`resolve`时，使用`then`来处理成功的回调函数
 - `rejected`状态执行的回调函数，调用`reject`函数时为失败状态，使用`catch`处理失败的回调函数
@@ -178,7 +178,7 @@ promise.then(msg => {
 });
 ```
 
-### [#](http://houdunren.gitee.io/note/js/14 Promise.html#catch)catch
+##  (http://houdunren.gitee.io/note/js/14 Promise.html#catch)catch
 
 catch用于失败状态的处理
 
@@ -204,7 +204,7 @@ const promise = new Promise((resolve, reject) => {
 });
 ```
 
-### [#](http://houdunren.gitee.io/note/js/14 Promise.html#finally)finally
+##  (http://houdunren.gitee.io/note/js/14 Promise.html#finally)finally
 
 无论状态是`resolve` 或 `reject` 都会执行此动作。
 
@@ -223,11 +223,11 @@ const promise = new Promise((resolve, reject) => {
   });
 ```
 
-## [#](http://houdunren.gitee.io/note/js/14 Promise.html#应用技巧)应用技巧
+##  (http://houdunren.gitee.io/note/js/14 Promise.html#应用技巧)应用技巧
 
 所以 `promise` 把执行代码和处理结果代码分开，类似于上面的点餐操作。
 
-### [#](http://houdunren.gitee.io/note/js/14 Promise.html#链式操作)链式操作
+##  (http://houdunren.gitee.io/note/js/14 Promise.html#链式操作)链式操作
 
 如果`then`返回的是一个`Promise`对象，就可以采用链式写法，之后的`then`处理前一个`then`返回的`Promise`状态。
 
@@ -264,7 +264,7 @@ promise
   });
 ```
 
-### [#](http://houdunren.gitee.io/note/js/14 Promise.html#并行异步)并行异步
+##  (http://houdunren.gitee.io/note/js/14 Promise.html#并行异步)并行异步
 
 使用`Promise.all` 方法可以同时执行多个异步操作，比如同进获取课程列表与推荐课程场景
 
@@ -297,7 +297,7 @@ const hd = Promise.all([hdcms, houdunren])
   });
 ```
 
-### [#](http://houdunren.gitee.io/note/js/14 Promise.html#容错异步)容错异步
+##  (http://houdunren.gitee.io/note/js/14 Promise.html#容错异步)容错异步
 
 使用`Promise.race()` 处理容错异步，和`race`单词一样哪个Promise快用哪个，比如使用多个接口获取用户资料，哪个先返回用哪个。
 
@@ -326,6 +326,6 @@ Promise.race([hdcms, houdunren])
   });
 ```
 
-### [#](http://houdunren.gitee.io/note/js/14 Promise.html#promise-any)Promise.any
+##  (http://houdunren.gitee.io/note/js/14 Promise.html#promise-any)Promise.any
 
 与`Promise.race` 很像但不同是只要有一个状态为`rejected`整个`Promise`即为`rejected`。
