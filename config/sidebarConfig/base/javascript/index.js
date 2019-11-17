@@ -16,6 +16,11 @@ const children = [
   '13-javascript',
   '14-javascript',
   '15-javascript', 
+  '16-javascript', 
+  '17-javascript', 
+  '18-javascript', 
+  '19-javascript', 
+  '20-javascript', 
 ];
 
 module.exports = [
