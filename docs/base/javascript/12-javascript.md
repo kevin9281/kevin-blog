@@ -10,7 +10,7 @@ title: 12.模型设计
 - 模块需要隐藏内部实现，只对外开发接口
 - 模块可以避免滥用全局变量，造成代码不可控
 
-##  (http://houdunren.gitee.io/note/js/11 模块设计.html#实现原理)实现原理
+## 实现原理
 
 下面通过定义一个类似 `require.js` 的 `AMD` 模块管理引擎，来体验模块的使用。
 
@@ -45,7 +45,7 @@ Module.define("news", ["user"], function(User) {
 });
 ```
 
-##  (http://houdunren.gitee.io/note/js/11 模块设计.html#es6模块)ES6模块
+## ES6模块
 
 ES6使用基于文件的模块，即一个文件一个模块。
 
@@ -56,7 +56,7 @@ ES6使用基于文件的模块，即一个文件一个模块。
 
 > 有关于模块打包知识请在 后盾人搜索 `webpack`
 
-##  (http://houdunren.gitee.io/note/js/11 模块设计.html#常用指令)常用指令
+## 常用指令
 
 | 表达式                                           | 说明             |
 | ------------------------------------------------ | ---------------- |
@@ -71,7 +71,7 @@ ES6使用基于文件的模块，即一个文件一个模块。
 | Import {name as hdName,show} from 'houdunren.js' | 别名导入         |
 | Import * as api from 'houdunren.js'              | 导入全部接口     |
 
-##  (http://houdunren.gitee.io/note/js/11 模块设计.html#导出模块)导出模块
+## 导出模块
 
 下面定义模块 `modules/houdunren.js` ，使用 `export` 导出模块接口，没有导出的变量都是模块私有的。
 
@@ -83,7 +83,7 @@ const show = function() {
 export { name, show };
 ```
 
-##  (http://houdunren.gitee.io/note/js/11 模块设计.html#导入模块)导入模块
+## 导入模块
 
 在html文件中导入模块，需要定义属性 `type="module"`
 
@@ -95,7 +95,7 @@ export { name, show };
 </script>
 ```
 
-##  (http://houdunren.gitee.io/note/js/11 模块设计.html#批量导入)批量导入
+## 批量导入
 
 批量导入模块接口
 
@@ -104,7 +104,7 @@ import * as api from "/modules/houdunren.js";
 console.log(api.show());
 ```
 
-##  (http://houdunren.gitee.io/note/js/11 模块设计.html#默认导出)默认导出
+## 默认导出
 
 使用`default` 定义默认导出的接口，导入时不需要使用 `{}`
 
@@ -140,7 +140,7 @@ export { name };
 import show, { name } from "/modules/houdunren.js";
 ```
 
-##  (http://houdunren.gitee.io/note/js/11 模块设计.html#重命名)重命名
+## 重命名
 
 使用 `as` 为导出的接口重命名
 

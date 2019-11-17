@@ -199,7 +199,7 @@ hd();
 
 ## 块级作用域
 
-### 共同点
+## 共同点
 
 `var/let/const`共同点是全局作用域中定义的变量，可以在函数中使用
 
@@ -239,7 +239,7 @@ hd();
 console.log(web); //hdcms.com
 ```
 
-### var
+## var
 
 ```
 const web = "houdunren.com";

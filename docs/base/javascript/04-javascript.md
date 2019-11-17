@@ -872,7 +872,9 @@ function dateFormat(date, format = "YYYY-MM-DD HH:mm:ss") {
 console.log(dateFormat(new Date(), "YYYY年MM月DD日"));
 ```
 
+```
 下面是系统提供的日期时间方法，更多方法请查看 [MDN官网](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date)
+```
 
 | 方法                 | 描述                                                   |
 | :------------------- | :----------------------------------------------------- |

@@ -8,7 +8,7 @@ title: 13.迭代器
 
 常用的解构与扩展运算符内部也在使用遍历器实现。
 
-##  (http://houdunren.gitee.io/note/js/12 迭代器.html#解决的问题)解决的问题
+## 解决的问题
 
 以往遍历数据时比如使用 `for` 需要变量来记录每次迭代数据的位置，如果遍历多层需要设置多个变量用于记录并不方便。
 
@@ -34,7 +34,7 @@ for (const iterator of arr) {
 }
 ```
 
-##  (http://houdunren.gitee.io/note/js/12 迭代器.html#原始实现)原始实现
+## 原始实现
 
 下面使用以往掌握的知识实现生成器，有助于更好的理解生成器。
 
@@ -58,7 +58,7 @@ console.log(gen.next()); //{value: 3, done: false}
 console.log(gen.next()); //{value: undefined, done: false}
 ```
 
-##  (http://houdunren.gitee.io/note/js/12 迭代器.html#原理分析)原理分析
+## 原理分析
 
 默认情况下对象是不可以迭代的，当添加`[Symbol.iterator]`生成品后，就会变为可迭代对象。
 
@@ -145,7 +145,7 @@ let f = hd[Symbol.iterator]();
 console.log(f.next());
 ```
 
-##  (http://houdunren.gitee.io/note/js/12 迭代器.html#解构与扩展)解构与扩展
+## 解构与扩展
 
 常用的解构与扩展运算符内部也在使用遍历器实现。
 
@@ -164,7 +164,7 @@ let hd = new Set().add("hdcms").add("houdunren");
 console.log(a, b); //hdcms houdunren
 ```
 
-##  (http://houdunren.gitee.io/note/js/12 迭代器.html#结构生成)结构生成
+## 结构生成
 
 Array/Map/Set 都包含 `values`、`keys`、`entries` 等方法，这些方法也会返回迭代器。
 
@@ -192,7 +192,7 @@ for (const [key, value] of map.entries()) {
 }
 ```
 
-##  (http://houdunren.gitee.io/note/js/12 迭代器.html#for-of)for/of
+## for/of
 
 拥有迭代特性即包含 `Symbol.iterator` 方法的数据结构，就可以使用`for/of` 遍历操作。
 

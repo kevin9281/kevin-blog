@@ -8,9 +8,9 @@ Symbol用于防止属性名冲突而产生的，比如向第三方对象中添�
 
 Symbol 的值是唯一的，独一无二的不会重复的
 
-##  (http://houdunren.gitee.io/note/js/5 Symbol.html#基础知识)基础知识
+## 基础知识
 
-##  (http://houdunren.gitee.io/note/js/5 Symbol.html#symbol-2)Symbol
+## Symbol
 
 ```text
 let hd = Symbol();
@@ -27,7 +27,7 @@ hd.name = "后盾人";
 console.log(hd.name);
 ```
 
-##  (http://houdunren.gitee.io/note/js/5 Symbol.html#描述参数)描述参数
+## 描述参数
 
 可传入字符串用于描述Symbol，方便在控制台分辨Symbol
 
@@ -54,7 +54,7 @@ let hd = Symbol("后盾人");
 console.log(hd.description); //后盾人
 ```
 
-##  (http://houdunren.gitee.io/note/js/5 Symbol.html#symbol-for)Symbol.for
+## Symbol.for
 
 根据描述获取Symbol，如果不存在则新建一个Symbol
 
@@ -67,7 +67,7 @@ let edu = Symbol.for("后盾人");
 console.log(hd == edu); //true
 ```
 
-##  (http://houdunren.gitee.io/note/js/5 Symbol.html#symbol-keyfor)Symbol.keyFor
+## Symbol.keyFor
 
 `Symbol.keyFor` 根据使用`Symbol.for`登记的Symbol返回描述，如果找不到返回undefined 。
 
@@ -79,7 +79,7 @@ let edu = Symbol("houdunren");
 console.log(Symbol.keyFor(edu)); //undefined
 ```
 
-##  (http://houdunren.gitee.io/note/js/5 Symbol.html#对象属性)对象属性
+## 对象属性
 
 Symbol 是独一无二的所以可以保证对象属性的唯一。
 
@@ -106,9 +106,9 @@ let obj = {
 console.log(obj[symbol]); //houdunren.com
 ```
 
-##  (http://houdunren.gitee.io/note/js/5 Symbol.html#实例操作)实例操作
+## 实例操作
 
-##  (http://houdunren.gitee.io/note/js/5 Symbol.html#缓存操作)缓存操作
+## 缓存操作
 
 使用`Symbol`可以解决在保存数据时由于名称相同造成的耦合覆盖问题。
 
@@ -138,7 +138,7 @@ Cache.set(cart.key, cart);
 console.log(Cache.get(user.key));
 ```
 
-##  (http://houdunren.gitee.io/note/js/5 Symbol.html#遍历属性)遍历属性
+## 遍历属性
 
 Symbol 不能使用 `for/in`、`for/of` 遍历操作
 

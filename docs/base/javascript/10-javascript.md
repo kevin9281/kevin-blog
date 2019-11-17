@@ -6,7 +6,7 @@ title: 10.对象
 
 对象是包括属性与方法的数据类型，JS中大部分类型都是对象如 `String/Number/Math/RegExp/Date` 等等。
 
-##  (http://houdunren.gitee.io/note/js/9 对象.html#基本声明)基本声明
+## 基本声明
 
 使用字面量形式声明对象是最简单的方式
 
@@ -33,7 +33,7 @@ let obj = {
 console.log(obj.get()); //后盾人
 ```
 
-##  (http://houdunren.gitee.io/note/js/9 对象.html#动态管理)动态管理
+## 动态管理
 
 对象和方法的属性可以动态的添加或删除。
 
@@ -53,7 +53,7 @@ console.log(hd);
 console.log(hd.age); //undefined
 ```
 
-##  (http://houdunren.gitee.io/note/js/9 对象.html#操作属性)操作属性
+## 操作属性
 
 使用点语法获取
 
@@ -80,7 +80,7 @@ let property = "name";
 console.log(user[property]);
 ```
 
-##  (http://houdunren.gitee.io/note/js/9 对象.html#对象方法)对象方法
+## 对象方法
 
 定义在对象中的函数我们称为方法，下面定义了学生对象，并提供了计算平均成绩的方法
 
@@ -112,7 +112,7 @@ console.log(lisi.avgGrade());
 
 > 一个学生创建一个对象，显然不实际下面的构造函数就可以解决这个问题
 
-##  (http://houdunren.gitee.io/note/js/9 对象.html#引用特性)引用特性
+## 引用特性
 
 对象和函数、数组一样是引用类型，即复制只会复制引用地址。
 
@@ -134,7 +134,7 @@ hd(user);
 console.log(user.age); //32
 ```
 
-##  (http://houdunren.gitee.io/note/js/9 对象.html#展开语法)展开语法
+## 展开语法
 
 使用`...`可以展示对象的结构
 
@@ -144,13 +144,13 @@ let info = { ...hd, site: "hdcms" };
 console.log(info);
 ```
 
-##  (http://houdunren.gitee.io/note/js/9 对象.html#解构赋值)解构赋值
+## 解构赋值
 
 解构是一种更简洁的赋值特性，可以理解为分解一个数据的结构，在数组章节已经介绍过。
 
 - 建设使用 `var/let/const` 声明
 
-##  (http://houdunren.gitee.io/note/js/9 对象.html#基本使用)基本使用
+## 基本使用
 
 下面是基本使用语法
 
@@ -233,7 +233,7 @@ const {random} =Math;
 console.log(random());
 ```
 
-##  (http://houdunren.gitee.io/note/js/9 对象.html#严格模式)严格模式
+## 严格模式
 
 非严格模式可以不使用声明指令，严格模式下必须使用声明。所以建议使用 let 等声明。
 
@@ -243,7 +243,7 @@ console.log(random());
 console.log(name, url);
 ```
 
-##  (http://houdunren.gitee.io/note/js/9 对象.html#简洁定义)简洁定义
+## 简洁定义
 
 如果属性名与赋值的变量名相同可以更简洁
 
@@ -283,7 +283,7 @@ let opt = {name,url};
 console.log(opt);//{name: "后盾人", url: "houdunren.com"}; //后盾人 JS
 ```
 
-##  (http://houdunren.gitee.io/note/js/9 对象.html#嵌套赋值)嵌套赋值
+## 嵌套赋值
 
 可以操作多层复杂数据结构
 
@@ -299,7 +299,7 @@ const {name,lessons:{title}}  = hd;
 console.log(name,title) ;
 ```
 
-##  (http://houdunren.gitee.io/note/js/9 对象.html#默认值)默认值
+## 默认值
 
 为变量设置默认值
 
@@ -331,7 +331,7 @@ createElement({
 });
 ```
 
-##  (http://houdunren.gitee.io/note/js/9 对象.html#函数参数)函数参数
+## 函数参数
 
 数组参数的使用
 
@@ -360,11 +360,11 @@ function user(name, { sex, age } = {}) {
 user("向军大叔", { sex: "男", age: 18 });
 ```
 
-##  (http://houdunren.gitee.io/note/js/9 对象.html#构建函数)构建函数
+## 构建函数
 
 对象可以通过内置或自定义的构造函数创建。
 
-##  (http://houdunren.gitee.io/note/js/9 对象.html#工厂函数)工厂函数
+## 工厂函数
 
 在函数中返回对象的函数称为工厂函数，工厂函数有以下优点
 
@@ -397,7 +397,7 @@ const lisi = stu("李四", "18", { math: 78, english: 98 });
 console.log(lisi.avgGrade());
 ```
 
-##  (http://houdunren.gitee.io/note/js/9 对象.html#构造函数)构造函数
+## 构造函数
 
 和工厂函数相似构造函数也用于创建对象，它的上下文为新的对象实例。
 
@@ -429,7 +429,7 @@ const lisi = new Student("李四", "18", { math: 78, english: 98 });
 console.log(lisi.avgGrade());
 ```
 
-##  (http://houdunren.gitee.io/note/js/9 对象.html#内置构造)内置构造
+## 内置构造
 
 JS中大部分数据类型都是通过构造函数创建的。
 
@@ -464,7 +464,7 @@ hdcms.title = "开源内容管理系统";
 console.log(hdcms);
 ```
 
-##  (http://houdunren.gitee.io/note/js/9 对象.html#对象函数)对象函数
+## 对象函数
 
 在`JS`中函数也是一个对象
 
@@ -498,9 +498,9 @@ const lisi = new User("李四");
 console.log(lisi.show());
 ```
 
-##  (http://houdunren.gitee.io/note/js/9 对象.html#属性管理)属性管理
+## 属性管理
 
-##  (http://houdunren.gitee.io/note/js/9 对象.html#检测属性)检测属性
+## 检测属性
 
 `hasOwnProperty`检测属性是否存在，不判断继承属性。
 
@@ -531,7 +531,7 @@ console.log("web" in obj);
 console.log(obj.hasOwnProperty("web"));
 ```
 
-##  (http://houdunren.gitee.io/note/js/9 对象.html#删除属性)删除属性
+## 删除属性
 
 使用`delete` 可以删除属性
 
@@ -539,7 +539,7 @@ console.log(obj.hasOwnProperty("web"));
 delete obj.name;
 ```
 
-##  (http://houdunren.gitee.io/note/js/9 对象.html#添加属性)添加属性
+## 添加属性
 
 可以为对象添加属性
 
@@ -554,7 +554,7 @@ obj.site = "houdunren.com";
 console.log(obj.hasOwnProperty("site")); //true
 ```
 
-##  (http://houdunren.gitee.io/note/js/9 对象.html#assign)assign
+## assign
 
 以往我们使用类似`jQuery.extend` 等方法设置属性，现在可以使用 `Object.assign` 静态方法
 
@@ -567,7 +567,7 @@ hd = Object.assign(hd, { f: 1 }, { m: 9 });
 console.log(hd); //{a: 1, b: 2, f: 1, m: 9}
 ```
 
-##  (http://houdunren.gitee.io/note/js/9 对象.html#计算属性)计算属性
+## 计算属性
 
 对象属性可以通过表达式计算定义，这在动态设置属性或执行属性方法时很好用。
 
@@ -606,7 +606,7 @@ console.log(lessonObj); //{css-0: {…}, css-1: {…}, mysql-2: {…}}
 console.log(lessonObj["css-0"]); //{title: "媒体查询响应式布局", category: "css"}
 ```
 
-##  (http://houdunren.gitee.io/note/js/9 对象.html#传值操作)传值操作
+## 传值操作
 
 对象是引用类型赋值是传址操作，后面会介绍对象的深、浅拷贝操作
 
@@ -621,9 +621,9 @@ hd.stu.name = 'hdcms';
 console.log(user.name);//hdcms
 ```
 
-##  (http://houdunren.gitee.io/note/js/9 对象.html#属性特性)属性特性
+## 属性特性
 
-##  (http://houdunren.gitee.io/note/js/9 对象.html#基础知识-2)基础知识
+## 基础知识
 
 属性类型可以使用 `Object.getOwnPropertyDescriptors`查看
 
@@ -658,7 +658,7 @@ Object.defineProperty(user, "name", {
 user.name = "houdunren"; //Cannot assign to read only property 'name' of object
 ```
 
-##  (http://houdunren.gitee.io/note/js/9 对象.html#私有属性)私有属性
+## 私有属性
 
 JS没有私有属性概念，但使用 `defineProperty` 可以模拟定义私有属性
 
@@ -679,9 +679,9 @@ obj.name = "houdunren";
 console.dir(obj.name);
 ```
 
-##  (http://houdunren.gitee.io/note/js/9 对象.html#遍历对象)遍历对象
+## 遍历对象
 
-##  (http://houdunren.gitee.io/note/js/9 对象.html#for-in)for/in
+## for/in
 
 使用`for/in`遍历对象属性
 
@@ -695,7 +695,7 @@ for (let key in hd) {
 }
 ```
 
-##  (http://houdunren.gitee.io/note/js/9 对象.html#for-of)for/of
+## for/of
 
 `for/of`用于遍历迭代对象，不能直接操作对象。但`Object`对象的`keys/`方法返回的是迭代对象。
 
@@ -737,7 +737,7 @@ for (const [key, value] of Object.entries(hd)) {
 }
 ```
 
-##  (http://houdunren.gitee.io/note/js/9 对象.html#对象拷贝)对象拷贝
+## 对象拷贝
 
 对象复制时复制的内存地址，所以一个对象的改变直接影响另一个
 
@@ -754,7 +754,7 @@ a.name = 'lisi';
 console.log(b.name); //lisi
 ```
 
-##  (http://houdunren.gitee.io/note/js/9 对象.html#浅拷贝)浅拷贝
+## 浅拷贝
 
 使用`for/in`执行对象拷贝
 
@@ -822,7 +822,7 @@ console.log(hd);
 console.log(obj);
 ```
 
-##  (http://houdunren.gitee.io/note/js/9 对象.html#深拷贝)深拷贝
+## 深拷贝
 
 是完全的复制一个对象，两个对象是完全独立的对象
 
@@ -851,14 +851,14 @@ console.log(newObj);
 console.log(obj);
 ```
 
-##  (http://houdunren.gitee.io/note/js/9 对象.html#访问器)访问器
+## 访问器
 
 getter方法用于获得属性值，setter方法用于设置属性，这是JS提供的存取器特性即使用函数来管理属性。
 
 - 用于避免错误的赋值
 - 需要动态监测值的改变
 
-##  (http://houdunren.gitee.io/note/js/9 对象.html#基本使用-2)基本使用
+## 基本使用
 
 下面是设置token储取的示例，将业务逻辑使用`getter/setter`处理更方便，也方便其他业务的复用。
 
@@ -880,7 +880,7 @@ let Request = {
 console.log(Request.token);
 ```
 
-##  (http://houdunren.gitee.io/note/js/9 对象.html#双向绑定)双向绑定
+## 双向绑定
 
 下面通过访问器实现`vue` 等前端框架的双向绑定特性。
 
@@ -907,7 +907,7 @@ Array.from(els).map(function(el) {
 });
 ```
 
-##  (http://houdunren.gitee.io/note/js/9 对象.html#代理)代理
+## 代理
 
 代理（拦截器）是对象的访问控制，`setter/getter` 是对单个对象属性的控制，而代理是对整个对象的控制。
 
@@ -915,7 +915,7 @@ Array.from(els).map(function(el) {
 - 对象的多个属性控制统一交给代理完成
 - 严格模式下 `set` 必须返回布尔值
 
-##  (http://houdunren.gitee.io/note/js/9 对象.html#使用方法)使用方法
+## 使用方法
 
 ```text
 "use strict";
@@ -956,7 +956,7 @@ const proxy = new Proxy(factorial, {
 proxy(10);
 ```
 
-##  (http://houdunren.gitee.io/note/js/9 对象.html#截图字符)截图字符
+## 截图字符
 
 下例中当标题长度超过时添加 `.` 字符
 
@@ -990,7 +990,7 @@ const stringDotProxy = new Proxy(lessons, stringDot);
 console.log(stringDotProxy[0]);
 ```
 
-##  (http://houdunren.gitee.io/note/js/9 对象.html#表单验证)表单验证
+## 表单验证
 
 ![Untitled](http://houdunren.gitee.io/note/assets/img/Untitled-1059910.07b17933.gif)
 
@@ -1056,13 +1056,13 @@ console.log(stringDotProxy[0]);
 </script>
 ```
 
-##  (http://houdunren.gitee.io/note/js/9 对象.html#json)JSON
+## JSON
 
 使用`json` 数据格式是替换 `xml` 的最佳方式，主流语言都很好的支持`json` 格式。所以 `json` 也是前后台传输数据的主要格式。
 
 json 标准中要求使用双引号包裹属性，虽然有些语言不强制，但使用双引号可避免多程序间传输发生错误语言错误的发生。
 
-##  (http://houdunren.gitee.io/note/js/9 对象.html#声明定义)声明定义
+## 声明定义
 
 **基本结构**
 
@@ -1101,7 +1101,7 @@ let lessons = [
 console.log(lessons[0].title);
 ```
 
-##  (http://houdunren.gitee.io/note/js/9 对象.html#序列化)序列化
+## 序列化
 
 序列化是将 `json` 转换为字符串，一般用来向其他语言传输使用。
 
@@ -1156,7 +1156,7 @@ let hd = {
 console.log(JSON.stringify(hd)); //{"title":"houdunren.com","name":"向军大叔"}
 ```
 
-##  (http://houdunren.gitee.io/note/js/9 对象.html#反序列化)反序列化
+## 反序列化
 
 使用 `JSON.parse` 将字符串 `json` 解析成对象
 

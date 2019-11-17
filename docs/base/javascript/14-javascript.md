@@ -10,7 +10,7 @@ title: 14.生成器
 - 全部代码执行完成，或遇到`return`时生成器执行完毕
 - 学习生成器前需要掌握前面章节的迭代器
 
-##  (http://houdunren.gitee.io/note/js/13 生成器.html#原始实现)原始实现
+## 原始实现
 
 下面使用以往掌握的知识实现生成器，有助于更好的理解生成器。
 
@@ -34,7 +34,7 @@ console.log(gen.next());
 console.log(gen.next());
 ```
 
-##  (http://houdunren.gitee.io/note/js/13 生成器.html#声明定义)声明定义
+## 声明定义
 
 - `*` 可以挨着`function* hd()`或中间留空格`function * hd()`
 - yied 关键字指调用迭代器的`next()` 函数的返回值
@@ -86,7 +86,7 @@ console.log(iterator.next());
 console.log(iterator.next());
 ```
 
-##  (http://houdunren.gitee.io/note/js/13 生成器.html#基本操作)基本操作
+## 基本操作
 
 操作调用生成器后生成的迭代器
 
@@ -169,7 +169,7 @@ for (const iterator of subTree) {
 }
 ```
 
-##  (http://houdunren.gitee.io/note/js/13 生成器.html#遍历数组)遍历数组
+## 遍历数组
 
 ```text
 function* generator(arr) {
@@ -185,7 +185,7 @@ console.log(gen.next());
 console.log(gen.next());
 ```
 
-##  (http://houdunren.gitee.io/note/js/13 生成器.html#迭代对象)迭代对象
+## 迭代对象
 
 默认情况下对象是不可以迭代的，当添加`[Symbol.iterator]`生成品后，就会变为可迭代对象。
 
@@ -208,7 +208,7 @@ for (const iterator of object) {
 }
 ```
 
-##  (http://houdunren.gitee.io/note/js/13 生成器.html#参数传递)参数传递
+## 参数传递
 
 如果向`next()` 函数传递参数将替换`yield`的返回值
 
@@ -226,7 +226,7 @@ console.log(generator.next()); //{value: "ishoudunren", done: false}
 console.log(generator.next("hdcms")); //{value: "hdcms", done: false}
 ```
 
-##  (http://houdunren.gitee.io/note/js/13 生成器.html#返回语句)返回语句
+## 返回语句
 
 当生成器函数执行完毕或遇到`return`时 `done` 为 true
 
@@ -255,7 +255,7 @@ console.log(generator.next());
 console.log(generator.next()); //{value: 5, done: true}
 ```
 
-##  (http://houdunren.gitee.io/note/js/13 生成器.html#异步执行)异步执行
+## 异步执行
 
 生成器最主要的应用特性是异步操作，因为 `next` 特性是等待操作非常适合异步处理。
 
