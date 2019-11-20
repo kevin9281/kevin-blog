@@ -32,7 +32,7 @@ module.exports = [
         { text: '原生Ajax', link: '/ajax/jsajax/' },
         { text: 'jQuery的Ajax', link: '/ajax/jqajax/' },
         { text: 'Vue的后台管理', link: '/ajax/vueajax/' },
-        { text: '跨域', link: '/ajax/wzry/' },
+        { text: 'ESLint', link: '/ajax/wzry/' },
         { text: 'mock的使用', link: '/ajax/mock/' },
       ]},
     ]
