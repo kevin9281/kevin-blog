@@ -10,8 +10,8 @@ module.exports = {
     }
   },
   theme: 'reco',
-  title: 'Notes',
-  description: '我的个人博客',
+  title: 'Better late than never',
+  description: '今日事今日毕,日复日年复年',
   head: [ // 注入到当前页面的 HTML <head> 中的标签
     ['link', { rel: 'icon', href: './imgs/favicon.ico' }], // 增加一个自定义的 favicon(网页标签的图标)
     ['meta', { name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no' }]
@@ -25,34 +25,39 @@ module.exports = {
   themeConfig: {
     type: 'blog',
     logo: './imgs/avatar.png',
-    author: 'kungfu迷',
+    author: 'Kevin-Blog',
     authorAvatar: './imgs/avatar.png',
     autoHideNavbar: true,
+    valineConfig: {
+      placeholder: '既然来了留下点什么吧~', // [v1.0.7 new]留言框占位提示文字
+      appId: 'gMltRliD6GwQqXgbM93t178v-gzGzoHsz',// your appId
+      appKey: '8jHUgHuxfn5QmMro7l8GWBjC', // your appKey
+    },
     blogConfig: {
       category: {
         location: 2,     // 在导航栏菜单中所占的位置，默认2
-        text: 'Category' // 默认文案 “分类”
+        text: '分类' // 默认文案 “分类”
       },
       tag: {
         location: 3,     // 在导航栏菜单中所占的位置，默认3
-        text: 'Tag'      // 默认文案 “标签”
+        text: '标签'      // 默认文案 “标签”
       }
     },
     nav: [
-      { text: 'Home', link: '/', icon: "reco-home" },
-      { text: 'TimeLine', link: '/TimeLine/', icon: 'reco-date' },
-      { text: 'About', link: '/views/about/', icon: "reco-account" },
+      { text: '首页', link: '/', icon: "reco-home" },
+      { text: '时间轴', link: '/timeLine/', icon: 'reco-date' },
+      { text: '收藏集', link: '/views/about/', icon: "reco-account" },
       {
-        text: 'Contact',
+        text: '关于我',
         icon: "reco-message",
         items: [
-          { text: 'Github', link: 'https://github.com/MyNetdisk', icon: "reco-github" },
-          { text: 'Email', link: 'mailto:peregrinator@yeah.net', icon: "reco-message" },
+          { text: 'Github', link: 'https://github.com/kevin9281', icon: "reco-github" },
+          // { text: 'Email', link: 'mailto:peregrinator@yeah.net', icon: "reco-message" },
           // { text: 'QQ', link: 'http://qr.topscan.com/api.php?text=http://qm.qq.com/cgi-bin/qm/qr?k=1PbIl8QPOkF0ErJKX-GmjA-E8e53djl4', icon: "reco-qq" },
           // { text: 'Wechat', link: 'http://qr.topscan.com/api.php?text=https://u.wechat.com/EPDjgRrQutXUU-K1XzT9X_0', icon: "reco-wechat" }
         ]
       },
-      { text: 'Repo', link: 'https://github.com/MyNetdisk/vuepressDemo' }
+      // { text: 'Repo', link: 'https://github.com/kevin9281/kevin-blog' }
     ],
     friendLink: [ //添加友链
       {
@@ -69,7 +74,7 @@ module.exports = {
       },
     ],
     // 备案
-    record: 'ICP 备案文案',
+    record: '暂无',
     recordLink: 'ICP 备案指向链接',
     cyberSecurityRecord: '公安部备案文案',
     cyberSecurityLink: '公安部备案指向链接',
